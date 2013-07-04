@@ -1,4 +1,4 @@
-# notebook
+# technote
 
 My personal technical notebook.
 
