@@ -27,6 +27,7 @@
 - `find ./ \( -path ./node_modules -o -path ./.git -o -path ./.idea \) -a -prune -o -print | xargs  wc -l | sort -n`: -a means and, -o means or
 - `ls -tr`
 - `convmv -r -f cp936 -t utf8 --notest --nosmart *`
+- `rsync -lptzr --delete src_dir/ dst_dir`: -l sysmlinks, -p perms, -t times, -z compress
 
 # Disk
 
