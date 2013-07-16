@@ -93,6 +93,7 @@
 
 - `msmtp -S --host serverhost`
 - `nslookup -query=mx redhat.com`
+- `telnet POP3-server 110`: USER username\n PASS password\n STAT\n LIST\n RETR\n
 
 # PHP
 
