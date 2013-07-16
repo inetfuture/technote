@@ -92,6 +92,7 @@
 # Mail
 
 - `msmtp -S --host serverhost`
+- `nslookup -query=mx redhat.com`
 
 # PHP
 
