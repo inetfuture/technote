@@ -12,10 +12,10 @@
 
 ## Debian
 
-– 0: Halt
-– 1: Single
-– 2: Full multi-user with display manager (GUI)
-– 3: Full multi-user with display manager (GUI)
-– 4:  Full multi-user with display manager (GUI)
-– 5: Full multi-user with display manager (GUI)
-– 6: Reboot
+- 0: Halt
+- 1: Single
+- 2: Full multi-user with display manager (GUI)
+- 3: Full multi-user with display manager (GUI)
+- 4:  Full multi-user with display manager (GUI)
+- 5: Full multi-user with display manager (GUI)
+- 6: Reboot
