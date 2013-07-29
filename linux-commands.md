@@ -51,6 +51,7 @@
 - `curl ifconfig.me`
 - `mtr`: a network diagnostic tool
 - `resolvconf -u`
+- `nmap -sP 192.168.1.*`
 
 # Service
 
