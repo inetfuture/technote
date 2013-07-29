@@ -52,6 +52,7 @@
 - `mtr`: a network diagnostic tool
 - `resolvconf -u`
 - `nmap -sP 192.168.1.*`
+- `arp -D test6; arp -d test6; arp -s test6 MAC_addr`
 
 # Service
 
