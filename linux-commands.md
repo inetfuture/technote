@@ -1,10 +1,3 @@
-# Hardware
-
-- `rfkill`: tool for enabling and disabling wireless devices
-- `lshw -C network`
-- `lspci / lsusb`: list all PCI / usb devices
-- `alsamixer`: soundcard mixer for ALSA soundcard driver, with ncurses interface
-
 # Package
 
 - `dpkg -s`
@@ -28,6 +21,10 @@
 - `ls -tr`
 - `convmv -r -f cp936 -t utf8 --notest --nosmart *`
 - `rsync -lptzr --delete src_dir/ dst_dir`: -l sysmlinks, -p perms, -t times, -z compress
+
+# Text
+
+- `sort -k3 -r -n -h`: -k3 => third column, -r => reverse, -n => numeric sort, -h => human numeric sort
 
 # Disk
 
@@ -104,6 +101,13 @@
 # MongoDB
 
 - `rs.slaveOk()`
+
+# Hardware
+
+- `rfkill`: tool for enabling and disabling wireless devices
+- `lshw -C network`
+- `lspci / lsusb`: list all PCI / usb devices
+- `alsamixer`: soundcard mixer for ALSA soundcard driver, with ncurses interface
 
 # Miscellaneous
 
