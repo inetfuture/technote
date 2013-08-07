@@ -24,7 +24,7 @@
 
 # Text
 
-- `sort -k3 -r -n -h`: -k3 => third column, -r => reverse, -n => numeric sort, -h => human numeric sort
+- `sort -k3 -r -n -h`: -k3 => third column, -r reverse, -n numeric sort, -h human numeric sort
 
 # Disk
 
