@@ -15,3 +15,8 @@ cd $CWD;
 ```sh
 ps -ef | grep 'nginx: master' | grep -v grep | awk '{print $2}'
 ```
+
+```sh
+# Squeeze whitespace, cut filed 2 with whitespace as delimiter
+ps -ef | grep 'nginx: master' | grep -v grep | tr -s \ | cut -d' ' -f2
+```
