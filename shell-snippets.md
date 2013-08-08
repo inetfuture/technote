@@ -1,6 +1,6 @@
 ## Get dir of the script being executed
 
-```bash
+```sh
 SCRIPT_PATH=$(readlink -f "$0")
 SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 ```
@@ -12,6 +12,6 @@ cd $CWD;
 
 ## Find nginx master process pid
 
-```bash
+```sh
 ps -ef | grep 'nginx: master' | grep -v grep | awk '{print $2}'
 ```
