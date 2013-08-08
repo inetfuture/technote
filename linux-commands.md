@@ -98,6 +98,8 @@
 # PHP
 
 - `pear config-set http_proxy http`
+- `php -m | grep ext_name`
+- `php-config --extension-dir`
 
 # MongoDB
 
