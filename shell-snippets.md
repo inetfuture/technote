@@ -7,6 +7,6 @@ SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 
 # Find nginx master process pid
 
-```shell
+```bash
 ps -ef | grep 'nginx: master' | grep -v grep | awk '{print $2}'
 ```
