@@ -51,6 +51,7 @@
 - `resolvconf -u`
 - `nmap -sP 192.168.1.*`
 - `arp -D test6; arp -d test6; arp -s test6 MAC_addr`
+- `route add -net 10.0.0.0 netmask 255.0.0.0 gw 192.168.225.173`: add static route
 
 # Service
 
