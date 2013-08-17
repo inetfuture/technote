@@ -1,10 +1,3 @@
-# Hardware
-
-- `rfkill`: tool for enabling and disabling wireless devices
-- `lshw -C network`
-- `lspci / lsusb`: list all PCI / usb devices
-- `alsamixer`: soundcard mixer for ALSA soundcard driver, with ncurses interface
-
 # Package
 
 - `dpkg -s`
@@ -28,6 +21,11 @@
 - `ls -tr`
 - `convmv -r -f cp936 -t utf8 --notest --nosmart *`
 - `rsync -lptzr --delete src_dir/ dst_dir`: -l sysmlinks, -p perms, -t times, -z compress
+
+# Text
+
+- `sort -k3 -r -n -h`: -k3 => third column, -r reverse, -n numeric sort, -h human numeric sort
+- `tr`: translate or delete characters, 
 
 # Disk
 
@@ -53,6 +51,7 @@
 - `resolvconf -u`
 - `nmap -sP 192.168.1.*`
 - `arp -D test6; arp -d test6; arp -s test6 MAC_addr`
+- `route add -net 10.0.0.0 netmask 255.0.0.0 gw 192.168.225.173`: add static route
 
 # Service
 
@@ -64,8 +63,8 @@
 
 # SSH
 
-- `ssh -D [bind local addr`: forward localhost's 7070 port to remotehost    
-- `ssh -NfR [bind remote addr`:  forward remotehost's 222 port to localhost's 22 port
+- `ssh -D [local_addr]:7070`: forward localhost's 7070 port to remotehost    
+- `ssh -NfR 222:[remote_addr]:22 user@remotehost`:  forward remotehost's 222 port to localhost's 22 port
 - `ssh-keygen -R hostname`: remove all keys belong to hostname from a known_hosts file 
 - `ssh-copy-id [-i [identity_file]] username@remotehost`: install your public key in a remote machine's authorized_keys
 
@@ -100,10 +99,19 @@
 # PHP
 
 - `pear config-set http_proxy http`
+- `php -m | grep ext_name`
+- `php-config --extension-dir`
 
 # MongoDB
 
 - `rs.slaveOk()`
+
+# Hardware
+
+- `rfkill`: tool for enabling and disabling wireless devices
+- `lshw -C network`
+- `lspci / lsusb`: list all PCI / usb devices
+- `alsamixer`: soundcard mixer for ALSA soundcard driver, with ncurses interface
 
 # Miscellaneous
 
