@@ -1,15 +1,15 @@
-# Package
+## Package
 
 - `dpkg -s`
 - `dpkg -c, dpkg -x, dpkg -L`
 - `apt-file search`
 
-# Security
+## Security
 
 - `useradd testuser -m -s /bin/bash`
 - `usermod username -G sudo`
 
-# File
+## File
 
 - `zip -r dir.zip dir`
 - `unzip dir.zip`
@@ -22,19 +22,19 @@
 - `convmv -r -f cp936 -t utf8 --notest --nosmart *`
 - `rsync -lptzr --delete src_dir/ dst_dir`: -l sysmlinks, -p perms, -t times, -z compress
 
-# Text
+## Text
 
 - `sort -k3 -r -n -h`: -k3 => third column, -r reverse, -n numeric sort, -h human numeric sort
 - `tr`: translate or delete characters, 
 
-# Disk
+## Disk
 
 - `fdisk -l`: List the partition tables for the specified devices. If no devices are given, those mentioned in /proc/partitions (if that exsts) are used
 - `df -h`: report file system disk space usage
 - `du -sh target_dir`: estimate file space usage
 - `du --max-depth 1 | sort -rn | head -n 5`: top 5 big dir/file
 
-# Network
+## Network
 
 - `route`: show / manipulate the IP routing table
 - `traceroute -I HOST`
@@ -53,7 +53,7 @@
 - `arp -D test6; arp -d test6; arp -s test6 MAC_addr`
 - `route add -net 10.0.0.0 netmask 255.0.0.0 gw 192.168.225.173`: add static route
 
-# Service
+## Service
 
 - `service SCRIPT COMMAND`:  run a System V init script( /etc/init.d/) or an upstart job( /etc/init) (take precedence). 
 - `All scripts should supportat least the start and stop command.`
@@ -61,14 +61,14 @@
 - `upstart jobs`: initctl list, init scripts
 - `chkconfig`:  enable or disable system services       
 
-# SSH
+## SSH
 
 - `ssh -D [local_addr]:7070`: forward localhost's 7070 port to remotehost    
 - `ssh -NfR 222:[remote_addr]:22 user@remotehost`:  forward remotehost's 222 port to localhost's 22 port
 - `ssh-keygen -R hostname`: remove all keys belong to hostname from a known_hosts file 
 - `ssh-copy-id [-i [identity_file]] username@remotehost`: install your public key in a remote machine's authorized_keys
 
-# VIM
+## VIM
 
 - `set tabstop=4`
 - `2yy, p`
@@ -78,7 +78,7 @@
 - `10j`: 10 lines forward,10k
 - `o or O`: insert a new line below or above this line
 
-# GIT
+## GIT
 
 - `git commit --amend`: modify last commit
 - `git rebase -i master~3`:   interactive rebase
@@ -90,30 +90,30 @@
 - `git clone -b branch_name`
 - `git checkout -b branch_name remote/branch_name`, `git checkout --trach remote/branch_name`
 
-# Mail
+## Mail
 
 - `msmtp -S --host serverhost`
 - `nslookup -query=mx redhat.com`
 - `telnet POP3-server 110`: USER username\n PASS password\n STAT\n LIST\n RETR\n
 
-# PHP
+## PHP
 
 - `pear config-set http_proxy http`
 - `php -m | grep ext_name`
 - `php-config --extension-dir`
 
-# MongoDB
+## MongoDB
 
 - `rs.slaveOk()`
 
-# Hardware
+## Hardware
 
 - `rfkill`: tool for enabling and disabling wireless devices
 - `lshw -C network`
 - `lspci / lsusb`: list all PCI / usb devices
 - `alsamixer`: soundcard mixer for ALSA soundcard driver, with ncurses interface
 
-# Miscellaneous
+## Miscellaneous
 
 - `lsmod`: show  the status of modules in the linux kernel
 - `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`: set time zone, `date -R`
