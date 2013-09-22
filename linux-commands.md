@@ -99,6 +99,7 @@
 ## PHP
 
 - `pear config-set http_proxy http`
+- `php --ini`
 - `php -m | grep ext_name`
 - `php-config --extension-dir`
 
