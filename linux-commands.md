@@ -36,22 +36,28 @@
 
 ## Network
 
+### Config
+
+- `resolvconf -u`
 - `route`: show / manipulate the IP routing table
-- `traceroute -I HOST`
+- `route add -net 10.0.0.0 netmask 255.0.0.0 gw 192.168.225.173`: add static route
 - `arp`: manipulate the system ARP cache
+- `arp -D test6; arp -d test6; arp -s test6 MAC_addr`
+
+### Diagnose
+
 - `ip`: show/manipulate routing, devices, policy routing and tunnels
+- `curl ifconfig.me` figure out external ip
+- `traceroute -I HOST`
 - `nslookup`: query Internet name servers interactively
 - `dig`: DNS lookup utility
+- `mtr`: a network diagnostic tool
+
 - `netstat -s | grep -E '.*(queue|timeout).*'`
 - `tcpdump -i lo host localhost and port 7070 -A `
 - `ss -m src *`
 - `cat /proc/net/sockstat：TCP mem about equal ss -m src *`
-- `curl ifconfig.me`
-- `mtr`: a network diagnostic tool
-- `resolvconf -u`
 - `nmap -sP 192.168.1.*`
-- `arp -D test6; arp -d test6; arp -s test6 MAC_addr`
-- `route add -net 10.0.0.0 netmask 255.0.0.0 gw 192.168.225.173`: add static route
 
 ## Service
 
