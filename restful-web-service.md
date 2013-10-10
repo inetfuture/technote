@@ -1,3 +1,5 @@
+HTTP is a implementation of REST.
+
 ## Verbs
 
 Verb | Safe? | Idempotent? | Scenario |
@@ -25,4 +27,3 @@ RESTful:
 REST-RPC:
 
 - No envelop, but also no standard HTTP verbs, represent method info in URI.
-
