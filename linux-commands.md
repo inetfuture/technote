@@ -48,7 +48,6 @@
 - `nslookup`: query Internet name servers interactively
 - `dig`: DNS lookup utility
 - `mtr`: a network diagnostic tool
-
 - `netstat -s | grep -E '.*(queue|timeout).*'`
 - `tcpdump -i lo host localhost and port 7070 -A `
 - `ss -m src *`
