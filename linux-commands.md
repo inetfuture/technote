@@ -1,13 +1,8 @@
 ## Package
 
-- `dpkg -s`
-- `dpkg -c, dpkg -x, dpkg -L`
-- `apt-file search`
-
-## Security
-
-- `useradd testuser -m -s /bin/bash`
-- `usermod username -G sudo`
+- `dpkg -c`: list contents of deb package,` dpkg -x`: extract files from package, dpkg -L`: list files installed from a package-name
+- `dpkg -s filename`: search for a filename from installed packages
+- `apt-file search filename`: search which package contains a specific file/path
 
 ## File
 
@@ -26,6 +21,7 @@
 
 - `sort -k3 -r -n -h`: -k3 => third column, -r reverse, -n numeric sort, -h human numeric sort
 - `tr`: translate or delete characters, 
+- `tee`: read from standard input and write to standard output and files
 
 ## Disk
 
@@ -65,7 +61,7 @@
 - `All scripts should supportat least the start and stop command.`
 - `upstart jobs`: restart => stop => start, init scripts
 - `upstart jobs`: initctl list, init scripts
-- `chkconfig`:  enable or disable system services       
+- `update-rc.d SCRIPT enable/disable`, `chkconfig`:  enable or disable system services 
 
 ## SSH
 
@@ -74,44 +70,39 @@
 - `ssh-keygen -R hostname`: remove all keys belong to hostname from a known_hosts file 
 - `ssh-copy-id [-i [identity_file]] username@remotehost`: install your public key in a remote machine's authorized_keys
 
-## VIM
-
-- `set tabstop=4`
-- `2yy, p`
-- `G or g`:  go to the end/start of the file
-- `Ctrl + g`: show file information
-- `/ or ?`:  forward or backward search,n or N
-- `10j`: 10 lines forward,10k
-- `o or O`: insert a new line below or above this line
-
 ## GIT
 
-- `git commit --amend`: modify last commit
+- `git commit --amend --author "name <email>"`: modify last commit
 - `git rebase -i master~3`:   interactive rebase
 - `git log：-p --color | --graph | --pretty=oneline`
 - `git diff HEAD`: diff staged and unstaged changed files
-- `git submodule`, `git add path/to/submodule`
-- `git rm --cached path/to/submodule`, `git add path/to/submodule/*`
-- `git clone ssh`
+- `git submodule`, `git add path/to/submodule`, `git rm --cached path/to/submodule
 - `git clone -b branch_name`
 - `git checkout -b branch_name remote/branch_name`, `git checkout --trach remote/branch_name`
 
+## VIM
+
+- `set tabstop=4`, `set nospell`
+- `2yy, p`
+- `G or g`:  go to the end/start of the file
+- `Ctrl + g`: show file information
+- `/ or ?`:  forward or backward search, `n or N`: next or previous
+- `10j`: 10 lines forward,`10k`: 10 lines backward
+- `o or O`: insert a new line below or above this line
+
 ## Mail
 
-- `msmtp -S --host serverhost`
+- `msmtp -S --host serverhost`: check information about SMTP server
 - `nslookup -query=mx redhat.com`
-- `telnet POP3-server 110`: USER username\n PASS password\n STAT\n LIST\n RETR\n
+- `telnet POP3-server 110`: commands: user, pass, stat, list, retr, dele(take effect after quit), quit
 
 ## PHP
 
+- `php --ini`: show configuration file names
+- `php --interactive`
+- `php -m | grep ext_name`: check extension
+- `php-config `: get information about PHP configuration and compile options
 - `pear config-set http_proxy http`
-- `php --ini`
-- `php -m | grep ext_name`
-- `php-config --extension-dir`
-
-## MongoDB
-
-- `rs.slaveOk()`
 
 ## Hardware
 
@@ -124,8 +115,8 @@
 
 - `lsmod`: show  the status of modules in the linux kernel
 - `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`: set time zone, `date -R`
+- `useradd testuser -m -s /bin/bash`
+- `usermod username -G sudo`
 - `lastlog`: reports the most recent login of all users or of a given user
-- `tee`: read from standard input and write to standard output and files
-- `php5 --interactive`
 - `history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head`
 - `gnome-terminal --geometry 110x30+1000+1000 --hide-menubar`
