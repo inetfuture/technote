@@ -77,7 +77,8 @@
 - `git diff HEAD`: diff staged and unstaged changed files
 - `git submodule`, `git add path/to/submodule`, `git rm --cached path/to/submodule
 - `git clone -b branch_name`
-- `git checkout -b branch_name remote/branch_name`, `git checkout --trach remote/branch_name`
+- `git checkout -b branch_nae remote/branch_name`, `git checkout --trach remote/branch_name`
+- `git remote prune origin`, `git remote update`
 
 ## VIM
 
