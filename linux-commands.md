@@ -20,7 +20,9 @@
 ## Text
 
 - `sort -k3 -r -n -h`: -k3 => third column, -r reverse, -n numeric sort, -h human numeric sort
-- `tr`: translate or delete characters, 
+- `tr`: translate or delete characters
+- `strings`: pint the strings of printable characters in files
+- `expand`: convert tabs to spaces
 - `tee`: read from standard input and write to standard output and files
 - `egrep -v 'exclude1|exclude2'`
 
@@ -50,7 +52,7 @@
 - `dig`: DNS lookup utility
 - `mtr`: a network diagnostic tool
 - `netstat -s | grep -E '.*(queue|timeout).*'`
-- `tcpdump -i lo host localhost and port 7070 -A `
+- `tcpdump -i lo host localhost and port 7070 -A -s 0`
 - `ss -m src *`
 - `cat /proc/net/sockstat：TCP mem about equal ss -m src *`
 - `nmap -sP 192.168.1.*`
