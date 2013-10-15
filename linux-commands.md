@@ -22,6 +22,7 @@
 - `sort -k3 -r -n -h`: -k3 => third column, -r reverse, -n numeric sort, -h human numeric sort
 - `tr`: translate or delete characters, 
 - `tee`: read from standard input and write to standard output and files
+- `egrep -v 'exclude1|exclude2'`
 
 ## Disk
 
