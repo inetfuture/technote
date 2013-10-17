@@ -21,6 +21,7 @@
 
 - `sort -k3 -r -n -h`: -k3 => third column, -r reverse, -n numeric sort, -h human numeric sort
 - `tr`: translate or delete characters
+- `sed -i 's/ugly/beautiful/g' filename`: edit file in place to replace ugly with beautiful
 - `strings`: pint the strings of printable characters in files
 - `expand`: convert tabs to spaces
 - `tee`: read from standard input and write to standard output and files
@@ -59,17 +60,17 @@
 
 ## Service
 
-- `service SCRIPT COMMAND`:  run a System V init script( /etc/init.d/) or an upstart job( /etc/init) (take precedence). 
+- `service SCRIPT COMMAND`:  run a System V init script( /etc/init.d/) or an upstart job( /etc/init) (take precedence).
 - `All scripts should supportat least the start and stop command.`
 - `upstart jobs`: restart => stop => start, init scripts
 - `upstart jobs`: initctl list, init scripts
-- `update-rc.d SCRIPT enable/disable`, `chkconfig`:  enable or disable system services 
+- `update-rc.d SCRIPT enable/disable`, `chkconfig`:  enable or disable system services
 
 ## SSH
 
-- `ssh -D [local_addr]:7070`: forward localhost's 7070 port to remotehost    
-- `ssh -NfR 222:[remote_addr]:22 user@remotehost`:  forward remotehost's 222 port to localhost's 22 port
-- `ssh-keygen -R hostname`: remove all keys belong to hostname from a known_hosts file 
+- `ssh -NfD [local_addr]:7070`: forward localhost's 7070 port to remotehost
+- `ssh -NfR [remote_addr:]7070:local_addr:22 user@remotehost`:  forward remotehost's 7070 port to localhost's 22 port, default remote_addr is loopback, if want it to be the others, turn `GatewayPorts` on in `/etc/ssh/ssd_config`, then `reload ssh`
+- `ssh-keygen -R hostname`: remove all keys belong to hostname from a known_hosts file
 - `ssh-copy-id [-i [identity_file]] username@remotehost`: install your public key in a remote machine's authorized_keys
 
 ## GIT
@@ -119,7 +120,7 @@
 - `lsmod`: show  the status of modules in the linux kernel
 - `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`: set time zone, `date -R`
 - `useradd testuser -m -s /bin/bash`
-- `usermod username -Ga sudo`
+- `usermod username -Ga sudo`, `groups username`
 - `lastlog`: reports the most recent login of all users or of a given user
 - `history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head`
 - `gnome-terminal --geometry 110x30+1000+1000 --hide-menubar`
