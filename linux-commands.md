@@ -119,7 +119,7 @@
 - `lsmod`: show  the status of modules in the linux kernel
 - `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`: set time zone, `date -R`
 - `useradd testuser -m -s /bin/bash`
-- `usermod username -G sudo`
+- `usermod username -Ga sudo`
 - `lastlog`: reports the most recent login of all users or of a given user
 - `history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head`
 - `gnome-terminal --geometry 110x30+1000+1000 --hide-menubar`
