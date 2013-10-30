@@ -10,6 +10,7 @@
 - `unzip dir.zip`
 - `tar czvf dir.tar.gz dir`
 - `tar xzvf dit.tar.gz -C dir`
+- `tar`: omit `-v` to see error info, filename should follow `-f` directly
 - `locate`: find files by name, `updatedb`
 - `whereis`: locate the binary, source, and manual page files for a command
 - `find ./ \( -path ./node_modules -o -path ./.git -o -path ./.idea \) -a -prune -o -print | xargs  wc -l | sort -n`: -a means and, -o means or
@@ -125,3 +126,4 @@
 - `lastlog`: reports the most recent login of all users or of a given user
 - `history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head`
 - `gnome-terminal --geometry 110x30+1000+1000 --hide-menubar`
+- `update-alternatives --config editor`
