@@ -3,3 +3,4 @@
 - hop on the DevOps wagon
 - A useful analogy can be drawn from the world of shipping.
 - be prone to
+- stay tune for scenes from netx episode
