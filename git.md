@@ -31,3 +31,11 @@
 # Resource Collections
 
 - [GitTips](https://gitcafe.com/riku/GitTips)
+
+# Sumup
+
+Git is just a stupid content tracker.
+
+It's used as a SCM, but not really designed as one.
+
+Consider it as a file system.

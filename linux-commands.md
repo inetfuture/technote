@@ -85,6 +85,21 @@
 - `git clone -b branch_name`
 - `git checkout -b branch_nae remote/branch_name`, `git checkout --trach remote/branch_name`
 - `git remote prune origin`, `git remote update`
+- rewrite commit histroy
+
+    ```bash
+    git filter-branch --commit-filter '
+    if [ "$GIT_COMMITTER_NAME" = "wrong_name" ];
+    then
+        GIT_COMMITTER_NAME="inetfuture(Aaron Wang)";
+        GIT_AUTHOR_NAME="inetfuture(Aaron Wang)";
+        GIT_COMMITTER_EMAIL="inetfuture@gmail.com";
+        GIT_AUTHOR_EMAIL="inetfuture@gmail.com";
+        git commit-tree "$@";
+    else
+        git commit-tree "$@";
+    fi' HEAD
+    ```
 
 ## VIM
 
