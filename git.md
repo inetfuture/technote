@@ -17,6 +17,7 @@
     - [Use gitk to understand git](http://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)
 - How merge works
     - http://www.quora.com/Git-revision-control/How-does-git-merge-work
+    - http://codicesoftware.blogspot.com/2011/09/merge-recursive-strategy.html
 
 # Best Practices
 
