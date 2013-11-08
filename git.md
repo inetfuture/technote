@@ -1,6 +1,7 @@
 # Books
 
 - [Progit](https://github.com/progit/progit)
+- [Git Internals](https://github.com/pluralsight/git-internals-pdf)
 - [Git Community Book 中文版](http://gitbook.liuhui998.com/)
 - [gitready.com - learn git one commit at a time](http://gitready.com/)
 - [GotGitHub - an open source E-book about GitHub in Chinese](https://github.com/gotgit/gotgithub)
@@ -9,11 +10,25 @@
 
 - http://alblue.bandlem.com/Tag/git/
 
+# Key Questions
+
+- merge vs rebase
+    - http://mislav.uniqpath.com/2013/02/merge-vs-rebase/
+    - [Use gitk to understand git](http://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/)
+- How merge works
+    - http://www.quora.com/Git-revision-control/How-does-git-merge-work
+
+# Best Practices
+
+- [What's in a good commit](http://dev.solita.fi/2013/07/04/whats-in-a-good-commit.html)
+- [Colorful bash prompt reflecting git status](http://www.opinionatedprogrammer.com/2011/01/colorful-bash-prompt-reflecting-git-status/)
+
 # Work Flows
 
 - https://www.atlassian.com/git/workflows
 - [Understanding the Git Workflow](https://sandofsky.com/blog/git-workflow.html)
 - [A Git Workflow for Agile Teams](http://reinh.com/blog/2009/03/02/a-git-workflow-for-agile-teams.html)
+- [GitHub flow](http://scottchacon.com/2011/08/31/github-flow.html)
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
     - [gitflow - Git extensions to provide high-level repository operations for Vincent Driessen's branching model](https://github.com/nvie/gitflow)
     - [git-flow cheatsheet](http://danielkummer.github.io/git-flow-cheatsheet/)
