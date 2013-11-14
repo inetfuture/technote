@@ -2,6 +2,7 @@
 
 - [Progit](https://github.com/progit/progit)
 - [Git Internals](https://github.com/pluralsight/git-internals-pdf)
+- [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/)
 - [Git Community Book 中文版](http://gitbook.liuhui998.com/)
 - [gitready.com - learn git one commit at a time](http://gitready.com/)
 - [GotGitHub - an open source E-book about GitHub in Chinese](https://github.com/gotgit/gotgithub)
