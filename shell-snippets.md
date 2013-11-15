@@ -20,3 +20,9 @@ ps -ef | grep 'nginx: master' | grep -v grep | awk '{print $2}'
 # Squeeze whitespace, cut filed 2 with whitespace as delimiter
 ps -ef | grep 'nginx: master' | grep -v grep | tr -s \ | cut -d' ' -f2
 ```
+
+## Collect hosts' HW and inet addr with ansible
+
+```sh
+ansible all -m shell -a 'echo `hostname` `ifconfig | grep eth` `ifconfig | grep 225`' | grep eth | awk '{print $1,$6,$8}' | sort
+```
