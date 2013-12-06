@@ -1,0 +1,2 @@
+- KDocker, put any windown into tray.
+- Email notification: thunderbird(FireTray) + xfce4-notifyd
