@@ -5,12 +5,16 @@
 ```python
 import re
 
-re.match(r'regexp', str)
+re.findall(r'^(regexp)$', 'hi\nregexp\nhi', re.MULTILINE)
+
+> ['regexp']
 ```
 
 ```python
 import re
 
 r = re.compile(r'regexp')
-r.match(str)
+r.match/findall
 ```
+
+- match: apply the pattern at the start of the string
