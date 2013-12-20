@@ -50,7 +50,8 @@
 ### Diagnose
 
 - `ip`: show/manipulate routing, devices, policy routing and tunnels
-- `curl ifconfig.me` figure out external ip
+- `curl ifconfig.me`: figure out external ip
+- `ip -4 route get 8.8.8.8`: figure out which interface is used to comunicate with certain host
 - `traceroute -I HOST`
 - `nslookup`: query Internet name servers interactively
 - `dig`: DNS lookup utility
