@@ -27,7 +27,7 @@ RESTful:
 REST-RPC:
 
 - No envelop, but also no standard HTTP verbs, represent method info in URI.
- 
+
 ## Best Practice
 
 - An API is a user interface for a developer - so put some effort into making it pleasant

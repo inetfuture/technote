@@ -9,6 +9,13 @@
 - https://github.com/linnovate/mean
 - https://github.com/paypal/kraken-js
 
+### Full-stack/MV*/SPA Framework
+
+- https://github.com/meteor/meteor, an ultra-simple, database-everywhere, data-on-the-wire, pure-Javascript web framework.
+- https://github.com/balderdashy/sails, realtime MVC Framework for Node.js.
+- https://github.com/codeparty/derby, MVC framework making it easy to write realtime, collaborative applications that run in both Node.js and browsers.
+- https://github.com/socketstream/socketstream, a fast, modular Node.js web framework dedicated to building realtime single-page apps.
+
 ### API Framework
 
 - https://github.com/deployd/deployd
@@ -26,6 +33,7 @@
 
 ### Control Flow
 
+- https://github.com/caolan/async
 - https://github.com/maxtaco/coffee-script (icedcoffeescript)
 - https://github.com/kriskowal/q
 - https://github.com/tildeio/rsvp.js
@@ -33,6 +41,14 @@
 ### Job Queue
 
 - https://github.com/LearnBoost/kue
+
+### Monitoring/Stats
+
+- https://github.com/etsy/statsd, simple daemon for easy stats aggregation
+
+### Desktop
+
+- https://github.com/rogerwang/node-webkit, call all Node.js modules directly from DOM and enable a new way of writing applications with all Web technologies.
 
 ### Templating
 
@@ -64,7 +80,3 @@
 
 - https://github.com/node-webot/wechat
 - https://github.com/paypal/kappa, a hierarchical npm-registry proxy
-
-to organize:
-https://github.com/balderdashy/sails
-meteor, derby, socketstream

@@ -12,7 +12,6 @@
 - Resource-oriented
 - Object-oriented
 
-
 # Programming Paradigm
 
 A programming paradigm is a fundamental style of computer programming, a way of building the structure and elements of computer programs. There are four main paradigms: imperative, functional, object-oriented, and logic programming.
