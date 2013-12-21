@@ -3,18 +3,29 @@
 - http://www.infoq.com/cn/news/2013/12/paypal-java-javascript
 - http://www.ibm.com/developerworks/mobile/library/mo-nodejs-1/index.html
 
-### Scaffold Tool/Best Practice/Structured Framework/Boilerplate
+### Resource Gallery
+
+- http://jster.net/
+- http://www.nodecloud.org/
+- https://nodejsmodules.org/
+- http://nodeframework.com/
+
+### Scaffold Tool/Best Practice/Boilerplate
 
 - https://github.com/yeoman/yeoman
 - https://github.com/linnovate/mean
 - https://github.com/paypal/kraken-js
 
-### Full-stack/MV*/SPA Framework
+### Full-stack/SPA Framework
 
 - https://github.com/meteor/meteor, an ultra-simple, database-everywhere, data-on-the-wire, pure-Javascript web framework.
-- https://github.com/balderdashy/sails, realtime MVC Framework for Node.js.
 - https://github.com/codeparty/derby, MVC framework making it easy to write realtime, collaborative applications that run in both Node.js and browsers.
 - https://github.com/socketstream/socketstream, a fast, modular Node.js web framework dedicated to building realtime single-page apps.
+
+### MVC Framework
+
+- https://github.com/balderdashy/sails, realtime MVC Framework for Node.js.
+- https://github.com/1602/compound, works on server and browser.
 
 ### API Framework
 
@@ -37,6 +48,7 @@
 - https://github.com/maxtaco/coffee-script (icedcoffeescript)
 - https://github.com/kriskowal/q
 - https://github.com/tildeio/rsvp.js
+- https://github.com/visionmedia/co, the ultimate generator based flow-control goodness for nodejs (supports thunks, promises, etc).
 
 ### Job Queue
 
@@ -60,10 +72,11 @@
 
 ### Test
 
-- https://github.com/flatiron/nock
-- https://github.com/karma-runner/karma
-- https://github.com/assaf/zombie
-- https://github.com/ariya/phantomjs
+- https://github.com/flatiron/nock, HTTP mocking and expectations library.
+- https://github.com/vlucas/frisby, a REST API testing framework built on node.js and Jasmine that makes testing API endpoints easy, fast, and fun.
+- https://github.com/karma-runner/karma, spectacular Test Runner for JavaScript.
+- https://github.com/assaf/zombie, insanely fast, full-stack, headless testing using node.js.
+- https://github.com/ariya/phantomjs, scriptable Headless WebKit.
 
 ### Documentation
 
