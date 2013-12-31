@@ -3,7 +3,7 @@
 - http://www.infoq.com/cn/news/2013/12/paypal-java-javascript
 - http://www.ibm.com/developerworks/mobile/library/mo-nodejs-1/index.html
 
-### Resource Gallery
+### Resource Gallery/Catalog
 
 - http://jster.net/
 - http://www.nodecloud.org/
@@ -41,6 +41,11 @@
 ### Realtime Framework
 
 - https://github.com/mozilla/togetherjs, a service for your website that makes it surprisingly easy to collaborate in real-time.
+
+### Hybrid Mobile App Framework
+
+- https://github.com/driftyco/ionic/, advanced HTML5 Mobile App Framework. A beautiful front-end framework for developing hybrid mobile apps in HTML5.
+- https://github.com/sintaxi/phonegap, access core functions on Android, iPhone and Blackberry using JavaScript.
 
 ### Control Flow
 
