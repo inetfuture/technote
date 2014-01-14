@@ -1,8 +1,9 @@
 ## Package
 
-- `dpkg -c`: list contents of deb package,` dpkg -x`: extract files from package, dpkg -L`: list files installed from a package-name
-- `dpkg -s filename`: search for a filename from installed packages
+- `dpkg -c`: list contents of deb package,` dpkg -x`: extract files from package, `dpkg -L`: list files installed from a package-name
+- `dpkg -s filename`: search for a filename from *installed* packages
 - `apt-file search filename`: search which package contains a specific file/path
+- `apt-get -o Dpkg::Options::="--force-confmiss" install --reinstall <package-name>`
 
 ## File
 
