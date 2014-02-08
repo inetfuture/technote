@@ -29,6 +29,7 @@
 - `tee`: read from standard input and write to standard output and files
 - `grep -r "word" /path/to/dir/*.c`, `find . -type f -exec grep -l "word" {} +`, `find /path/to/dir -type f -print0 | xargs grep -l "foo"`: recursively search all files for a string, `find -print0` can deal with spaces in file names
 - `egrep -v 'exclude1|exclude2'`
+- `find -L /etc/ssl/certs -type l -delete`
 
 ## Disk
 

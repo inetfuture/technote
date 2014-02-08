@@ -6,12 +6,14 @@
 ### Resource Gallery/Catalog
 
 - http://jster.net/
+- http://www.javascriptoo.com/
 - http://www.nodecloud.org/
 - https://nodejsmodules.org/
 - http://nodeframework.com/
 
 ### Scaffold Tool/Best Practice/Boilerplate
 
+- https://github.com/sahat/hackathon-starter
 - https://github.com/yeoman/yeoman
 - https://github.com/linnovate/mean
 - https://github.com/paypal/kraken-js
