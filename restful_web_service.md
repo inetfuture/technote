@@ -52,3 +52,7 @@ REST-RPC:
 - Include response headers that facilitate caching
 - Define a consumable error payload
 - Effectively use HTTP Status codes
+
+## Examples
+
+- http://developer.github.com/v3
