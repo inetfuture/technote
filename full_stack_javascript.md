@@ -26,6 +26,7 @@
 
 ### MVC Framework
 
+- https://github.com/visionmedia/express
 - https://github.com/balderdashy/sails, realtime MVC Framework for Node.js.
 - https://github.com/1602/compound, works on server and browser.
 
@@ -55,6 +56,7 @@
 - https://github.com/maxtaco/coffee-script (icedcoffeescript)
 - https://github.com/kriskowal/q
 - https://github.com/tildeio/rsvp.js
+- https://github.com/petkaantonov/bluebird
 - https://github.com/visionmedia/co, the ultimate generator based flow-control goodness for nodejs (supports thunks, promises, etc).
 
 ### Job Queue
@@ -63,6 +65,7 @@
 
 ### Monitoring/Stats
 
+- https://github.com/lorenwest/node-monitor
 - https://github.com/etsy/statsd, simple daemon for easy stats aggregation
 
 ### Desktop
@@ -76,14 +79,20 @@
 ### Configuration
 
 - https://github.com/flatiron/nconf
+- https://github.com/lorenwest/node-config
 
-### Test
+### Testing
 
 - https://github.com/flatiron/nock, HTTP mocking and expectations library.
 - https://github.com/vlucas/frisby, a REST API testing framework built on node.js and Jasmine that makes testing API endpoints easy, fast, and fun.
 - https://github.com/karma-runner/karma, spectacular Test Runner for JavaScript.
 - https://github.com/assaf/zombie, insanely fast, full-stack, headless testing using node.js.
 - https://github.com/ariya/phantomjs, scriptable Headless WebKit.
+
+### Building
+
+- https://github.com/gruntjs/grunt
+- https://github.com/gulpjs/gulp
 
 ### Documentation
 
@@ -96,7 +105,14 @@
 - https://github.com/jeffwilcox/mpns
 - https://github.com/rs/pushd
 
+### Utils
+
+- http://lodash.com/
+- https://github.com/epeli/underscore.string
+- https://github.com/nomiddlename/log4js-node
+
 ### Misc
 
+- https://github.com/creationix/nvm
 - https://github.com/node-webot/wechat
 - https://github.com/paypal/kappa, a hierarchical npm-registry proxy
