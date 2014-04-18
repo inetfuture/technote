@@ -33,3 +33,9 @@ ansible all -m shell -a 'echo `hostname` `ifconfig | grep eth` `ifconfig | grep 
 PS=`ps -e -opid=,rss=,args= | sort -nk 2 | tail -n 1`
 kill -9 `echo $PS | awk '{print $1}'`
 ```
+
+### Infinite loop
+
+```shell
+while :; do date; sleep 1; done; 
+```
