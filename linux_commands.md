@@ -7,9 +7,9 @@
 
 ## File
 
-- `zip -r dir.zip dir`
+- `zip -r dir.zip dir [-x dir/node_modules\* dir/.git\*]`
 - `unzip dir.zip`
-- `tar czvf dir.tar.gz dir`
+- `tar czvf dir.tar.gz dir [--exclude node_modules --exclude .git]`
 - `tar xzvf dit.tar.gz -C dir`
 - `tar`: omit `-v` to see error info, filename should follow `-f` directly
 - `locate`: find files by name, `updatedb`
@@ -146,3 +146,4 @@
 - `history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head`
 - `gnome-terminal --geometry 110x30+1000+1000 --hide-menubar`
 - `update-alternatives --config editor`
+- `x11vnc --create --forever`

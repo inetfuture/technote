@@ -39,3 +39,9 @@ kill -9 `echo $PS | awk '{print $1}'`
 ```shell
 while :; do date; sleep 1; done; 
 ```
+
+### Print Every Command Executed
+
+```shell
+trap 'echo "$BASH_COMMAND"' DEBUG
+```
