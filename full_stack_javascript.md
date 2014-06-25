@@ -29,12 +29,14 @@
 - https://github.com/visionmedia/express
 - https://github.com/balderdashy/sails, realtime MVC Framework for Node.js.
 - https://github.com/1602/compound, works on server and browser.
+- https://github.com/JedWatson/keystone, node.js cms and web app framework
 
 ### API Framework
 
 - https://github.com/deployd/deployd
 - https://github.com/mde/geddy
 - https://github.com/evantahler/actionHero
+- https://github.com/JonAbrams/synth, the first back-end framework specially designed for single-page web applications
 
 ### Realtime Library
 
@@ -59,9 +61,10 @@
 - https://github.com/petkaantonov/bluebird
 - https://github.com/visionmedia/co, the ultimate generator based flow-control goodness for nodejs (supports thunks, promises, etc).
 
-### Job Queue
+### Job Queue/CRON
 
 - https://github.com/LearnBoost/kue
+- https://github.com/rschmukler/agenda
 
 ### Monitoring/Stats
 
@@ -71,10 +74,12 @@
 ### Desktop
 
 - https://github.com/rogerwang/node-webkit, call all Node.js modules directly from DOM and enable a new way of writing applications with all Web technologies.
+- https://github.com/netease-youdao/hex, a Solution to Building Desktop Application Using HTML5 and Node.js
 
 ### Templating
 
 - https://github.com/linkedin/dustjs, asynchronous templates for the browser and node.js
+- https://github.com/facebook/react
 
 ### Configuration
 
@@ -83,6 +88,7 @@
 
 ### Testing
 
+- https://github.com/visionmedia/supertest, super-agent driven library for testing node.js HTTP servers using a fluent API
 - https://github.com/flatiron/nock, HTTP mocking and expectations library.
 - https://github.com/vlucas/frisby, a REST API testing framework built on node.js and Jasmine that makes testing API endpoints easy, fast, and fun.
 - https://github.com/karma-runner/karma, spectacular Test Runner for JavaScript.
