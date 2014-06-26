@@ -34,14 +34,22 @@ PS=`ps -e -opid=,rss=,args= | sort -nk 2 | tail -n 1`
 kill -9 `echo $PS | awk '{print $1}'`
 ```
 
-### Infinite loop
+## Infinite loop
 
 ```shell
 while :; do date; sleep 1; done; 
 ```
 
-### Print Every Command Executed
+## Print Every Command Executed
 
 ```shell
 trap 'echo "$BASH_COMMAND"' DEBUG
 ```
+
+## Batch convert PNG to JPG
+
+```shell
+for i in *.png ; do convert "$i" "${i%.*}.jpg" ; done
+ls -1 *.png | xargs -n 1 bash -c 'convert "$0" "${0%.*}.jpg"'
+ls -1 *.png | parallel --eta convert '{}' '{.}.jpg'
+``` 

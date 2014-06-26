@@ -30,6 +30,7 @@
 - https://github.com/balderdashy/sails, realtime MVC Framework for Node.js.
 - https://github.com/1602/compound, works on server and browser.
 - https://github.com/JedWatson/keystone, node.js cms and web app framework
+- https://github.com/soygul/koan
 
 ### API Framework
 
