@@ -74,7 +74,8 @@
 
 ## SSH
 
-- `ssh -NfD [local_addr]:7070`: forward localhost's 7070 port to remotehost
+- `ssh -NfD [local_addr]:7070`: forward localhost's 7070 port to remotehost, dynamically
+- `ssh -NfL [local_addr]:7070:remote_addr:22 user@remotehost`: forward localhost's 7070 port to remotehost's 22 port, default local_addr is loopback
 - `ssh -NfR [remote_addr:]7070:local_addr:22 user@remotehost`:  forward remotehost's 7070 port to localhost's 22 port, default remote_addr is loopback, if want it to be the others, turn `GatewayPorts` on in `/etc/ssh/ssd_config`, then `reload ssh`
 - `ssh-keygen -R hostname`: remove all keys belong to hostname from a known_hosts file
 - `ssh-copy-id [-i [identity_file]] username@remotehost`: install your public key in a remote machine's authorized_keys
