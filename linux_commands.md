@@ -15,6 +15,7 @@
 - `locate`: find files by name, `updatedb`
 - `whereis`: locate the binary, source, and manual page files for a command
 - `find ./ \( -path ./node_modules -o -path ./.git -o -path ./.idea \) -a -prune -o -print | xargs  wc -l | sort -n`: -a means and, -o means or
+- `find . -mtime +30 | xargs rm -rf`: delete files older than 30 days
 - `ls -tr`
 - `convmv -r -f cp936 -t utf8 --notest --nosmart *`
 - `rsync -lptzr --delete src_dir/ dst_dir`: -l sysmlinks, -p perms, -t times, -z compress
