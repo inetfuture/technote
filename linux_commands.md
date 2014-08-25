@@ -67,7 +67,7 @@
 
 ## Service
 
-- `service SCRIPT COMMAND`:  run a System V init script( /etc/init.d/) or an upstart job( /etc/init) (take precedence).
+- `service SCRIPT COMMAND`:  run a System V init script(/etc/init.d/) or an upstart job(/etc/init) (take precedence).
 - `All scripts should supportat least the start and stop command.`
 - `upstart jobs`: restart => stop => start, init scripts
 - `upstart jobs`: initctl list, init scripts
@@ -122,6 +122,10 @@
 - `msmtp -S --host serverhost`: check information about SMTP server
 - `nslookup -query=mx redhat.com`
 - `telnet POP3-server 110`: commands: user, pass, stat, list, retr, dele(take effect after quit), quit
+
+## openssl
+
+- openssl x509 -text -noout -in PEM_FILE_PATH
 
 ## PHP
 
