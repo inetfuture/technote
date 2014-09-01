@@ -38,6 +38,7 @@
 - `df -h`: report file system disk space usage
 - `du -sh target_dir`: estimate file space usage
 - `du --max-depth 1 | sort -rn | head -n 5`: top 5 big dir/file
+- `mount -t cifs -o username=USERNAME,password=PASSWORD //HOST/SHARE_NAME /mnt/MOUNT_POINT`: mount smb share folder
 
 ## Network
 
