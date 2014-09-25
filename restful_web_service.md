@@ -4,11 +4,13 @@ HTTP is a implementation of REST.
 
 Verb | Safe? | Idempotent? | Scenario |
 -----| ---- | ---------- | -------- |
+OPTIONS | Y | Y | get communication options(at least available verbs) |
 GET | Y | Y | get resource |
-POST | N | N | create resource, unsafe operations there are no suitable verbs for |
-PATCH | N | N | update resource partially |
+HEAD | Y | Y | same with GET but no response body |
 PUT | N | Y | create(if not exists)/relpace resource |
 DELETE | N | Y | delete resource |
+POST | N | N | create resource, unsafe operations there are no suitable verbs for |
+PATCH | N | N | update resource partially |
 
 ## vs RPC style web service
 
