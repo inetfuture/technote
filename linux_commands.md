@@ -18,6 +18,7 @@
 - `find . -mtime +30 | xargs rm -rf`: delete files older than 30 days
 - `ls -tr`
 - `convmv -r -f cp936 -t utf8 --notest --nosmart *`
+- `iconv -f UTF-16LE -t UTF-8 utf-16leEncodiedFile > output`
 - `rsync -lptzr --delete src_dir/ dst_dir`: -l sysmlinks, -p perms, -t times, -z compress
 
 ## Text
