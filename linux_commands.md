@@ -149,6 +149,11 @@
 - `lspci / lsusb`: list all PCI / usb devices
 - `alsamixer`: soundcard mixer for ALSA soundcard driver, with ncurses interface
 
+## Performance Monitoring
+
+- `iostat -xm 2`
+- `iotop`
+
 ## Miscellaneous
 
 - `lsmod`: show  the status of modules in the linux kernel

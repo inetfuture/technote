@@ -1,3 +1,3 @@
 # technote
 
-My technical notebook.
+My technique notebook.
