@@ -1,6 +1,6 @@
 # Books
 
-- [Progit](https://github.com/progit/progit)
+- [Progit](https://github.com/progit/progit) **MUST READ**
 - [Git Internals](https://github.com/pluralsight/git-internals-pdf)
 - [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/)
 - [Git Community Book 中文版](http://gitbook.liuhui998.com/)
@@ -22,7 +22,7 @@
 
 # Best Practices
 
-- [What's in a good commit](http://dev.solita.fi/2013/07/04/whats-in-a-good-commit.html)
+- [What's in a good commit](http://dev.solita.fi/2013/07/04/whats-in-a-good-commit.html) **MUST READ**
 - [Colorful bash prompt reflecting git status](http://www.opinionatedprogrammer.com/2011/01/colorful-bash-prompt-reflecting-git-status/)
 
 # Work Flows
@@ -31,7 +31,7 @@
 - [Understanding the Git Workflow](https://sandofsky.com/blog/git-workflow.html)
 - [A Git Workflow for Agile Teams](http://reinh.com/blog/2009/03/02/a-git-workflow-for-agile-teams.html)
 - [GitHub flow](http://scottchacon.com/2011/08/31/github-flow.html)
-- [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+- [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) **MUST READ**
     - [gitflow - Git extensions to provide high-level repository operations for Vincent Driessen's branching model](https://github.com/nvie/gitflow)
     - [git-flow cheatsheet](http://danielkummer.github.io/git-flow-cheatsheet/)
 
