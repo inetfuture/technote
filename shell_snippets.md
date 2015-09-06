@@ -37,7 +37,7 @@ kill -9 `echo $PS | awk '{print $1}'`
 ## Infinite loop
 
 ```shell
-while :; do date; sleep 1; done; 
+while :; do date; sleep 1; done;
 ```
 
 ## Print Every Command Executed
@@ -52,4 +52,10 @@ trap 'echo "$BASH_COMMAND"' DEBUG
 for i in *.png ; do convert "$i" "${i%.*}.jpg" ; done
 ls -1 *.png | xargs -n 1 bash -c 'convert "$0" "${0%.*}.jpg"'
 ls -1 *.png | parallel --eta convert '{}' '{.}.jpg'
-``` 
+```
+
+## Batch rename files
+
+```shell
+find . -type f | sed -n 's/\(.*\)\(TSB\)\(.*\)/mv "\1\2\3" "\1TRE\3"/p' | sh
+```
