@@ -1,4 +1,4 @@
-# 必读资料书籍
+# 资料书籍
 
 - 《代码整洁之道》
 - 《深入理解计算机系统》
@@ -6,7 +6,7 @@
 - [Git相关](https://github.com/inetfuture/technote/blob/master/git.md)
 - [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
 
-# 必备工具
+# 工具
 
 - VPN：http://gjsq.me/6292696
 
@@ -31,6 +31,7 @@
     - Linux：~/.config/sublime-text-3/Packages/User
     - OS X：~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 
+- Oh My Zsh：https://github.com/robbyrussell/oh-my-zsh
 - Dropbox：https://db.tt/N5tpOzTY
 
     全客户端支持，包括 Linux ，需要翻墙。国内类似的服务且支持 Linux 的，我试过金山快盘，可惜同步不稳定，经常出错。
@@ -44,6 +45,24 @@
     - 剪藏浏览器插件：https://appcenter.yinxiang.com/app/evernote-webclipper/web-apps/
     - 关注微信公众号：“我的印象笔记”，可以快速收藏微信内容
 
+# 开发环境配置
+
+## 安装软件
+
+- 优先使用语言版本管理器安装语言运行时，比如 nvm（Node.js），pyenv（Python），rvm（Ruby），jenv（Java），phpbrew（PHP）
+
+    **注意，此类工具通常安装在你的 `$HOME` 下，通过修改当前 shell 的 `$PATH` 等环境变量生效，就是说安装或者使用它们的时候，你不需要也不应该使用 `sudo` 。**
+
+    好处：
+
+    - 不需要 `sudo`，不会污染系统环境，如果中间出错了，可以直接删掉重来。
+    - 方便版本切换，包括最新版本。
+
+- 优先使用语言包管理器安装语言依赖，比如 npm（Node.js），pip（Python），gem（Ruby），maven/gradle（Java），pecl/composer（PHP）
+- 优先使用系统包管理器安装系统依赖，apt-get（Ubuntu），homebrew（OS X）
+    - 优先使用第三方工具的官方源或者可靠的 PPA 源，比如在 Ubuntu 上安装 MongoDB 和 Redis 时：http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb ，https://launchpad.net/~rwky/+archive/ubuntu/redis
+- Ubuntu 必备软件包：`sudo apt-get install -y aptitude gdebi vim curl wget build-essential openssh-server`
+
 # 做事原则
 
 - 认真负责
@@ -53,7 +72,7 @@
     - 自己的代码被别人 Review 时，如果觉得某段代码可能有问题或者不是最优方案，主动提出来讨论，而不是等待审查者询问。前者可以使 Review 更高效，更利于培养同事间的相互信任，后者一是效率低，同时也是一种不负责任的表现。
     - 进度存在风险时主动知会其他人，而不是默默拖到最后一刻连累大家加班。
 - 自我驱动
-    - 自觉深入学习相关技术，而不是用多少学多少，不催促不学习。
+    - 自觉深入学习相关技术，而不是用多少学多少。
     - 主动思考产品的走向，自觉进行知识储备、调研。
     - 自觉重构低质量代码，保证项目的健康发展。
 - 换位思考
@@ -62,11 +81,17 @@
 
 # Code Review
 
+## 目的
+
+- 提高代码质量，查漏补缺。
+- 相互学习。
+- 促进项目内知识流动，防止对某个个人过分依赖。
+
 ## 流程
 
 1. 提交者发起功能分支到 develop 分支的 Merge Request
-    - 代码变动要尽量小且专注于某一个任务，不要攒的很大，或者做多个任务，要保证审查者可以较快、较容易的 Review 。
-    - 发起后，要在 GitLab 上 double check 变更集。
+    - 代码变动要尽量小且专注于一个任务，不要攒的很大，或者做多个任务，要保证审查者可以较快、较容易的 Review 。
+    - 发起后，要在 GitLab 或者其它 Review 工具上 double check 变更集。
 2. 审查者 Review 代码
     - 在任何有疑问或建议的地方留 comment
     - 从中学习一些好的东西
@@ -90,3 +115,4 @@
 - 单一职责原则，一个类、文件或者模块是否做的太多，是否干了它不该干的事。
 - 开放、封闭原则，是否方便扩展，是否考虑到了以后的需求。
 - 代码改动方式是否合适，是不是在一味得堆砌代码，是否需要停下来进行重构。
+- 保持整洁，不能存在任何无用的文件、代码，文档、注释需要同步更新，不能包含注释掉的代码，如果确有原因应该添加注释说明。
