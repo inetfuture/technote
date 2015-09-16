@@ -39,3 +39,18 @@ REST-RPC:
 ## Examples
 
 - http://developer.github.com/v3
+
+## URL Design Rules
+
+- Remember, REST is **resource oriented**
+- Use plural noun for resource collection, like `/dogs`
+- To operate on single resource, use URL like `/dogs/1234`
+- Use HTTP verbs right
+- Common CRUD cases:
+
+Resource | POST | GET | PUT | PATCH | DELETE
+-------- | ---- | --- | --- | ----- | ------
+/dogs | create a new dog | list dogs | bulk update dogs | X | delete all dogs
+/dogs/1234 | X | show a dog | update a dog | update a dog partially | delete a dog
+
+- For non-resource-CRUD cases, always use POST verb, eg. `POST /machines/1234/restart`
