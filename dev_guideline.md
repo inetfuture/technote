@@ -3,7 +3,8 @@
 - 《代码整洁之道》
 - 《深入理解计算机系统》
 - 《TCP/IP 详解 卷1》
-- [Git相关](https://github.com/inetfuture/technote/blob/master/git.md)
+- [Git相关](git.md)
+- [RESTful api](restful_api.md)
 - [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
 
 # 工具
@@ -24,7 +25,7 @@
 
 - Sublime Text：http://www.sublimetext.com/3
 
-    安装 Package Control：https://packagecontrol.io/installation ，必备插件：GitGutter，knockdown，SublimeLinter
+    安装 Package Control：https://packagecontrol.io/installation ，必备插件：GitGutter，knockdown，SublimeLinter，DocBlockr
 
     可以将整个配置目录放到 GitHub 上，方便在多台机器上同步（也可以用 Dropbox 同步，参考下面），比如 https://github.com/inetfuture/sublime-config ，配置目录的位置：
 
@@ -78,6 +79,22 @@
 - 换位思考
     - 使用邮件、微信等工具交流时一次性提供必要的上下文，避免低效率的沟通，想一下，我这样描述对方是否可以理解并直接回复。
     - 无论是做 Code Review 还是提交功能给 QA 测试，尽自己最大努力保证质量。
+- 从根本上解决问题
+    - 思考问题的原因，不要停留于表面问题的修修补补。
+
+        比如，QA 报了一个 Bug，说在一个输入项中填入 `<script>alert('haha');</script>` ，保存后页面上会弹出提示框，你来修复这个问题的时候要考虑从根本上杜绝脚本注入问题，比如使用 Angular.js 的 `$sanitize` service 过滤输入再显示。相比较而言，不太恰当的做法是仅仅用正则过滤掉输入中的 `<script />` 标签，虽然可以修复这个 Bug，却是治标不治本，如果输入中包含 `onmouseover="alert('haha')"` 这种代码呢？
+
+        当然这种问题需要你有扎实的基本功，对开发各个方面有较全面的了解，才能一针见血的解决问题。
+
+    - 每一个问题，想一下有没有办法一劳永逸？或者自动化？
+
+- 用正确的方式解决问题
+    - 很多问题都有不止一种的解决办法，不要满足于你最初想到的那种，也许有更好的呢？主动去思考目前的方案可维护吗？效率高吗？普适吗？
+    - 多看一些最佳实践（Best Practice）的资料，多看一些优秀开源项目的源代码，多了解别人怎么做的你才能及时发现自己的不足。
+
+        比如 RESTful API，是有一套业界公认的最佳实践的，其本身就是一套约定俗成的东西，如果你没有看过这些最佳实践，随意的设计 URL，随意的使用 HTTP 动词，那你设计出来的 API 其实只是 HTTP API，请不要称其为 RESTful API。
+
+        再比如你对 Git 不熟，然后不知怎么得把工作目录搞的一团糟，你该怎么办？再 clone 一个重新开始？NO！除非你打算一辈子这么干。你应该去 google 解决方案，并充分认识到自己对 Git 不熟这个事实，然后拿出时间来补充知识。
 
 # Code Review
 
@@ -89,18 +106,18 @@
 
 ## 流程
 
-1. 提交者发起功能分支到 develop 分支的 Merge Request
+1. 提交者发起 topic 分支到目标分支的 Merge Request
     - 代码变动要尽量小且专注于一个任务，不要攒的很大，或者做多个任务，要保证审查者可以较快、较容易的 Review 。
     - 发起后，要在 GitLab 或者其它 Review 工具上 double check 变更集。
 2. 审查者 Review 代码
     - 在任何有疑问或建议的地方留 comment
     - 从中学习一些好的东西
-    - 完成后，留 comment “Reviewed and waiting for fix” 或者 “Reviewed”
+    - 完成后，如果有问题需要修复，留 comment “Reviewed and waiting for fix”，否则进行第 4 步。
 3. 提交者响应 comments
-    - 确实有问题的，修复之
-    - 不同意的，讨论
+    - 确实有问题的，修复之。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit。
+    - 不同意的，讨论。
     - 完成后，留 comment “Fixed”，审查者再次检查，回到第二步。
-4. 审查者确认没有问题之后，将 Merge Request 转发给 develop 分支的维护者进行合并。
+4. 审查者确认没有问题之后，将 Merge Request 转发给目标分支的维护者进行合并。
 
 ## 检查清单
 
