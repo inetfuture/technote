@@ -1,11 +1,11 @@
-## Package
+# Package
 
 - `dpkg -c`: list contents of deb package,` dpkg -x`: extract files from package, `dpkg -L`: list files installed from a package-name
 - `dpkg -s filename`: search for a filename from *installed* packages
 - `apt-file search filename`: search which package contains a specific file/path
 - `apt-get -o Dpkg::Options::="--force-confmiss" install --reinstall <package-name>`
 
-## File
+# File
 
 - `zip -r dir.zip dir [-x dir/node_modules\* dir/.git\*]`
 - `unzip dir.zip`
@@ -21,7 +21,7 @@
 - `iconv -f UTF-16LE -t UTF-8 utf-16leEncodiedFile > output`
 - `rsync -lptzr --delete src_dir/ dst_dir`: -l sysmlinks, -p perms, -t times, -z compress
 
-## Text
+# Text
 
 - `sort -k3 -r -n -h`: -k3 => third column, -r reverse, -n numeric sort, -h human numeric sort
 - `tr`: translate or delete characters
@@ -33,7 +33,7 @@
 - `egrep -v 'exclude1|exclude2'`
 - `find -L /etc/ssl/certs -type l -delete`
 
-## Disk
+# Disk
 
 - `fdisk -l`: List the partition tables for the specified devices. If no devices are given, those mentioned in /proc/partitions (if that exsts) are used
 - `df -h`: report file system disk space usage
@@ -46,9 +46,9 @@
 - `blockdev --getbsz /dev/sda`, `blockdev --setbsz /dev/sda`: get/set block size, in bytes
 - `lsblk -o NAME,PHY-SeC`, `cat /sys/block/sda/queue/physical_block_size`: get block device physical sector size
 
-## Network
+# Network
 
-### Config
+11 Config
 
 - `resolvconf -u`
 - `route`: show / manipulate the IP routing table
@@ -57,7 +57,7 @@
 - `arp -D test6; arp -d test6; arp -s test6 MAC_addr`
 - `dig +short HOSTNAME`
 
-### Diagnose
+11 Diagnose
 
 - `ip`: show/manipulate routing, devices, policy routing and tunnels
 - `curl ifconfig.me`: figure out external ip
@@ -72,7 +72,7 @@
 - `cat /proc/net/sockstat：TCP mem about equal ss -m src *`
 - `nmap -sP 192.168.1.*`
 
-## Service
+# Service
 
 - `service SCRIPT COMMAND`:  run a System V init script(/etc/init.d/) or an upstart job(/etc/init) (take precedence).
 - `All scripts should supportat least the start and stop command.`
@@ -80,7 +80,7 @@
 - `upstart jobs`: initctl list, init scripts
 - `update-rc.d SCRIPT enable/disable`, `chkconfig`:  enable or disable system services
 
-## SSH
+# SSH
 
 - `ssh -NfD [local_addr]:7070`: forward localhost's 7070 port to remotehost, dynamically
 - `ssh -NfL [local_addr]:7070:remote_addr:22 user@remotehost`: forward localhost's 7070 port to remotehost's 22 port, default local_addr is loopback
@@ -88,7 +88,7 @@
 - `ssh-keygen -R hostname`: remove all keys belong to hostname from a known_hosts file
 - `ssh-copy-id [-i [identity_file]] username@remotehost`: install your public key in a remote machine's authorized_keys
 
-## GIT
+# GIT
 
 - `git commit --amend --author "name <email>"`: modify last commit
 - `git rebase -i master~3`:   interactive rebase
@@ -114,7 +114,7 @@
     fi' HEAD
     ```
 
-## VIM
+# VIM
 
 - `set tabstop=4`, `set nospell`
 - `2yy, p`
@@ -124,17 +124,17 @@
 - `10j`: 10 lines forward,`10k`: 10 lines backward
 - `o or O`: insert a new line below or above this line
 
-## Mail
+# Mail
 
 - `msmtp -S --host serverhost`: check information about SMTP server
 - `nslookup -query=mx redhat.com`
 - `telnet POP3-server 110`: commands: user, pass, stat, list, retr, dele(take effect after quit), quit
 
-## openssl
+# openssl
 
 - openssl x509 -text -noout -in PEM_FILE_PATH
 
-## PHP
+# PHP
 
 - `php --ini`: show configuration file names
 - `php --interactive`
@@ -142,19 +142,19 @@
 - `php-config `: get information about PHP configuration and compile options
 - `pear config-set http_proxy http`
 
-## Hardware
+# Hardware
 
 - `rfkill`: tool for enabling and disabling wireless devices
 - `lshw -C network`
 - `lspci / lsusb`: list all PCI / usb devices
 - `alsamixer`: soundcard mixer for ALSA soundcard driver, with ncurses interface
 
-## Performance Monitoring
+# Performance Monitoring
 
 - `iostat -xm 2`
 - `iotop`
 
-## Miscellaneous
+# Miscellaneous
 
 - `lsmod`: show  the status of modules in the linux kernel
 - `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`: set time zone, `date -R`

@@ -1,6 +1,6 @@
 HTTP is an implementation of REST.
 
-## Verbs
+# Verbs
 
 Verb | Safe? | Idempotent? | Scenario |
 -----| ---- | ---------- | -------- |
@@ -12,7 +12,7 @@ DELETE | N | Y | delete resource |
 POST | N | N | create resource, unsafe operations there are no suitable verbs for |
 PATCH | N | N | update resource partially |
 
-## vs RPC style web service
+# vs RPC style web service
 
 RPC(SOAP):
 
@@ -30,17 +30,17 @@ REST-RPC:
 
 - No envelop, but also no standard HTTP verbs, represent method info in URI.
 
-## References
+# References
 
 - [Web API Design - Crafting Interfaces that Developers Love](http://apigee.com/about/resources/webcasts/restful-api-design-second-edition), you need to input your email to receive the ebook. **MUST READ**
 - http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
 - https://github.com/interagent/http-api-design
 
-## Examples
+# Examples
 
 - http://developer.github.com/v3
 
-## URL Design Rules
+# URL Design Rules
 
 - Remember, REST is **resource oriented**
 - Use plural noun for resource collection, like `/dogs`

@@ -1,6 +1,6 @@
-## Type
+# Type
 
-### typeof
+## typeof
 
 Returns a string indicating the type of the unevaluated operand.
 
@@ -29,7 +29,7 @@ typeof /s/ === 'function'; // Chrome 1-12 ... // Non-conform to ECMAScript 5.1
 typeof /s/ === 'object'; // Firefox 5+ ...    // Conform to ECMAScript 5.1
 ```
 
-### instanceof
+## instanceof
 
 Tests presence of constructor.prototype in object prototype chain.
 
@@ -70,6 +70,6 @@ a instanceof String; // false
 b instanceof String; // true
 ```
 
-## Closure
+# Closure
 
 code + scope

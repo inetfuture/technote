@@ -1,3 +1,5 @@
+# phrases & sentences
+
 - each group is separated from the next by a comma, with no intervening whitespace.
 - at one extreme... at the other extreme...
 - hop on the DevOps wagon

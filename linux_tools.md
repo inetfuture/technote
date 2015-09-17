@@ -1,13 +1,13 @@
-### GUI
+# GUI
 
-- KDocker, put any windown into tray.
+- KDocker, put any window into tray.
 - Email notification: thunderbird(FireTray) + xfce4-notifyd
 
-### Server
+# Server
 
 - http://www.thekelleys.org.uk/dnsmasq/doc.html, a lightweight, easy to configure DNS forwarder and DHCP server.
 
-### zsh
+# zsh
 
 ```
 autoload -U up-line-or-beginning-search

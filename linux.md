@@ -1,6 +1,6 @@
-## runlevel
+# runlevel
 
-### RedHat
+## RedHat
 
 - 0: Halt
 - 1: Single
@@ -10,7 +10,7 @@
 - 5: Full multi-user with display manager (GUI)
 - 6: Reboot
 
-### Debian
+## Debian
 
 - 0: Halt
 - 1: Single
