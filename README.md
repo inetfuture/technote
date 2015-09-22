@@ -1,13 +1,18 @@
-# 资料书籍
+# 前言
+
+本文是对我自己及团队成员的一些要求，欢迎补充和改进。
+
+# 必读资料书籍
 
 - 《代码整洁之道》
 - 《深入理解计算机系统》
 - 《TCP/IP 详解 卷1》
+- [how-to-name-things](http://slides.com/inetfuture/how-to-name-things)
 - [Git相关](git.md)
 - [RESTful api](restful_api.md)
 - [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
 
-# 工具
+# 必备工具
 
 - VPN：http://gjsq.me/6292696
 
@@ -25,7 +30,7 @@
 
 - Sublime Text：http://www.sublimetext.com/3
 
-    安装 Package Control：https://packagecontrol.io/installation ，必备插件：GitGutter，knockdown，SublimeLinter，DocBlockr
+    安装 Package Control：https://packagecontrol.io/installation ，必备插件：Git，GitGutter，knockdown，SublimeLinter，DocBlockr，EditorConfig，Emmet，FileDiffs，SublimeCodeIntel
 
     可以将整个配置目录放到 GitHub 上，方便在多台机器上同步（也可以用 Dropbox 同步，参考下面），比如 https://github.com/inetfuture/sublime-config ，配置目录的位置：
 
@@ -96,34 +101,12 @@
 
         再比如你对 Git 不熟，然后不知怎么得把工作目录搞的一团糟，你该怎么办？再 clone 一个重新开始？NO！除非你打算一辈子这么干。你应该去 google 解决方案，并充分认识到自己对 Git 不熟这个事实，然后拿出时间来补充知识。
 
-# Code Review
+# 编写整洁代码
 
-## 目的
+## 基本要求
 
-- 提高代码质量，查漏补缺。
-- 相互学习。
-- 促进项目内知识流动，防止对某个个人过分依赖。
-
-## 流程
-
-1. 提交者发起 topic 分支到目标分支的 Merge Request
-    - 代码变动要尽量小且专注于一个任务，不要攒的很大，或者做多个任务，要保证审查者可以较快、较容易的 Review 。
-    - 发起后，要在 GitLab 或者其它 Review 工具上 double check 变更集。
-2. 审查者 Review 代码
-    - 在任何有疑问或建议的地方留 comment
-    - 从中学习一些好的东西
-    - 完成后，如果有问题需要修复，留 comment “Reviewed and waiting for fix”，否则进行第 4 步。
-3. 提交者响应 comments
-    - 确实有问题的，修复之。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit。
-    - 不同意的，讨论。
-    - 完成后，留 comment “Fixed”，审查者再次检查，回到第二步。
-4. 审查者确认没有问题之后，将 Merge Request 转发给目标分支的维护者进行合并。
-
-## 检查清单
-
-- 交给别人 Review 之前一定要自己先按此清单过一遍，别人只是帮你查漏补缺，对自己的代码负责，不要浪费别人的时间。
-- 可读性，是否容易理解，命名是否具有足够描述性，是否有歧义，代码路径、结构是否清晰、简洁。
 - Coding Style，如果有要求，应该严格遵循，例外的情况需要讨论决定。
+- 可读性，是否容易理解，命名是否具有足够描述性，是否有歧义，代码路径、结构是否清晰、简洁。
 - 一致性，包括但不限于标识符命名、错误处理、日志格式、文件组织方式、HTTP API 接口设计、UI 交互等各个方面，越是一致的系统越容易上手，越容易维护，反之则维护成本越高。
 - 健壮性，是否进行必要的输入验证，边界情况是否考虑到，异常处理是否周全，会不会产生内存泄露，等等。
 - 性能，数据量大或者访问频繁时是不是会有问题，对内存、数据库的使用是否高效，算法是否最优。
@@ -132,5 +115,49 @@
 - 单一职责原则，一个类、文件或者模块是否做的太多，是否干了它不该干的事。
 - 开放、封闭原则，是否方便扩展，是否考虑到了以后的需求。
 - 代码改动方式是否合适，是不是在一味得堆砌代码，是否需要停下来进行重构。
-- 保持整洁，不能存在任何无用的文件、代码，文档、注释需要同步更新，不能包含注释掉的代码，如果确有原因应该添加注释说明。
+- 保持干净，不能存在任何无用的文件、代码，文档、注释需要同步更新，不能包含注释掉的代码，不能包含临时调试代码，如果确有原因应该添加注释说明。
 
+## 进阶要求
+
+- 使用多态减少或转移 `if` 判断，https://www.youtube.com/watch?v=4F72VULWFvc&index=1&list=PL693EFD059797C21E
+
+## 提高可读性的小技巧
+
+- return early, https://www.airpair.com/php/posts/best-practices-for-modern-php-development#4-2-try-not-to-use-else-
+
+# Code Review
+
+## 目的
+
+- 提高代码质量，查漏补缺。
+- 相互学习。
+- 促进项目内知识流动，防止对某个个人过分依赖。
+
+## Commit Message 规范
+
+```
+$(scope): $(subject)
+
+$(description)
+```
+
+- `$(scope)`：取决于具体项目，一般为一组固定值，用来描述本次 commit 影响的范围，比如 https://github.com/nodejs/node/commits/master ，后加入项目的新成员应遵循已有的 scope 约定。
+- `$(subject)`：50 字左右的简要说明，禁止出现 *update code* ， *fix bug* 等无实际意义的描述，好的例子： *select connector by sorting free memory* （不需要形如 *update about how to select connector ...* 的啰嗦写法）, *fix sucess tip can not show on IE8* （不需要形如 *fix bug of ...* 的啰嗦写法）。
+- `$(description)`：详细说明，建议使用列表罗列。
+
+## 流程
+
+1. 提交者发起 topic 分支到目标分支的 Merge Request
+    - 代码变动要尽量小且专注于一个任务，不要攒的很大，或者做多个任务，要保证审查者可以较快、较容易的 Review 。
+    - 交给别人 Review 之前一定要自己先按此清单过一遍，别人只是帮你查漏补缺，对自己的代码负责，不要浪费别人的时间
+    - 发起后，要在 GitLab 或者其它 Review 工具上 double check 变更集。
+2. 审查者 Review 代码
+    - 对 [编写整洁的代码](#编写整洁代码) 中各项要求进行检查
+    - 在任何有疑问或建议的地方留 comment
+    - 从中学习一些好的东西
+    - 完成后，如果有问题需要修复，留 comment “Reviewed and waiting for fix”，否则进行第 4 步。
+3. 提交者响应 comments
+    - 确实有问题的，修复之。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit。
+    - 不同意的，讨论。
+    - 完成后，留 comment “Fixed”，审查者再次检查，回到第二步。
+4. 审查者确认没有问题之后，将 Merge Request 转发给目标分支的维护者进行合并。
