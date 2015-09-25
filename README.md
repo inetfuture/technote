@@ -51,6 +51,10 @@
     - 剪藏浏览器插件：https://appcenter.yinxiang.com/app/evernote-webclipper/web-apps/
     - 关注微信公众号：“我的印象笔记”，可以快速收藏微信内容
 
+- Chrome 插件：
+    - https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc?hl=en
+    - https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en
+
 # 开发环境配置
 
 ## 安装软件
