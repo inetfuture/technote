@@ -1,3 +1,17 @@
+# Must Done Configuration
+
+```
+git config --global user.name ???
+git config --global user.email ???
+git config --global core.editor vim
+git config --global push.default simple
+git config --global rerere.enabled true
+git config --global alias.c checkout
+git config --global alias.d diff
+git config --global alias.l log
+git config --global alias.s status -sb
+```
+
 # Books
 
 - [Progit](https://github.com/progit/progit) **MUST READ**
@@ -48,6 +62,12 @@
 # Resource Collections
 
 - [GitTips](https://gitcafe.com/riku/GitTips)
+
+# Snippets
+
+- Exclude files when git diff
+
+    `git diff oldBranch newBranch --name-only | egrep -v "(exclude1|exclude2)" | xargs git diff oldBranch newBranch --`
 
 # Sumup
 

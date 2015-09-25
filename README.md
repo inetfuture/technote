@@ -61,12 +61,12 @@
 
     好处：
 
-    - 不需要 `sudo`，不会污染系统环境，如果中间出错了，可以直接删掉重来。
-    - 方便版本切换，包括最新版本。
+    - 不需要 `sudo`，不会污染系统环境，如果某天坏掉了，可以直接删掉重来。
+    - 方便版本切换，及时用上最新版本。
 
 - 优先使用语言包管理器安装语言依赖，比如 npm（Node.js），pip（Python），gem（Ruby），maven/gradle（Java），pecl/composer（PHP）
 - 优先使用系统包管理器安装系统依赖，apt-get（Ubuntu），homebrew（OS X）
-    - 优先使用第三方工具的官方源或者可靠的 PPA 源，比如在 Ubuntu 上安装 MongoDB 和 Redis 时：http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb ，https://launchpad.net/~rwky/+archive/ubuntu/redis
+    - 对于一些第三方工具，优先使用其官方源或者可靠的 PPA 源，比如在 Ubuntu 上安装 MongoDB 和 Redis 时分别使用：http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb ，https://launchpad.net/~rwky/+archive/ubuntu/redis
 - Ubuntu 必备软件包：`sudo apt-get install -y aptitude gdebi vim curl wget build-essential openssh-server`
 
 # 做事原则
@@ -123,6 +123,7 @@
 - 开放、封闭原则，是否方便扩展，是否考虑到了以后的需求。
 - 代码改动方式是否合适，是不是在一味得堆砌代码，是否需要停下来进行重构。
 - 保持干净，不能存在任何无用的文件、代码，文档、注释需要同步更新，不能包含注释掉的代码，不能包含临时调试代码，如果确有原因应该添加注释说明。
+- 所有 Warning 都应该被立即修复，觉得不需要修的，讨论决定后通过修改配置文件禁用掉。
 
 ## 进阶要求
 
@@ -162,7 +163,7 @@
 
 - 查看日志，比如做 PHP Web 开发要知道 Nginx，PHP-FPM，PHP 的日志文件的位置，必要的时候从中寻找线索。使用 `tail -F file1 file2` 命令可以持续监控多个文件。
 - 通过添加临时 log 语句或断点的形式检查代码路径，很多时候调试是个体力活，并没有什么难度。检查代码是否按预期路径执行了，如果没有，为什么？输入数据的原因吗？或者中间一步数据处理是错的？从数据进入系统开始一步步从前往后分析，用排除法逐步缩小范围，bug 必将无所遁形。另外，有时候代码路径可能牵扯到第三方库，这个时候不要畏惧，代码都是人写的，尤其开源项目通常质量较高，进去看一下，通常没你想象的那么难。
-- 确保读懂日志消息、异常信息、错误输出等，特别是英文内容，不要因为是英文不想读，结果非常明显的线索摆在你面前你却视而不见。比如常见的 git 错误，都会有相应的描述甚至建议的解决办法。再比如做 Web 开发，一个页面打不开，最起码你要先看一下 HTTP Response 是什么，状态码，body 等。
+- 确保读懂日志消息、异常信息、错误输出等，特别是英文内容，不要因为是英文不想读，结果非常明显的线索摆在你面前你却视而不见。比如常见的 git 错误，都会有相应的描述甚至建议的解决办法。再比如做 Web 开发，一个页面打不开，最起码你要先看一下 HTTP Response 是什么，状态码，body 等。如果实在看不懂，goole 之。
 - 有意识的组织整理常见错误，依据过往经验快速定位问题。例如 PHP 开发时碰到 HTTP 404，基本可以排除代码逻辑问题，应该检查拼写错误、Nginx 配置、MVC 框架路由配置、文件路径等。
 
 # Code Review
@@ -197,7 +198,7 @@ $(description)
     - 从中学习一些好的东西
     - 完成后，如果有问题需要修复，留 comment “Reviewed and waiting for fix”，否则进行第 4 步。
 3. 提交者响应 comments
-    - 确实有问题的，修复之。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit。
+    - 确实有问题的，修复之。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit 历史。
     - 不同意的，讨论。
     - 完成后，留 comment “Fixed”，审查者再次检查，回到第二步。
 4. 审查者确认没有问题之后，将 Merge Request 转发给目标分支的维护者进行合并。
