@@ -1,4 +1,4 @@
-# Language
+# Languages
 
 ## Python
 
@@ -11,10 +11,10 @@ re.findall(r'^(regexp)$', 'hi\nregexp\nhi', re.MULTILINE)
 ```
 
 ```python
-im
-r = re.compile(r'regexp')
-r.match/findallport re
+import re
 
+r = re.compile(r'regexp')
+r.match/findall
 ```
 
 - match: apply the pattern at the start of the string
@@ -48,3 +48,8 @@ r.match/findallport re
 /^regexp$/m.test('hi\nregexp\nhi');
 > true
 ```
+
+# References
+
+- http://deerchao.net/tutorials/regex/regex.htm
+- http://www.rexegg.com/
