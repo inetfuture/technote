@@ -37,7 +37,6 @@
     - Linux：~/.config/sublime-text-3/Packages/User
     - OS X：~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 
-- Oh My Zsh：https://github.com/robbyrussell/oh-my-zsh
 - Dropbox：https://db.tt/N5tpOzTY
 
     全客户端支持，包括 Linux ，需要翻墙。国内类似的服务且支持 Linux 的，我试过金山快盘，可惜同步不稳定，经常出错。
@@ -54,6 +53,8 @@
 - Chrome 插件：
     - https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc?hl=en
     - https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en
+- Oh My Zsh：https://github.com/robbyrussell/oh-my-zsh
+- httpie：https://github.com/jkbrzt/httpie
 
 # 开发环境配置
 
@@ -138,7 +139,7 @@
 
 - 使用多态减少或转移 `if` 判断，https://www.youtube.com/watch?v=4F72VULWFvc&index=1&list=PL693EFD059797C21E
 
-## 提高可读性的技巧
+## 提高代码可读性的技巧
 
 - 局部变量尽量就近声明。
 - return early, https://www.airpair.com/php/posts/best-practices-for-modern-php-development#4-2-try-not-to-use-else-
@@ -162,7 +163,7 @@
 
 - 相关的代码尽量按使用顺序组织在一起，尤其是添加新代码时，不要一味得添加到文件尾部。
 - 布尔变量命名应尽量采用肯定形势。
-- 避免硬编码数字、字符串。
+- 避免硬编码数字、字符串，应使用常量并给它们有意义的名字。
 - 传递简单数据类型时，适当添加临时变量提高可读性，例如：
 
     ```coffee
@@ -228,3 +229,32 @@ $(description)
     - 不同意的，讨论。
     - 完成后，留 comment “Fixed”，审查者再次检查，回到第二步。
 4. 审查者确认没有问题之后，将 Merge Request 转发给目标分支的维护者进行合并。
+
+# Research 技巧
+
+工作中难免需要学习新技术，这个过程中也有一些技巧可以实践。
+
+- 使用 Google 搜索，除非是特定于国内的东西，比如微信开发相关，不要使用百度。
+
+    百度搜索质量偏低是事实，一方面是受限于百度自身的技术，另一方面是因为中文搜索有很多垃圾站，以及低质量的转载博客。经常出现前几页都是各种垃圾站在重复同一篇文章，而且广告满天飞，排版稀烂。还有新浪、网易的博客，很多都是复制粘贴的转载，格式一团糟，原文却不知所踪。更不要提很多技术中文资料相对较少，更新不及时，翻译质量不高等等问题。
+
+    养成使用在 Google 上使用英文关键词搜索的好习惯绝对可以节省你的大量时间和精力。
+
+- 搜索时要注意时效性
+
+    取决于具体的技术，搜索出来的东西很多可能已经过时了，要注意区分，不要被过时的东西误导。快速浏览搜索结果时捎带看一下时间也是一个好习惯，有多条相似结果时当然是最新的会靠谱一点。
+
+- 掌握使用搜索引擎的一些小技巧，http://www.lifehack.org/articles/technology/20-tips-use-google-search-efficiently.html
+- 注意搜集、整理一些高质量的网站、博客
+
+    当你研究一个新东西的时候肯定会进行很多搜索，其中有些结果可能质量很高，这时可以快速浏览一下这个网站或者博客的首页，看看是否有收藏价值，或者有没有其它相关文章值得看一下。
+
+- 阅读权威、系统的书籍
+
+    通过使用搜索引擎或者阅读博客等通常可以对某种技术有个大概了解，或者可以解决某个具体问题，但是对于较复杂的技术，系统学习是必不可少的，看书往往是最有效的方式。可以到豆瓣阅读或者各大电商网站上通过评分排名来筛选好的书籍。如果是国外书籍，尽量选择英文原版，一开始会比较吃力，熟悉了就好了。
+
+    跟筛选搜索结果一样，尽量选择较新的书籍。
+
+- 持续关注
+
+    每个人理解新事物都有一个从浅入深的过程，新学的技术最好可以不断夯实，反复咀嚼，不要停留在表面。可以通过订阅一些邮件列表、知名博客来不断补充知识盲点，学习最佳实践，反思自己的不足，以及了解技术的最新动态。
