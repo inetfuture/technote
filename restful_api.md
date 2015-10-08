@@ -32,7 +32,7 @@ REST-RPC:
 
 # References
 
-- [Web API Design - Crafting Interfaces that Developers Love](http://apigee.com/about/resources/webcasts/restful-api-design-second-edition), you need to input your email to receive the ebook. **MUST READ**
+- [Web API Design - Crafting Interfaces that Developers Love](http://apigee.com/about/resources/webcasts/restful-api-design-second-edition), you need to input your email to receive the ebook. **[MUST READ]** :bangbang:
 - http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
 - https://github.com/interagent/http-api-design
 
