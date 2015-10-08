@@ -120,6 +120,8 @@
 
 # 编写整洁代码
 
+> Writing clean code requires the disciplined use of a myriad little techniques applied through a painstakingly acquired sense of "cleanliness". This "code-sense" is the key. Some of us are born with it. Some of us have to fight to acquire it. Not only does it let us see whether code is good or bad, but it also shows us the strategy for applying our discipline to transform bad code into clean code.
+
 ## 基本要求
 
 - Coding Style，如果有要求，应该严格遵循，任何例外的情况需要讨论决定。
