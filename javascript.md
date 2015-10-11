@@ -10,16 +10,16 @@ typeof operand
 
 | Type | Result |
 | ---- | ------ |
-|Undefined | "undefined" |
-|Null | "object" |
-|Boolean | "boolean" |
-|Number | "number" |
-|String | "string" |
-|Host object (provided by the JS environment) | Implementation-dependent |
-|Function object (implements [[Call]] in ECMA-262 terms) | "function" |
-|E4X XML object | "xml" |
-|E4X XMLList object | "xml" |
-|Any other object | "object" |
+| Undefined | "undefined" |
+| Null | "object" |
+| Boolean | "boolean" |
+| Number | "number" |
+| String | "string" |
+| Host object (provided by the JS environment) | Implementation-dependent |
+| Function object (implements [[Call]] in ECMA-262 terms) | "function" |
+| E4X XML object | "xml" |
+| E4X XMLList object | "xml" |
+| Any other object | "object" |
 
 ```js
 typeof null === 'object';

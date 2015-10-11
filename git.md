@@ -8,7 +8,9 @@ git config --global push.default simple
 git config --global rerere.enabled true
 git config --global alias.c checkout
 git config --global alias.d diff
-git config --global alias.l log
+git config --global alias.dc "diff --cached"
+git config --global alias.dw "diff --word-diff"
+git config --global alias.l "log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 git config --global alias.s status -sb
 ```
 
@@ -38,6 +40,7 @@ git config --global alias.s status -sb
 
 - [What's in a good commit](http://dev.solita.fi/2013/07/04/whats-in-a-good-commit.html) **[MUST READ]** :bangbang:
 - [Colorful bash prompt reflecting git status](http://www.opinionatedprogrammer.com/2011/01/colorful-bash-prompt-reflecting-git-status/)
+- [github-cheat-sheet](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
 
 # Work Flows
 
