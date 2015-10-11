@@ -1,13 +1,13 @@
 # References
 
-- https://arcturo.github.io/library/coffeescript/
+- [The Little Book on CoffeeScript](https://arcturo.github.io/library/coffeescript/) **[MUST READ]** :bangbang:
 
 # Style Guide
 
 Rules below are additions to https://github.com/polarmobile/coffeescript-style-guide .
 
 - Use these idioms whenever possible http://arcturo.github.io/library/coffeescript/04_idioms.html
-- Limit all lines to a maximum of **119** characters
+- Limit all lines to a maximum of **120** characters
 - Put `'use strict'` statement at the top of the file, see http://arcturo.github.io/library/coffeescript/07_the_bad_parts.html for why
 - **Has to pass coffeelint**
 - Others:
@@ -74,4 +74,7 @@ Rules below are additions to https://github.com/polarmobile/coffeescript-style-g
     , (err, result) ->
       return console.error if err
       console.log result
+
+    # Don't leave empty functions, if you have to, write it like below:
+    necessaryEmptyFunction = -> undefined
     ```
