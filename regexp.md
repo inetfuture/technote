@@ -1,4 +1,8 @@
 # Languages
+# References
+
+- http://deerchao.net/tutorials/regex/regex.htm
+- http://www.rexegg.com/
 
 ## Python
 
@@ -49,7 +53,3 @@ r.match/findall
 > true
 ```
 
-# References
-
-- http://deerchao.net/tutorials/regex/regex.htm
-- http://www.rexegg.com/

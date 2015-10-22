@@ -4,6 +4,7 @@
 - [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/) **[MUST READ]** :bangbang:
 - *Async JavaScript: Build More Responsive Apps With Less Code*
 - https://github.com/sorrycc/awesome-javascript
+- http://jsbooks.revolunet.com/
 - [Full Stack Javascript](./full_stack_javascript.md)
 
 # Style Code

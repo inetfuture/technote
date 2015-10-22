@@ -16,45 +16,57 @@
 
 # 必备工具
 
-- VPN：http://gjsq.me/6292696
+## VPN
 
-    翻墙是作为程序员的一项基本技能，使用方法：
+http://gjsq.me/6292696
 
-    - Linux PPTP：https://www.igreenjsq.mobi/shiyong/67.html
-    - OS X：https://www.igreenjsq.mobi/mac.html
+使用方法：
 
-    VPN 是全局生效的，为了可以继续访问本地局域网（比如 192.168 网段）需要修改路由表：
+- Linux PPTP：https://www.igreenjsq.mobi/shiyong/67.html
+- OS X：https://www.igreenjsq.mobi/mac.html
 
-    - Linux：`sudo route add -net 192.168.0.0 netmask 255.255.0.0 gw ${GATEWAY}`
-    - OS X：`sudo route -n add 192.168.0.0/16 ${GATEWAY}`
+VPN 是全局生效的，为了可以继续访问本地局域网（比如 192.168 网段）需要修改路由表：
 
-    另外也可以将一些国内常用网站 IP 加进去绕过 VPN 提高访问速度，你可以把这些命令保存到一个 shell 脚本里，开机的时候自动或手动执行一下。
+- Linux：`sudo route add -net 192.168.0.0 netmask 255.255.0.0 gw ${GATEWAY}`
+- OS X：`sudo route -n add 192.168.0.0/16 ${GATEWAY}`
 
-- Sublime Text：http://www.sublimetext.com/3
+另外也可以将一些国内常用网站 IP 加进去绕过 VPN 提高访问速度，你可以把这些命令保存到一个 shell 脚本里，开机的时候自动或手动执行一下。
 
-    安装 Package Control：https://packagecontrol.io/installation ，必备插件：Git，GitGutter，knockdown，SublimeLinter，DocBlockr，EditorConfig，Emmet，FileDiffs，SublimeCodeIntel
+## Sublime Text
 
-    可以将整个配置目录放到 GitHub 上，方便在多台机器上同步（也可以用 Dropbox 同步，参考下面），比如 https://github.com/inetfuture/sublime-config ，配置目录的位置：
+http://www.sublimetext.com/3
 
-    - Linux：~/.config/sublime-text-3/Packages/User
-    - OS X：~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+安装 Package Control：https://packagecontrol.io/installation ，必备插件：Git，GitGutter，knockdown，SublimeLinter，DocBlockr，EditorConfig，Emmet，FileDiffs，SublimeCodeIntel
 
-- Dropbox：https://db.tt/N5tpOzTY
+可以将整个配置目录放到 GitHub 上，方便在多台机器上同步（也可以用 Dropbox 同步，参考下面），比如 https://github.com/inetfuture/sublime-config ，配置目录的位置：
 
-    全客户端支持，包括 Linux ，需要翻墙。国内类似的服务且支持 Linux 的，尝试过金山快盘，可惜同步不稳定，经常出错。
+- Linux：~/.config/sublime-text-3/Packages/User
+- OS X：~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 
-    除了同步各种资料外，还可以用来同步一些配置文件，比如各种 dot files：~/.bashrc，~/.pep8，~/.gitconfig 等等，把它们放到 Dropbox 的同步目录下，然后建立软链接到本来的位置，这样公司、家里多台机器可以无缝同步，尤其重装系统或者换新机器的时候，各种用习惯了的配置可以快速重新启用。
+## Dropbox
 
-- 印象笔记：https://www.yinxiang.com/
+https://db.tt/N5tpOzTY
 
-    不建议使用 Evernote 国际版，太卡，而且国内的版本提供的本地化服务更方便。
+全客户端支持，包括 Linux ，需要翻墙。国内类似的服务且支持 Linux 的，尝试过金山快盘，可惜同步不稳定，经常出错。
 
-    - 剪藏浏览器插件：https://appcenter.yinxiang.com/app/evernote-webclipper/web-apps/
-    - 关注微信公众号：“我的印象笔记”，可以快速收藏微信内容。
+除了同步各种资料外，还可以用来同步一些配置文件，比如各种 dot files：~/.bashrc，~/.pep8，~/.gitconfig 等等，把它们放到 Dropbox 的同步目录下，然后建立软链接到本来的位置，这样公司、家里多台机器可以无缝同步，尤其重装系统或者换新机器的时候，各种用习惯了的配置可以快速重新启用。
 
-- Chrome 插件：
-    - https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc?hl=en
-    - https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en
+## 印象笔记
+
+https://www.yinxiang.com/
+
+不建议使用 Evernote 国际版，太卡，而且国内的版本提供的本地化服务更方便。
+
+- 剪藏浏览器插件：https://appcenter.yinxiang.com/app/evernote-webclipper/web-apps/
+- 关注微信公众号：“我的印象笔记”，可以快速收藏微信内容。
+
+## Chrome 插件
+
+- https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc?hl=en
+- https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en
+
+## 其它
+
 - Oh My Zsh：https://github.com/robbyrussell/oh-my-zsh
 - httpie：https://github.com/jkbrzt/httpie
 - DevDocs：http://devdocs.io/
