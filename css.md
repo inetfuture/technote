@@ -1,3 +1,7 @@
+# References
+
+- http://zh.learnlayout.com/ **[MUST READ]** :bangbang:
+
 # position
 
 - basic: 默认值
