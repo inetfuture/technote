@@ -59,3 +59,9 @@ ls -1 *.png | parallel --eta convert '{}' '{.}.jpg'
 ```shell
 find . -type f | sed -n 's/\(.*\)\(TSB\)\(.*\)/mv "\1\2\3" "\1TRE\3"/p' | sh
 ```
+
+# Count lines while ignoring some folders
+
+```shell
+find . -name "*.h" -o -name "*.m" -path ThirdParties -prune | xargs cat | wc -l
+```

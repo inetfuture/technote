@@ -2,7 +2,7 @@
 
 ## Subject
 
-In format of *[{project_name} Daily Report]* , no need to put your name or date in the subject.
+In format of *[project_name] Daily Report* , where *project_name* should be replaced by your project name, and, no need to put your name or date in the subject.
 
 ## Content
 
@@ -22,8 +22,9 @@ Next Day:
 - Item3
 ```
 
-- **The content should be well organized, not too concise nor too verbose.** The purpose of daily report is to report your progress to your leader, including coding and researching, so your leader can act accordingly. Think of this purpose before you send it out.
-- Use present tense with verbs, no need of *I will* or *I did* .
+- **The content should be well organized, not too concise nor too verbose.** The purpose of daily report is to report your progress to your leader, **including coding and researching, what have you done, what problems you have encountered, what solutions/workarounds you have came up with, and what are you planning to do next**, so your leader can act accordingly or help you in time. Think of this purpose before you send it out.
+- If you're describing a problem, attach enough context, what references you have read, what's the decision you have made.
+- Use present tense with verbs, no need of *I did* or *I will* .
 - Pay attention to writing, including spelling and punctuations.
 
 A bad example, this is useless:
@@ -45,16 +46,16 @@ Today:
 
 - Draft db schema of xxx and xxx, see doc.
 - Fix bug #11: xxx, #14: xxx.
-- Fail to fix bug #12: xxx, don't know what's wrong, please help.
+- Try to fix bug #12: xxx, there is a bug of xxx library, my workaround is xxx, not sure if this is appropriate, please advise.
 - Implement story #3: xxx, 70 percent done.
 - Read book xxx chapter xxx, now I understand xxx.
 
 Next Day:
 
 - Draft db schema of xxx and xxx.
-- Continue to fix bug #12: xxx.
+- Continue to fix bug #12: xxx with better solution.
 - Finish story #3: xxx.
-- Research xxx.
+- Research xxx, find out why xxx.
 ```
 
-NOTE: the `doc` and `#11`, `#14`, `#12`, `#3` are links, when you mention something, if they have external related resources, better to link them. On the contrast, just write *Fix bug #11* is not friendly, you're forcing your leader to manually navigate, which is a wast of time.
+NOTE: the `doc` and `#11`, `#14` etc are links, when you mention something, if they have external related resources, better to link them. On the contrast, just write *Fix bug #11* is not friendly, you're forcing your leader to manually navigate, which is a wast of time.
