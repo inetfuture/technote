@@ -24,7 +24,7 @@ Next Day:
 
 - **The content should be well organized, not too concise nor too verbose.** The purpose of daily report is to report your progress to your leader, **including coding and researching, what have you done, what problems you have encountered, what solutions/workarounds you have came up with, and what are you planning to do next**, so your leader can act accordingly or help you in time. Think of this purpose before you send it out.
 - If you're describing a problem, attach enough context, what references you have read, what's the decision you have made.
-- Use present tense with verbs, no need of *I did* or *I will* .
+- Use simple present tense with verbs, no need of *I did* or *I will* .
 - Pay attention to writing, including spelling and punctuations.
 
 A bad example, this is useless:
