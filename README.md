@@ -67,6 +67,7 @@ https://www.yinxiang.com/
 
 ## 其它
 
+- Trello: https://trello.com
 - Oh My Zsh：https://github.com/robbyrussell/oh-my-zsh
 - httpie：https://github.com/jkbrzt/httpie
 - DevDocs：http://devdocs.io/
@@ -98,8 +99,9 @@ https://www.yinxiang.com/
     - 代码仅仅可以工作是不够的，还要可读、易扩展、可维护、安全、高效，等等等等，要用高标准要求自己，写代码要“上心”，不要敷衍、随意。
     - 细节不一定决定成败但却可以充分体现一个人的工作态度，请认真对待各种流程、规范，比如写英文邮件时，从语法、格式到每一个拼写、标点，再比如 Commit Message 的格式、Coding Style 等等。
 - 主动沟通而不是被动应付
+    - 对需求、开发规范、代码组织等等各方面存在任何疑问时，主动询问和讨论，不要默不作声、自作主张导致返工和延误。
     - 自己的代码被别人 Review 时，如果觉得某段代码可能有问题或者不是最优方案，主动提出来讨论，而不是等待审查者询问。前者可以使 Review 更高效，更利于培养同事间的相互信任，后者一是效率低，同时也是一种不负责任的表现。
-    - 进度存在风险时主动知会其他人，而不是默默拖到最后一刻连累大家加班。对需求有疑问时更要主动提出来讨论，防止不必要的返工。
+    - 进度存在风险时主动知会其他人，而不是默默拖到最后一刻连累大家加班
     - 做变更时及时通知相关人员，否则可能会浪费队友的时间去排查问题。代码级别的问题可以通过在 GitLab 等代码管理工具上 at 对方。
 - 自我驱动
     - 自觉深入学习相关技术，而不是用多少学多少，临时抱佛脚。假设你在做 iOS 开发，即便目前所有项目仍在用 Objective-C ，你也应该利用业余时间自觉去学习 Swift ，时刻准备着。
@@ -119,7 +121,7 @@ https://www.yinxiang.com/
     - 每一个问题，想一下有没有办法一劳永逸？或者自动化？
     - 谁痛苦，谁改变。某件事总是让你很不爽？想办法改变它！
 - 用正确的方式解决问题
-    - 很多问题都有不止一种的解决办法，不要满足于你最初想到的那种，也许有更好的呢？主动去思考目前的方案可维护吗？效率高吗？普适吗？
+    - 很多问题都有不止一种的解决办法，不要满足于你最初想到的那种，也许有更好的呢？主动去思考目前的方案可维护吗？方便吗？效率高吗？普适吗？
     - 多看一些最佳实践（Best Practice）的资料，多看一些优秀开源项目的源代码，多了解别人怎么做的你才能及时发现自己的不足。
 
         比如 RESTful API，是有一套业界公认的最佳实践的，其本身就是一套约定俗成的东西，如果你没有看过这些最佳实践，随意的设计 URL，随意的使用 HTTP 动词，那你设计出来的 API 其实只是 HTTP API，请不要称其为 RESTful API。
@@ -164,7 +166,7 @@ https://www.yinxiang.com/
 ## 提高代码可读性的技巧
 
 - 局部变量尽量就近声明。
-- return early, https://www.airpair.com/php/posts/best-practices-for-modern-php-development#4-2-try-not-to-use-else-
+- return early, https://www.airpair.com/php/posts/best-practices-for-modern-php-development#4-2-try-not-to-use-else-, http://www.codeproject.com/Articles/626403/How-and-Why-to-Avoid-Excessive-Nesting
 - 在语言本身语法允许的情况下，将主流程放在文件上部，子流程按被调用顺序放在文件下部，这样打开文件后可以比较快的抓住重点，比如：
 
     ```coffee
