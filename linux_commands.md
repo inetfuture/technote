@@ -48,7 +48,7 @@
 
 # Network
 
-11 Config
+## Config
 
 - `resolvconf -u`
 - `route`: show / manipulate the IP routing table
@@ -57,7 +57,7 @@
 - `arp -D test6; arp -d test6; arp -s test6 MAC_addr`
 - `dig +short HOSTNAME`
 
-11 Diagnose
+## Diagnose
 
 - `ip`: show/manipulate routing, devices, policy routing and tunnels
 - `curl ifconfig.me`: figure out external ip
@@ -156,7 +156,7 @@
 
 # Miscellaneous
 
-- `lsmod`: show  the status of modules in the linux kernel
+- `lsmod`: show the status of modules in the linux kernel
 - `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`: set time zone, `date -R`
 - `useradd testuser -m -s /bin/bash`
 - `usermod username -Ga sudo`, `groups username`
