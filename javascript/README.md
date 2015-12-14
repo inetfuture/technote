@@ -2,6 +2,7 @@
 
 - *JavaScript: The Good Parts* **[MUST READ]** :bangbang:
 - [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/) **[MUST READ]** :bangbang:
+- [JavaScript Patterns 中译本](https://github.com/TooBug/javascript.patterns)
 - *Async JavaScript: Build More Responsive Apps With Less Code*
 - https://github.com/sorrycc/awesome-javascript
 - http://jsbooks.revolunet.com/
