@@ -1,4 +1,4 @@
-# Style Guide
+# Guide
 
 ## Subject
 
