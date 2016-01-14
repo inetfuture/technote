@@ -69,5 +69,5 @@ find . -name "*.h" -o -name "*.m" -path ThirdParties -prune | xargs cat | wc -l
 # Download markdown links
 
 ```shell
-grep '/http' ../README.md | sed "s/.*\(http.*g\).*/\1/" | xargs wget --restrict-file-names=nocontrol
+grep 'http' ../README.md | sed "s/.*\(http.*g\).*/\1/" | xargs wget --restrict-file-names=nocontrol
 ```

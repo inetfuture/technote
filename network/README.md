@@ -1,4 +1,10 @@
-# Subnets
+# References
+
+- [High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545/index.html)
+
+# Misc
+
+## Subnets
 
 **No computer is directly connected to every other computer on the internet.** Instead, each computer is a member of one or more subnets. Subnets, in turn, **are connected to each other by machines called routers or gateways**, which belong to multiple subnets, forwarding internet traffic from one subnet to the other and reverse.
 
@@ -9,7 +15,7 @@ In order to successfully communicate with other computers throughout the interne
 - **The subnet mask format. Here.** The subnet is expressed as 11.22.33.0 with subnet mask 255.255.255.0. **The subnet mask indicates what bits of the subnet IP address indicate the actual subnet, and what bits are variable, indicating individual computers in the subnet.** A byte consists of 8 bits, and 255 is 1111 1111 in binary. Therefore, 255.255.255.0 means that the first 3 bytes of the subnet IP address (11.22.33) indicate the actual subnet, and the last byte can be variable (and indicates computers in the subnet). If the subnet mask were 255.255.0.0, that would mean that the last two bytes are variable.
 - **The significant bits format.** Here, the subnet is expressed as 11.22.33.0/24, which means subnet 11.22.33.0 with 24 significant bits. The 24 means that the first 24 bits of the subnet mask are 1, and all the following bits are 0. Thus, /24 is equivalent to a subnet mask of 255.255.255.0. /16 is equivalent to a subnet mask of 255.255.0.0. And because there are just 32 bits in an IP address, **/32 indicates an IP address with no variable part: a fixed, constant IP address.**
 
-# Types of IP addresses and subnets
+## Types of IP addresses and subnets
 
 There are three major types of IP addresses (or subnets) that you need to be aware of.
 
