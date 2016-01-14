@@ -39,7 +39,7 @@ VPN 是全局生效的，为了可以继续访问本地局域网（比如 192.16
 
 http://www.sublimetext.com/3
 
-安装 Package Control：https://packagecontrol.io/installation ，必备插件：Git，GitGutter，knockdown，SublimeLinter，DocBlockr，EditorConfig，Emmet，FileDiffs，SublimeCodeIntel
+安装 Package Control：https://packagecontrol.io/installation ，必备插件：Git，GitGutter，knockdown，SublimeLinter，DocBlockr，EditorConfig，Emmet，FileDiffs，SublimeCodeIntel, SidebarEnhancements
 
 可以将整个配置目录放到 GitHub 上，方便在多台机器上同步（也可以用 Dropbox 同步，参考下面），比如 https://github.com/inetfuture/sublime-config ，配置目录的位置：
 

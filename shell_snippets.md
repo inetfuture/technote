@@ -65,3 +65,9 @@ find . -type f | sed -n 's/\(.*\)\(TSB\)\(.*\)/mv "\1\2\3" "\1TRE\3"/p' | sh
 ```shell
 find . -name "*.h" -o -name "*.m" -path ThirdParties -prune | xargs cat | wc -l
 ```
+
+# Download markdown links
+
+```shell
+grep '/http' ../README.md | sed "s/.*\(http.*g\).*/\1/" | xargs wget --restrict-file-names=nocontrol
+```
