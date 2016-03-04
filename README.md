@@ -238,7 +238,7 @@ $(scope): $(subject)
 $(description)
 ```
 
-- `$(scope)`：必需，取决于具体项目，一般为项目功能模块的名字，用来描述本次 commit 影响的范围，比如 https://github.com/nodejs/node/commits/master ，后加入项目的新成员应遵循已有的 scope 约定。建议使用首字母小写的驼峰命名。`bug` 、 `hotfix` 、 `task` 等不能用作 scope 。除取决于具体项目的模块名之外，可以使用 `base` 表示基础结构、框架相关的改动
+- `$(scope)`：必需，取决于具体项目，一般为项目功能模块的名字，用来描述本次 commit **影响的范围**，比如 https://github.com/nodejs/node/commits/master ，后加入项目的新成员应遵循已有的 scope 约定。建议使用首字母小写的驼峰命名。`bug` 、 `hotfix` 、 `task` 、 `change`等描述的不是影响范围，故不能用作 scope 。除取决于具体项目的模块名之外，可以使用 `base` 表示基础结构、框架相关的改动。
 - `$(subject)`：必需，50 个字符左右的简要说明，首字母小写，通常是动宾结构，描述做了什么事情，动词用一般现在时，禁止出现 *update code* ， *fix bug* 等无实际意义的描述，好的例子： *select connector by sorting free memory* （不需要形如 *update about how to select connector ...* 的啰嗦写法）, *fix sucess tip can not show on IE8* （不需要形如 *fix bug of ...* 的啰嗦写法）。
 - `$(description)`：可选，详细说明，建议使用列表罗列要点。
 
