@@ -71,3 +71,21 @@ find . -name "*.h" -o -name "*.m" -path ThirdParties -prune | xargs cat | wc -l
 ```shell
 grep 'http' ../README.md | sed "s/.*\(http.*g\).*/\1/" | xargs wget --restrict-file-names=nocontrol
 ```
+
+# Kill orphan processes
+
+```shell
+ps -elf | awk '{if ($5 == 1){print $4" "$5" "$15}}' | grep php | egrep -v 'php-fpm' | awk '{print $1}' | xargs kill
+```
+
+# Grep but always show first line
+
+```shell
+awk 'NR == 1 || /php/'
+```
+
+# View output of a process
+
+```shell
+strace -e write=1,2 -e trace=write -p 7214
+```
