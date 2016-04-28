@@ -89,3 +89,11 @@ awk 'NR == 1 || /php/'
 ```shell
 strace -e write=1,2 -e trace=write -p 7214
 ```
+
+# Convert .mov to .gif
+
+https://gist.github.com/dergachev/4627207
+
+```shell
+ffmpeg -i in.mov -s 800x600 -pix_fmt rgb8 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
+```

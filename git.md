@@ -12,6 +12,7 @@ git config --global alias.dc "diff --cached"
 git config --global alias.dw "diff --word-diff"
 git config --global alias.l "log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 git config --global alias.s status -sb
+git config --global alias.reset-permission '!git diff -p -R --no-color | grep -E "^(diff|(old|new) mode)" --color=never | git apply'
 ```
 
 # Books
