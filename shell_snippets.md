@@ -97,3 +97,13 @@ https://gist.github.com/dergachev/4627207
 ```shell
 ffmpeg -i in.mov -s 800x600 -pix_fmt rgb8 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
 ```
+
+# Ensure ssh tunel
+
+```shell
+ps -ef | grep "ssh -NfR 127.0.0.1:3033:local:80 remote" | grep -v grep
+if [[ $? != 0 ]]; then
+  log 'Start tunnel on remote'
+  ssh -NfR 127.0.0.1:3033:local:80 remote
+fi
+```
