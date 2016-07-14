@@ -107,3 +107,9 @@ if [[ $? != 0 ]]; then
   ssh -NfR 127.0.0.1:3033:local:80 remote
 fi
 ```
+
+# Get pid related to an IP
+
+```shell
+netstat -anp | awk 'NR == 1 || /112.124.141.187/' | awk '{print $7}' | sed -e 's/-//g' | sed -e 's/\/php//g' | xargs --no-run-if-empty ps
+```

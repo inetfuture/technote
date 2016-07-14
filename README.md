@@ -6,12 +6,21 @@
 
 # 必读书籍资料
 
+## 短期
+
+**这些是进入项目就要用到的，请务必掌握。**
+
+- [Pro Git](https://git-scm.com/book/zh/v2)
+- http://mislav.uniqpath.com/2013/02/merge-vs-rebase/
+- [how-to-name-things](http://slides.com/inetfuture/how-to-name-things)
+- [RESTful API](restful_api.md)
+
+## 长期
+
 - 《代码整洁之道》
 - 《深入理解计算机系统》
 - 《敏捷软件开发 : 原则、模式与实践》
 - 《TCP/IP 详解 卷1》
-- [how-to-name-things](http://slides.com/inetfuture/how-to-name-things)
-- [RESTful API](restful_api.md)
 - [Git](git.md)
 - [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
 
@@ -67,12 +76,14 @@ https://www.yinxiang.com/
 
 - https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc?hl=en
 - https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en
+- https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?utm_source=chrome-ntp-icon
+- https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg?utm_source=chrome-ntp-icon
+- https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj?utm_source=chrome-ntp-icon
 
 ## 其它
 
-- Trello: https://trello.com
 - Oh My Zsh：https://github.com/robbyrussell/oh-my-zsh
-- httpie：https://github.com/jkbrzt/httpie
+- Trello: https://trello.com
 - DevDocs：http://devdocs.io/
 - 有道词典：http://dict.youdao.com/
 
