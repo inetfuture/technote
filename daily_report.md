@@ -60,3 +60,7 @@ Next Day:
 ```
 
 NOTE: the `doc` and `#11`, `#14` etc are links, when you mention something, if they have external related resources, better to link them. On the contrast, just write *Fix bug #11* is not friendly, you're forcing your leader to manually navigate, which is a wast of time.
+
+# Don't Break the Rule
+
+No matter if you were free so you learned some new knowledge or you were too busy with tasks, **always send the daily report, there is no execuse to skip**.

@@ -87,3 +87,10 @@ b instanceof String; // true
 # Closure
 
 code + scope
+
+# Snippets
+
+```js
+// Chrome/Firefox, Safari, IE
+language = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
+```
