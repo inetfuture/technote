@@ -8,9 +8,9 @@
 
 ## 短期
 
-**这些是进入项目就要用到的，请务必掌握。**
+**这些是进入项目就要用到的，请务快速必掌握。**
 
-- [Pro Git](https://git-scm.com/book/zh/v2)
+- [Pro Git](https://git-scm.com/book/zh/v2) ，如果以前对 Git 不熟悉，需要在最短时间内把这本书前三章读一遍。
 - http://mislav.uniqpath.com/2013/02/merge-vs-rebase/
 - [how-to-name-things](http://slides.com/inetfuture/how-to-name-things)
 - [RESTful API](restful_api.md)
