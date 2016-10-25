@@ -264,7 +264,7 @@ $(description)
     - 对 [编写整洁的代码](#编写整洁代码) 中各项要求进行检查
     - 在任何有疑问或建议的地方留 comment。
     - 从中学习一些好的东西。
-    - 完成后，如果有问题需要修复，留 comment “Reviewed and waiting for fix”，否则进行第 4 步。
+    - 完成后，如果有问题需要修复，留 comment “WFF”，表示“waiting for fix”，否则进行第 4 步。
 3. 提交者响应 comments 。
     - 确实有问题的，修复之。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit 历史。
     - 不同意的，讨论。
