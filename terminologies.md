@@ -3,7 +3,7 @@
 ## 1
 
 - DO: Distributed Object
-- RPC: Remote Process Call
+- RPC: Remote Procedure Call
 - REST: Representational State Transfer
 
 ## 2

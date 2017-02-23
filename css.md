@@ -4,7 +4,9 @@
 
 # position
 
-- basic: 默认值
-- relative: 相对自己正常的位置偏移，不脱离文档流
-- absolute: 相对可视窗口或者父容器（需为relative）偏移，脱离文档流
-- fixed: 特殊的absolute，只相对可视窗口偏移，脱离文档流
+- static: Default value. Elements render in order, as they appear in the document flow
+- absolute: The element is positioned relative to its first positioned (not static) ancestor element
+- fixed: The element is positioned relative to the browser window
+- relative: The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position
+- initial: Sets this property to its default value.
+- inherit: Inherits this property from its parent element.

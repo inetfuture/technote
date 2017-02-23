@@ -18,6 +18,7 @@
 ## 长期
 
 - 《代码整洁之道》
+- 《重构：改善既有代码的设计》
 - 《深入理解计算机系统》
 - 《敏捷软件开发 : 原则、模式与实践》
 - 《TCP/IP 详解 卷1》
@@ -249,7 +250,7 @@ $(scope): $(subject)
 $(description)
 ```
 
-- `$(scope)`：必需，取决于具体项目，一般为项目功能模块、组件的名字，用来描述本次 commit **影响的范围**，比如 https://github.com/nodejs/node/commits/master 。影响多个模块、组件可以用 `,` 隔开。后加入项目的新成员应遵循已有的 scope 约定（通过 `git log` 可以查看某个文件的提交历史），不要自己编造。使用首字母小写的驼峰命名。`bug` 、 `hotfix` 、 `task` 、 `change` 、`refactor` 等等描述的都不是影响的具体范围，而是改动类型，不能用作 scope 。除具体的模块、组件名之外，可以使用 `base` 表示基础结构、框架相关的改动。
+- `$(scope)`：必需，取决于具体项目，一般为项目功能模块、组件的名字，用来描述本次 commit **影响的范围**，比如 https://github.com/nodejs/node/commits/master 、https://github.com/golang/go/commits/master 。嵌套层级结构可以用 `/` 表示，如 `net/http`。影响多个模块、组件可以用 `,` 隔开（不加空格），如 `net/http,cmd`。后加入项目的新成员应遵循已有的 scope 约定（通过 `git log` 可以查看某个文件的提交历史），不要自己编造。使用首字母小写的驼峰命名。`bug` 、 `hotfix` 、 `task` 、 `change` 、`refactor` 等等描述的都不是影响的具体范围，而是改动类型，不能用作 scope 。除具体的模块、组件名之外，可以使用 `base` 表示基础结构、框架相关的改动，用 `misc` 表示杂项改动，用 `all` 表示大范围重构。
 - `$(subject)`：必需，50 个字符左右的简要说明，首字母小写，通常是动宾结构，描述做了什么事情，动词用一般现在时，禁止出现 *update code* ， *fix bug* 等无实际意义的描述，好的例子： *select connector by sorting free memory* （不需要形如 *update about how to select connector ...* 的啰嗦写法）, *fix sucess tip can not show on IE8* （不需要形如 *fix bug of ...* 的啰嗦写法）。
 - `$(description)`：可选，详细说明，建议使用列表罗列要点。
 

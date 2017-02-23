@@ -153,6 +153,7 @@
 
 - `iostat -xm 2`
 - `iotop`
+- `ps aux --sort -rss`
 
 # Miscellaneous
 
