@@ -4,7 +4,7 @@
 
 In format of *[team_name] Daily Report* , where *team_name* should be replaced by your team name, and, **no need to put your name or date in the subject**.
 
-For example, `[BaoMi Server] Daily Report` , `BaoMi Server` is a team name.
+For example, `[XXX Server] Daily Report` , `XXX Server` is a team name.
 
 ## Content
 

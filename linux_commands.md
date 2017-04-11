@@ -38,7 +38,7 @@
 - `fdisk -l`: List the partition tables for the specified devices. If no devices are given, those mentioned in /proc/partitions (if that exsts) are used
 - `df -h`: report file system disk space usage
 - `du -sh target_dir`: estimate file space usage
-- `du --max-depth 1 | sort -rn | head -n 5`: top 5 big dir/file
+- `du --max-depth 1 -h | sort -rn | head -n 5`: top 5 big dir/file
 - `mount -t cifs -o username=USERNAME,password=PASSWORD //HOST/SHARE_NAME /mnt/MOUNT_POINT`: mount smb share folder
 - `hdparm -t /dev/sda6`: perform timings of device reads for benchmark and comparison
 - `blockdev --report`: print a report for the specified device
@@ -67,7 +67,8 @@
 - `dig`: DNS lookup utility
 - `mtr`: a network diagnostic tool
 - `netstat -s | grep -E '.*(queue|timeout).*'`
-- `tcpdump -i lo host localhost and port 7070 -A -s 0`
+- `tcpdump  -A -s 0 -n -i lo host localhost and port 7070`
+- `ssh user@remotehost tcpdump -s 0 -n -U -w - -i any host ? | wireshark -k -i -`
 - `ss -m src *`
 - `cat /proc/net/sockstat：TCP mem about equal ss -m src *`
 - `nmap -sP 192.168.1.*`
