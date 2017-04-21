@@ -84,9 +84,10 @@ https://www.yinxiang.com/
 ## 其它
 
 - Oh My Zsh：https://github.com/robbyrussell/oh-my-zsh
-- Trello: https://trello.com
+- Trello：https://trello.com
 - DevDocs：http://devdocs.io/
 - 有道词典：http://dict.youdao.com/
+- editorconfig：http://editorconfig.org/ ，使用时需下载建议的[配置文件](.editorconfig) 到源码根目录，并安装编辑器相应插件。
 
 # 开发环境配置
 
