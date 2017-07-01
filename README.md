@@ -29,13 +29,7 @@
 
 ## VPN
 
-http://gjsq.me/6292696
-
-使用方法：https://www.greenjsq.me/shiyong.html
-
-Windows 、macOS 、iOS 、Android 有官方客户端，可自动选择线路并根据访问域名决定是否通过 VPN 连接，Linux 上为了可以继续访问本地局域网（比如 192.168 网段）需要修改路由表：`sudo route add -net 192.168.0.0 netmask 255.255.0.0 gw ${GATEWAY}` ，另外也可以将一些国内常用网站 IP 加进去绕过 VPN 提高访问速度，你可以把这些命令保存到一个 shell 脚本里，开机的时候自动或手动执行一下。
-
-提示：需要手动选择线路时，亚洲的线路（台湾、香港、韩国等）速度要好一点。
+http://haoyunti.com/?r=06065d934a8279b9
 
 ## Sublime Text
 
