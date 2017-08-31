@@ -73,6 +73,11 @@
 - `cat /proc/net/sockstat：TCP mem about equal ss -m src *`
 - `nmap -sP 192.168.1.*`
 
+## iptables
+
+- `iptables -t nat -A OUTPUT -d 1.1.1.1 -j DNAT --to-destination 2.2.2.2`
+- `iptables -t nat -D OUTPUT -d 1.1.1.1 -j DNAT --to-destination 2.2.2.2`
+
 # Service
 
 - `service SCRIPT COMMAND`:  run a System V init script(/etc/init.d/) or an upstart job(/etc/init) (take precedence).
