@@ -5,3 +5,4 @@
 - https://itunes.apple.com/us/app/flycut-clipboard-manager/id442160987?mt=12
 - Tunnelblick
 - https://www.iterm2.com/
+- https://itunes.apple.com/cn/app/parallels-client/id600925318?l=en&mt=12
