@@ -25,12 +25,13 @@
 - 《TCP/IP 详解 卷1》
 - [Git](git.md)
 - [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
+- 《搞定：无压工作的艺术》
 
 # 必备工具
 
-## VPN
+## 翻墙
 
-http://haoyunti.com/?r=06065d934a8279b9
+http://haoyunti.com/?r=06065d934a8279b9 或 https://shadowsocks.org/
 
 ## Sublime Text
 
@@ -65,7 +66,6 @@ https://www.yinxiang.com/
 - https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc?hl=en
 - https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en
 - https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?utm_source=chrome-ntp-icon
-- https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg?utm_source=chrome-ntp-icon
 - https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj?utm_source=chrome-ntp-icon
 
 ## 其它
@@ -311,6 +311,8 @@ $(description)
     比如有人问“这个文件现在有改动吗？”，不合适的回答是“上午改过，遇到了点问题，又改回去了”，这种沟通我觉得是比较低效的，试想如果是一个比较复杂的场景，可能提问者听半天解释也得不出答案。对于这个问题，提问者关心的是现在它有没有改，应该先回答“没有”，然后如果有必要，再补充说“但是上午改过，遇到了点问题，又改回去了”。
 
 - 回答进度估计等相关问题时，不要使用“差不多”、“快了”等模糊词汇，应该具体一点，比如“90% 都做完了，还剩xxx，下午可以完成”。
+- 多人参与的事务，最好在公开渠道沟通，比如 issue 或 IM 群组等，该开会的时候开会，避免跟多个人私聊同一件事情而反复交代上下文，尽量保证沟通透明、信息对称。通常来说，只有涉及敏感信息、明确需要把某些人排除在外的时候，才私聊。不要担心会打扰不相关的人，因为如果这个人不相关，TA 要么不要关注这个 issue ，要么离开这个 IM 群组，要么设置自己的通知级别为“仅提到”，总之是这个人自己的事情。
+- 尽量不要使用微信沟通，原因很明显：历史记录只保存在客户端，易丢失，不易搜索；PC 端只能登陆一个设备，家里公司要频繁切换登录；功能有限，不支持机器人。推荐使用 https://bearychat.com/ 或自行搭建 https://rocket.chat/ 。
 
 # Get Things Done
 
