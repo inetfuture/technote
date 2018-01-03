@@ -1,0 +1,7 @@
+{
+  "line-length": false,
+  "ul-indent": { "indent": 4 },
+  "single-h1": false,
+  "no-bare-urls": false,
+  "no-emphasis-as-header": false
+}

@@ -1,8 +1,9 @@
-# Languages
 # References
 
 - http://deerchao.net/tutorials/regex/regex.htm
 - http://www.rexegg.com/
+
+# Languages
 
 ## Python
 
@@ -53,3 +54,6 @@ r.match/findall
 > true
 ```
 
+# Collections
+
+- password: `(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*\\W)"`
