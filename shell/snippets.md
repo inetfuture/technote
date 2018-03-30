@@ -27,6 +27,12 @@ ps -ef | grep 'nginx: master' | grep -v grep | tr -s \ | cut -d' ' -f2
 ansible all -m shell -a 'echo `hostname` `ifconfig | grep eth` `ifconfig | grep 225`' | grep eth | awk '{print $1,$6,$8}' | sed "s/addr://" | sort
 ```
 
+# Get hosts' hardware spec with ansible
+
+```shell
+ansible all -m shell -a "echo \$(hostname) \$(cat /proc/cpuinfo | grep processor | tail -1 | awk '{print \$3+1}')core \$(free -m | awk 'NR==2' | awk '{print \$2}')MB" | egrep -v '>>'
+```
+
 # Find most memory consuming process then kill it
 
 ```shell
