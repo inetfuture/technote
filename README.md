@@ -33,7 +33,9 @@
 
 ## 翻墙
 
-http://haoyunti.com/?r=06065d934a8279b9 或 https://shadowsocks.org/
+方式很多，建议购买国外 VPS 自建 shadowsocks ，服务端推荐使用[搬瓦工](https://bandwagonhost.com) ，客户端 MacOS 使用 https://github.com/shadowsocks/ShadowsocksX-NG ，Ubuntu 使用 https://github.com/shadowsocks/shadowsocks-qt5 配合 Chrome [Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=en) 插件，具体搭建方式自己搜。
+
+不建议直接使用付费翻墙服务（shadowsocks 、VPN 等），不稳定，容易被关停。
 
 ## Sublime Text
 
