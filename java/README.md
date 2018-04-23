@@ -1,3 +1,4 @@
 # Style Guide
 
-http://google-styleguide.googlecode.com/svn/trunk/javaguide.html
+- https://google.github.io/styleguide/javaguide.html
+- https://github.com/alibaba/p3c
