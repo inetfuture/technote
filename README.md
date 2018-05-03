@@ -43,18 +43,12 @@ http://www.sublimetext.com/3
 
 安装 Package Control：https://packagecontrol.io/installation ，必备插件：Git，GitGutter，knockdown，SublimeLinter，DocBlockr，EditorConfig，Emmet，FileDiffs，SublimeCodeIntel, SidebarEnhancements
 
-可以将整个配置目录放到 GitHub 上，方便在多台机器上同步（也可以用 Dropbox 同步，参考下面），比如 https://github.com/inetfuture/sublime-config ，配置目录的位置：
+可以将整个配置目录放到 GitHub 上，方便在多台机器上同步，比如 https://github.com/inetfuture/sublime-config ，配置目录的位置：
 
-- Linux：~/.config/sublime-text-3/Packages/User
-- OS X：~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+- Linux：`~/.config/sublime-text-3/Packages/User`
+- OS X：`~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`
 
-## Dropbox
-
-https://db.tt/N5tpOzTY
-
-全客户端支持，包括 Linux ，需要翻墙。国内类似的服务且支持 Linux 的，尝试过金山快盘，可惜同步不稳定，经常出错。
-
-除了同步各种资料外，还可以用来同步一些配置文件，比如各种 dot files：~/.bashrc，~/.pep8，~/.gitconfig 等等，把它们放到 Dropbox 的同步目录下，然后建立软链接到本来的位置，这样公司、家里多台机器可以无缝同步，尤其重装系统或者换新机器的时候，各种用习惯了的配置可以快速重新启用。
+或者使用 https://code.visualstudio.com/ 。
 
 ## 印象笔记
 
@@ -258,11 +252,10 @@ $(description)
     - 对 [编写整洁的代码](#编写整洁代码) 中各项要求进行检查
     - 在任何有疑问或建议的地方留 comment。
     - 从中学习一些好的东西。
-    - 完成后，如果有问题需要修复，留 comment “WFF”，表示“waiting for fix”，否则进行第 4 步。
 3. 提交者响应 comments 。
-    - 确实有问题的，修复之。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit 历史。
+    - 确实有问题的，修复之。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit 历史（`--amend` 选项表示修改上一个 commit 而不是创建一个新的 commit ，commit 被修改过后，`git push` 必须加 `-f` 强制推送才能 push 成功）。
     - 不同意的，讨论。
-    - 完成后，留 comment “Fixed”，审查者再次检查，回到第二步。
+    - 完成后，留 comment “fixed”，审查者再次检查，回到第二步。
 4. 审查者确认没有问题之后，将 Merge Request 转发给目标分支的维护者进行合并。
 
 # 调试技巧
