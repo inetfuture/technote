@@ -1,12 +1,13 @@
 # References
 
+- https://martinfowler.com/articles/richardsonMaturityModel.html
 - [Web API Design - Crafting Interfaces that Developers Love](http://apigee.com/about/resources/webcasts/restful-api-design-second-edition), you need to input your email to receive the ebook. **[MUST READ]** :bangbang:
 - http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
 - http://github.com/interagent/http-api-design
 
 # Examples
 
-- http://developer.github.com/v3s
+- http://developer.github.com/v3
 
 # URL Design Rules
 
