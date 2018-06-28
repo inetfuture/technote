@@ -1,6 +1,6 @@
 # References
 
-- https://martinfowler.com/articles/richardsonMaturityModel.html
+- https://martinfowler.com/articles/richardsonMaturityModel.html **[MUST READ]** :bangbang:
 - [Web API Design - Crafting Interfaces that Developers Love](http://apigee.com/about/resources/webcasts/restful-api-design-second-edition), you need to input your email to receive the ebook. **[MUST READ]** :bangbang:
 - http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
 - http://github.com/interagent/http-api-design
@@ -19,8 +19,8 @@
 
     Resource | POST | GET | PUT | PATCH | DELETE
     -------- | ---- | --- | --- | ----- | ------
-    /blogs | create a new dog | list blogs | bulk update blogs | X | delete all blogs
-    /blogs/1234 | X | show a dog | update a dog | update a dog partially | delete a dog
+    /blogs | create a new blog | list blogs | bulk update blogs | X | delete all blogs
+    /blogs/1234 | X | show a blog | update a blog | update a blog partially | delete a blog
 
 - For non-resource-CRUD cases, always use POST verb, eg. `POST /machines/1234/restart`
 

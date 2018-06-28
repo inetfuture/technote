@@ -20,14 +20,13 @@
 
 - 《代码整洁之道》
 - 《重构：改善既有代码的设计》
-- 《深入理解计算机系统》
 - 《敏捷软件开发 : 原则、模式与实践》
 - 《企业应用架构模式》
+- 《深入理解计算机系统》
 - 《TCP/IP 详解 卷1》
 - 《Linux 内核设计与实现》
-- [Git](git.md)
-- [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
 - 《搞定：无压工作的艺术》
+- [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
 
 # 必备工具
 
@@ -78,7 +77,7 @@ https://www.yinxiang.com/
 
 ## 安装软件
 
-- 优先使用语言版本管理器安装语言运行时，比如 nvm（Node.js），pyenv（Python），rvm（Ruby），jenv（Java），phpbrew（PHP）
+- 优先使用语言版本管理器安装语言运行时，比如 nvm（Node.js）、pyenv（Python）、rvm（Ruby）、jenv（Java）、phpbrew（PHP）、gvm（Golang）。
 
     **注意，此类工具通常安装在你的 `$HOME` 下，通过修改当前 shell 的 `$PATH` 等环境变量生效，就是说安装或者使用它们的时候，你不需要也不应该使用 `sudo` 。**
 
@@ -87,8 +86,8 @@ https://www.yinxiang.com/
     - 不需要 `sudo`，不会污染系统环境，如果某天坏掉了，可以直接删掉重来。
     - 方便版本切换，及时用上最新版本。
 
-- 优先使用语言包管理器安装语言依赖，比如 npm（Node.js），pip（Python），gem（Ruby），maven/gradle（Java），pecl/composer（PHP）
-- 优先使用系统包管理器安装系统依赖，apt-get（Ubuntu），homebrew（OS X）
+- 优先使用语言包管理器安装语言依赖，比如 npm（Node.js）、pip（Python）、gem（Ruby）、maven/gradle（Java）、pecl/composer（PHP）、dep（Golang）。
+- 优先使用系统包管理器安装系统依赖，比如 apt-get（Ubuntu）、homebrew（OS X）
     - 对于一些第三方工具，优先使用其官方源或者可靠的 PPA 源，比如在 Ubuntu 上安装 MongoDB 和 Redis 时分别使用：http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb ，https://launchpad.net/~rwky/+archive/ubuntu/redis
 - Ubuntu 必备软件包：`sudo apt-get install -y aptitude gdebi vim curl wget build-essential openssh-server`
 
@@ -106,10 +105,11 @@ https://www.yinxiang.com/
 - 认真负责，关注细节，追求卓越
     - 每一份需求都要理解之后再动手，感觉需求不合理或不明确的要提出来讨论，对产品要有责任心，不仅仅是“按部就班”得做事情。
     - 提交前仔细测试自己实现的功能，检查代码细节，有交付高质量代码的责任心，而不是依赖其他成员帮你 Reivew 或者 QA 帮你发现 bug 。
-    - 代码仅仅可以工作是不够的，还要可读、易扩展、可维护、安全、高效，等等等等，要用高标准要求自己，写代码要“上心”，不要敷衍、随意。
+    - 代码仅仅可以工作是不够的，还要可读、易扩展、可维护、安全、高效，等等等等，要用高标准要求自己，写代码要“上心”，认真写好每一行，不要敷衍、随意。
     - 细节不一定决定成败但却可以充分体现一个人的工作态度，请认真对待各种流程、规范，比如写英文邮件时，从语法、格式到每一个拼写、标点，再比如 Commit Message 的格式、Coding Style 等等。
 - 自我驱动
-    - 自觉深入学习相关技术，而不是用多少学多少，临时抱佛脚。假设你在做 iOS 开发，即便目前所有项目仍在用 Objective-C ，你也应该利用业余时间自觉去学习 Swift ，时刻准备着。
+    - 自觉深入学习相关技术，而不是用多少学多少，临时抱佛脚。比如使用 Spring 框架，不要只是满足于能完成功能，应该自觉学习其原理和思想，依赖注入、面向切面都是怎么工作的？spring-boot 自动做了哪些事情？这样一方面当遇到框架问题时，你就能从容应对，另一方面这些知识将对你有潜移默化的帮助，总能用得到。
+    - 自己给自己提问题，并解决问题。比如让你去搭一个分布式存储系统，能跑起来只是最简单、最基本的要求，你应该能给自己提这些问题：怎么冗余容错？怎么备份、恢复？怎么监控容量并报警？怎么手动、自动扩容？业务如何方便的使用？是否需要制定使用规范？
     - 主动思考产品的走向，自觉进行知识储备、调研。
     - 自觉重构低质量代码，改善项目流程，等等，保证项目的健康发展。
 - 换位思考
@@ -133,7 +133,7 @@ https://www.yinxiang.com/
 
         再比如你对 Git 不熟，然后不知怎么得把工作目录搞的一团糟，你该怎么办？再 clone 一个重新开始？NO！除非你打算一辈子这么干。你应该去 google 解决方案，并充分认识到自己对 Git 不熟这个事实，然后拿出时间来补充知识。
 
-    - 不要重复造轮子，尤其是使用第三方库时，也许人家已经提供了现成的解决方案，只是因为你没有仔细看文档，所以不知道。
+    - 不要重复造轮子，尤其是使用第三方库时，也许人家已经提供了现成的解决方案，只是因为你没有仔细看文档，所以不知道。当然，如果你只是想锻炼自己的能力，重复造轮子是很有效的方式，但请对项目负责，不要擅自在项目里做。
 - 磨刀不误砍柴工
     - 学习新知识要尽可能的系统、全面，不要只是为了应付当前工作片面了解。
     - 使用第三方库、框架时应尽量通读其文档，至少要知道它可以做什么，有哪些限制，遇到具体问题后可以迅速到文档中查看细节。
@@ -166,7 +166,7 @@ https://www.yinxiang.com/
 - 封装原则，不要暴露不必要的实现细节。
 - 开放、封闭原则，要方便扩展，要考虑到以后的需求。
 - 代码改动方式要合适，不能一味得堆砌代码，需要适时停下来进行重构。
-- 保持干净，不能存在任何无用的文件、代码，所有文档、注释需要同步更新，不能包含注释掉的代码，不能包含临时调试代码，例外情况应该添加注释说明。
+- 保持干净，不能存在任何无用的文件、代码，所有文档、注释需要同步更新，不能包含注释掉的代码，不能包含临时调试代码，例外情况应该添加注释说明。尤其注意借鉴代码片段时，复制过来要 refine ，确保每一行都符合本项目规范，每一行都适用于本项目，并且每一行你都读得懂，不懂的搞清楚才能提交。
 - 所有 Warning 都应该被立即修复，觉得不需要修的，讨论决定后通过修改配置文件禁用掉。
 
 ## 进阶要求
@@ -175,34 +175,81 @@ https://www.yinxiang.com/
 
 ## 提高代码可读性的技巧
 
+- https://slides.com/inetfuture/how-to-name-things
+- https://slides.com/inetfuture/clean-functions
+- https://slides.com/inetfuture/patterns-to-avoid-code-dumplications
 - 局部变量尽量就近声明。
 - return early, https://www.airpair.com/php/posts/best-practices-for-modern-php-development#4-2-try-not-to-use-else-, http://www.codeproject.com/Articles/626403/How-and-Why-to-Avoid-Excessive-Nesting
-- 在语言本身语法允许的情况下，将主流程放在文件上部，子流程按被调用顺序放在文件下部，这样打开文件后可以比较快的抓住重点，比如：
+- 在语言本身语法允许的情况下，将主流程放在文件上部，子流程按被调用顺序放在文件下部，这样打开文件后可以比较快的抓住重点，例如：
 
-    ```coffee
-    main = ->
-      doStuff1()
-      doStuff2()
-      doStuff3()
+    ```js
+    const main = () => {
+      doStuff1();
+      doStuff2();
+      doStuff3();
+    };
 
-    doStuff1 = ->
-      console.log '1'
+    const doStuff1 = () => {
+      console.log('1');
+    };
 
-    doStuff2 = ->
-      console.log '2'
+    const doStuff2 = () => {
+      console.log('2');
+    };
 
-    doStuff3 = ->
-      console.log '3'
+    const doStuff3 = () => {
+      console.log('3');
+    };
     ```
 
-- 相关的代码尽量按使用顺序组织在一起，尤其是添加新代码时，不要一味得添加到文件尾部。
+- 相关的代码尽量按使用顺序、主次顺序或先后顺序组织在一起，即要有一定的排序逻辑，尤其是添加新代码时，不要一味得添加到文件尾部。
 - 布尔变量命名应尽量采用肯定形势。
 - 避免硬编码数字、字符串，应使用常量并给它们有意义的名字。
 - 传递简单数据类型时，适当添加临时变量提高可读性，例如：
 
-    ```coffee
-    ignoreError = true
-    doStuff(ignoreError)
+    ```js
+    const ignoreError = true;
+    doStuff(ignoreError);
+    ```
+
+- 使用直接表明你意图的写法，而不是绕弯子，例如：
+
+    ```js
+    // 反例：使用计数表示是否
+    let deletedItemsCount = 0;
+    for (const item of list) {
+      if (item.isDeleted) {
+        deletedItemsCount++;
+      }
+    }
+    if (deletedItemsCount > 0) {
+      doStuff();
+    }
+
+    // 正例：使用布尔表示是否
+    let hasDeletedItems = false;
+    for (const item of list) {
+      if (item.isDeleted) {
+        hasDeletedItems = true;
+      }
+    }
+    if (hasDeletedItems) {
+      doStuff();
+    }
+    ```
+
+- 拼接字符串时，使用插值而不是 `+` 操作，例如：
+
+    ```js
+    // ES6
+    const name = 'Aaron Wang';
+    console.log(`Hi, ${name}`);
+    ```
+
+    ```java
+    // Java
+    String name = "Aaron Wang";
+    System.out.println(String.format("Hi, %s", name));
     ```
 
 ## 如何写注释
