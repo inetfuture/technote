@@ -2,7 +2,11 @@
 
 请通过[原文](https://raw.githubusercontent.com/inetfuture/technote/master/markdown/README.md)模式阅读此文档。
 
-以下是对 https://daringfireball.net/projects/markdown/syntax 和 https://spec.commonmark.org/0.28/ 的补充。
+对 Markdown 不熟悉的请先阅读：
+
+- [原始定义](https://daringfireball.net/projects/markdown/)。
+- [GitHub 的教程](https://guides.github.com/features/mastering-markdown/)。
+- [CommonMark 规范](https://spec.commonmark.org/0.28/)。
 
 ## 中文排版
 
@@ -31,6 +35,7 @@
 ## 标题
 
 - 应有且只有一个一级标题作为文件标题。
+- 标题级别要按序。
 - 尽量不要使用四级以上的标题。
 - 前后要空行。
 - 不要使用强调、行内代码等格式。
@@ -50,6 +55,10 @@
 
 段落三
 ```
+
+## 强调
+
+使用 `*` 而不是 `_`，因为 `_` 可能与变量名冲突。
 
 ## 列表
 
@@ -76,12 +85,12 @@
 - 使用三个连续的 *backtick* （键盘左上角 Esc 下面那个波浪符键）作为分隔符号（下面用三个单引号代替表示）：
 
     ```markdown
-    '''js
 
+    '''js
     // 注意整个 block 前后空行
     var t = new Date();
-
     '''
+
     ```
 
     ```markdown
@@ -121,3 +130,5 @@
 ## 编辑器
 
 VS Code 可使用 [markdownlint extension](https://github.com/DavidAnson/vscode-markdownlint) 加 [.markdownlint.json](.markdownlint.json) 实现自动 lint 。
+
+尽量不要依赖实时预览工具，Markdown 语法没多少东西，习惯之后，在脑子里预览就够了。
