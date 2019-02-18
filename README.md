@@ -15,6 +15,7 @@
 - [how-to-name-things](http://slides.com/inetfuture/how-to-name-things)
 - [RESTful API](restful_api.md)
 - [Logging](logging.md)
+- [Markdown](markdown/README.md)
 
 ## 长期
 
