@@ -1,5 +1,6 @@
 {
   "line-length": false,
   "ul-indent": { "indent": 4 },
-  "no-bare-urls": false
+  "no-bare-urls": false,
+  "no-emphasis-as-header": false
 }
