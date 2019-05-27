@@ -4,16 +4,16 @@
 - *Effective Objective-C 2.0* **[MUST READ]** :bangbang:
 - http://nshipster.com/
 
-# Xcode
-
-- Install these plugins with [Alcatraz](http://alcatraz.io/): GitDiff, VVDocumenter-Xcode, ClangFormat, read more at http://nshipster.com/xcode-plugins/
-- Edit -> CLang Fromat -> File, Edit -> CLang Fromat -> Enable Format on Save
-
 # Style Guide
 
 - https://github.com/NYTimes/objective-c-style-guide
 - https://github.com/github/objective-c-style-guide
 - Delete Xcode generated header comment, because they're useless and very likely to be outdated
+
+# Xcode
+
+- Install these plugins with [Alcatraz](http://alcatraz.io/): GitDiff, VVDocumenter-Xcode, ClangFormat, read more at http://nshipster.com/xcode-plugins/
+- Edit -> CLang Fromat -> File, Edit -> CLang Fromat -> Enable Format on Save
 
 # Grammar
 

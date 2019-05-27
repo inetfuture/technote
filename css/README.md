@@ -2,7 +2,13 @@
 
 - http://zh.learnlayout.com/ **[MUST READ]** :bangbang:
 
-# position
+# Style Guide
+
+https://github.com/airbnb/css
+
+# Properties
+
+## position
 
 - static: Default value. Elements render in order, as they appear in the document flow
 - absolute: The element is positioned relative to its first positioned (not static) ancestor element

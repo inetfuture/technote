@@ -4,7 +4,9 @@
 
 # Style Guide
 
-Rules below are additions to https://github.com/polarmobile/coffeescript-style-guide .
+https://github.com/polarmobile/coffeescript-style-guide
+
+Additions:
 
 - Use these idioms whenever possible http://arcturo.github.io/library/coffeescript/04_idioms.html
 - Limit all lines to a maximum of **120** characters
