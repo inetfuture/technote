@@ -125,7 +125,7 @@
     ```
 
 - 使用正确的语言标记，代码块内代码要合法。
-- 描述多个连续的 Shell 命令应使用下面的形式，注意命令前面不要带 `$`、`#` 等提示符，可以方便复制粘贴：
+- 描述多个连续的 Shell 命令应使用下面的形式，注意命令前面不要带 `$` 等提示符，可以方便复制粘贴：
 
     ```markdown
     '''shell
@@ -153,6 +153,6 @@
 
 ## 编辑器
 
-VS Code 可使用 [markdownlint extension](https://github.com/DavidAnson/vscode-markdownlint) 加 [.markdownlint.json](.markdownlint.json) 实现自动 lint 。
+VS Code 可使用 [markdownlint extension](https://github.com/DavidAnson/vscode-markdownlint) 加 [.markdownlint.json](.markdownlint.json) 实现自动 lint。
 
 尽量不要依赖实时预览工具，Markdown 语法没多少东西，习惯之后，在脑子里预览就够了。
