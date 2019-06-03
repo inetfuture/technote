@@ -33,9 +33,7 @@
 
 ## 翻墙
 
-方式很多，建议购买国外 VPS 自建 shadowsocks，服务端推荐使用[搬瓦工](https://bandwagonhost.com)，客户端 MacOS 使用 [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)，Ubuntu 使用 [shadowsocks-qt5](https://github.com/shadowsocks/) 配合 [Chrome Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=en) 插件，具体搭建方式自己搜。
-
-不建议直接使用付费翻墙服务（shadowsocks、VPN 等），不稳定，容易被关停。
+方式很多，建议购买国外 VPS 自建 shadowsocks，服务端推荐使用[搬瓦工](https://bwh88.net/aff.php?aff=48579)，客户端 MacOS 使用 [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)，Ubuntu 使用 [shadowsocks-qt5](https://github.com/shadowsocks/) 配合 [Chrome Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=en) 插件，具体搭建方式自己搜。
 
 ## Sublime Text
 
