@@ -301,7 +301,7 @@ $(scope): $(subject)
 $(description)
 ```
 
-- `$(scope)`：必需，取决于具体项目，一般为项目功能模块、组件的名字，用来描述本次 commit **影响的范围**，比如 https://github.com/nodejs/node/commits/master 、https://github.com/golang/go/commits/master 。嵌套层级结构可以用 `/` 表示，如 `net/http`。涉及多个模块、组件可以用 `,` 隔开（不加空格），如 `net/http,cmd`。后加入项目的新成员应遵循已有的 scope 约定（通过 `git log` 可以查看某个文件的提交历史），不要自己编造。使用首字母小写的驼峰命名。`bug`、`hotfix`、`task`、`change`、`refactor` 等等描述的都不是影响的具体范围，而是改动类型，不能用作 scope。除具体的模块、组件名之外，可以使用 `base` 表示基础结构、框架相关的改动，用 `misc` 表示杂项改动，用 `all` 表示大范围重构。
+- `$(scope)`：必需，取决于具体项目，一般为项目功能模块、组件或目录的名字，用来描述本次 commit **影响的范围**，比如 https://github.com/nodejs/node/commits/master 、https://github.com/golang/go/commits/master 。嵌套层级结构可以用 `/` 表示，如 `net/http`。涉及多个模块、组件或目录可以用 `,` 隔开（不加空格），如 `net/http,cmd`、`net/{tcp,http}`（表示 `net/tcp` 和 `net/http`）。后加入项目的新成员应遵循已有的 scope 约定（通过 `git log` 可以查看某个文件的提交历史），不要自己编造。使用首字母小写的驼峰命名。`bug`、`hotfix`、`task`、`change`、`refactor` 等等描述的都不是影响的具体范围，而是改动类型，不能用作 scope。除具体的模块、组件或目录名之外，可以使用 `base` 表示基础结构、框架相关的改动，用 `misc` 表示杂项改动，用 `all` 表示大范围重构。
 - `$(subject)`：必需，50 个字符左右的简要说明，首字母小写，祈使句，描述 what 和 why，不加句号。禁止出现 *update code* ， *fix bug* 等无实际意义的描述，好的例子： *select connector by sorting free memory* （不需要形如 *update about how to select connector ...* 的啰嗦写法），*fix sucess tip can not show on IE8* （不需要形如 *fix bug of ...* 的啰嗦写法）。一个简单的判断 subject 是否合适的办法：[把你的 subject 放到句子 *If applied, this commit will xxx* 里是否通顺？](https://chris.beams.io/posts/git-commit/#imperative)
 - `$(description)`：可选，详细说明，建议使用列表罗列要点。
 
