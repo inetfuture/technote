@@ -6,7 +6,7 @@
 - *Async JavaScript: Build More Responsive Apps With Less Code*
 - https://github.com/sorrycc/awesome-javascript
 - http://jsbooks.revolunet.com/
-- [Full Stack Javascript](./full_stack_javascript.md)
+- [Full Stack JavaScript](./full_stack_javascript.md)
 
 # Style Guide
 
@@ -17,8 +17,6 @@ https://github.com/airbnb/javascript
 - 除类静态方法、需要被继承的实例方法，总是使用 arrow functions，无论在哪个位置。
 - 类成员排序：静态属性、静态方法、实例属性、构造方法、实例方法，公开方法尽量写在私有方法前面。
 - 私有成员要加下划线前缀。
-
-# [Full Satck Javascript](./full_stack_javascript.md)
 
 # Type System
 
