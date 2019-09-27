@@ -16,9 +16,10 @@ git config --global alias.s status -sb
 git config --global alias.reset-permission '!git diff -p -R --no-color | grep -E "^(diff|(old|new) mode)" --color=never | git apply'
 ```
 
-# Books
+# Books & Tutorials
 
 - [Progit](https://github.com/progit/progit) **[MUST READ]** :bangbang:
+- [Oh Shit, Git!?!](https://ohshitgit.com/) **[MUST READ]** :bangbang:
 - [Git Internals](https://github.com/pluralsight/git-internals-pdf)
 - [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/)
 - [Git Community Book 中文版](http://gitbook.liuhui998.com/)
