@@ -283,6 +283,41 @@ https://www.yinxiang.com/
 - 保留原始异常（错误）：比如 Java 中 `throw new RuntimeException()` 用第二个参数把原始 exception 传进去，如此在 stacktrace 里会有 `caused by` 信息。
 - 若要重试，必须加次数限制，应做好统一封装。
 
+### 错误反馈设计
+
+- 服务端：
+    - 遵循框架、协议的最佳实践，gRPC 就应该用 gRPC 的 [code](https://github.com/grpc/grpc-go/blob/master/codes/codes.go)，HTTP 就应该用 HTTP status code（后面是 gRPC 服务的话意味着 gateway 要做转换）。
+    - 错误，尤其验证错误，需尽量一次性把可能的都找出来并集中返回，而不是每次只返回一个（对客户端或用户会不友好，集成阶段或用户使用时可能需要多次试错），这意味着最终给客户端的 errors 需要是个集合（建议用 map，出错的请求字段做 key）。
+    - 避免使用数字 error code，因为可读性差，得查文档，维护也麻烦，如果实在需要，可使用字符串 code，并尽量复用（不要在里面放字段名），比如 canNotBeBlank、invalidFormat、tooLong、tooShort、tooBig、tooSmall、alreadyExists 等。国际化可按 code 翻译 message，简单场景下英文甚至可以直接从 code 拆出来用。
+    - message 也要尽量复用，不要带字段名，比如使用“can not be blank”，而不是"xxx can not be blank"。对于代码，哪个字段的问题可从 errors 的 key 得出，对于用户，界面上要把该错误消息跟其 input 对应，也不存在歧义。
+- 前端：
+    - 通用处理，比如对于输入表单，做到只需把服务端返回的 errors 直接挂到整个表单上，即可自动根据 key（即字段名）关联对应的 input，并将错误显示到 input 下。比如：
+
+        ![error_feedback_frontend_example.png](./images/error_feedback_frontend_example.png)
+
+最终 RESTful API 返回的结构建议如下：
+
+```
+{
+  message: '',
+  errors: {
+    field1: {
+      code: 'invalidFormat',
+      message: '无效格式'
+    },
+    field2: {
+      code: 'alreadyExists',
+      message: '已存在'
+    }
+  }
+}
+```
+
+说明：
+
+- `message`：整体错误消息，一般跟 HTTP status code 对应，比如 400 就是“Bad request”。另外某些场景下，错误不是跟具体某个请求字段对应的，此时也可以直接放 `message` 里，比如某个 API 可能报“memberId, clientId and openId can not be all empty”，这个错就不是一个字段的问题，在 errors 里不好表示。
+- `errors`：可选，key 为错误字段，value 为错误的 code 和 message。其实再完善一点，value 应该是个数组，因为一个字段可能有多个验证规则，则可能同时有多个错误，鉴于这种场景较少，可以不考虑。
+
 # Code Review
 
 ## 目的
