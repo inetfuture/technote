@@ -10,11 +10,9 @@
 
 **这些是进入项目就要用到的，请务快速必掌握。**
 
-- [Pro Git](https://git-scm.com/book/zh/v2)，如果以前对 Git 不熟悉，需要在最短时间内把这本书前三章读一遍。
-- http://mislav.uniqpath.com/2013/02/merge-vs-rebase/
+- [Pro Git](https://git-scm.com/book/zh/v2)，如果以前对 Git 不熟悉，需要先把这本书前三章读一遍，此外搞清楚 [merge 和 rebase](http://mislav.uniqpath.com/2013/02/merge-vs-rebase/)。
 - [How to Name Things](http://slides.com/inetfuture/how-to-name-things)
 - [RESTful API](restful_api.md)
-- [Logging](logging.md)
 - [Markdown](markdown/README.md)
 
 ## 长期
@@ -27,49 +25,51 @@
 - 《TCP/IP 详解 卷1》
 - 《Linux 内核设计与实现》
 - 《搞定：无压工作的艺术》
-- [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
 
 # 必备工具
 
-## 翻墙
+## 科学上网
 
-方式很多，建议购买国外 VPS 自建 shadowsocks，服务端推荐使用[搬瓦工](https://bwh88.net/aff.php?aff=48579)，客户端 MacOS 使用 [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)，Ubuntu 使用 [shadowsocks-qt5](https://github.com/shadowsocks/) 配合 [Chrome Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=en) 插件，具体搭建方式自己搜。
+方式很多，建议购买国外 VPS 自建 shadowsocks，~~服务端推荐使用[搬瓦工](https://bwh88.net/aff.php?aff=48579)~~（已经不稳定，经常被封 IP），客户端 macOS 使用 [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)，Ubuntu 使用 [shadowsocks-qt5](https://github.com/shadowsocks/) 配合 [Chrome Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=en) 插件，具体搭建方式自己搜。或者买服务，注意经常有跑路的，一次不要买太长。
 
-## Sublime Text
+## 编辑器
 
-http://www.sublimetext.com/3
-
-安装 [Package Control](https://packagecontrol.io/installation)，必备插件：Git、GitGutter、knockdown、SublimeLinter、DocBlockr、EditorConfig、Emmet、FileDiffs、SublimeCodeIntel、SidebarEnhancements。
+[Sublime Text](http://www.sublimetext.com/3)，安装 [Package Control](https://packagecontrol.io/installation)，必备插件：Git、GitGutter、knockdown、SublimeLinter、DocBlockr、EditorConfig、Emmet、FileDiffs、SublimeCodeIntel、SidebarEnhancements。
 
 可以将整个配置目录放到 GitHub 上，方便在多台机器上同步，比如 [inetfuture/sublime-config](https://github.com/inetfuture/sublime-config)，配置目录的位置：
 
 - Linux：`~/.config/sublime-text-3/Packages/User`
-- OS X：`~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`
+- macOS：`~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`
 
 或者使用 [VS Code](https://code.visualstudio.com/)。
 
-## 印象笔记
+配合 [editorconfig](http://editorconfig.org/)，使用时需下载建议的[配置文件](.editorconfig) 到源码根目录，并安装编辑器相应插件。
 
-https://www.yinxiang.com/
+## 知识管理
 
-不建议使用 Evernote 国际版，太卡，而且国内的版本提供的本地化服务更方便。
+[印象笔记](https://www.yinxiang.com/)，不建议使用 Evernote 国际版，太卡，而且国内的版本提供的本地化服务更方便。
 
 - [Chrome 剪藏插件](https://appcenter.yinxiang.com/app/evernote-webclipper/web-apps/)
-- 关注微信公众号：“我的印象笔记”，可以快速收藏微信内容。
+- 关注微信公众号：“我的印象笔记”，可以快速收藏微信公众号文章。
+
+## TODO 管理
+
+[Trello](https://trello.com) 或 [Teambition](https://www.teambition.com/)。
 
 ## Chrome 插件
 
-- [postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
-- [onetab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?utm_source=chrome-ntp-icon)
-- [awesome-screenshot-screen](https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj?utm_source=chrome-ntp-icon)
+- [Smart TOC](https://chrome.google.com/webstore/detail/lifgeihcfpkmmlfjbailfpfhbahhibba)
+- [Octotree](https://www.octotree.io/)
+- [Onetab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?utm_source=chrome-ntp-icon)
+- [Awesome Screenshot](https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj?utm_source=chrome-ntp-icon)
+- [Stylish](https://userstyles.org/)
+- [Tampermonkey](https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 
 ## 其它
 
 - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
-- [Trello](https://trello.com)
 - [DevDocs](http://devdocs.io/)
 - [有道词典](http://dict.youdao.com/)
-- [editorconfig](http://editorconfig.org/)：使用时需下载建议的[配置文件](.editorconfig) 到源码根目录，并安装编辑器相应插件。
 
 # 开发环境配置
 
@@ -84,9 +84,9 @@ https://www.yinxiang.com/
     - 不需要 `sudo`，不会污染系统环境，如果某天坏掉了，可以直接删掉重来。
     - 方便版本切换，及时用上最新版本。
 
-- 优先使用语言包管理器安装语言依赖，比如 npm（Node.js）、pip（Python）、gem（Ruby）、maven/gradle（Java）、pecl/composer（PHP）、dep（Golang）。
-- 优先使用系统包管理器安装系统依赖，比如 apt-get（Ubuntu）、homebrew（OS X）。
-    - 对于一些第三方工具，优先使用其官方源或者可靠的 PPA 源，比如在 Ubuntu 上安装 MongoDB 和 Redis 时分别使用：http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb ，https://launchpad.net/~rwky/+archive/ubuntu/redis
+- 优先使用语言包管理器安装语言依赖，比如 npm（Node.js）、pip（Python）、gem（Ruby）、maven/gradle（Java）、pecl/composer（PHP）。
+- 优先使用系统包管理器安装系统依赖，比如 apt-get（Ubuntu）、homebrew（macOS）。
+    - 对于一些第三方工具，优先使用其官方源或者可靠的 PPA 源。
 - Ubuntu 必备软件包：`sudo apt-get install -y aptitude gdebi vim curl wget build-essential openssh-server`。
 
 # 做事原则与方法
@@ -202,7 +202,7 @@ https://www.yinxiang.com/
     ```
 
 - 代码应按使用顺序、主次顺序、先后顺序、相关性组织，即要有一定的排序逻辑，尤其是添加新代码时，不要一味得添加到文件尾部。
-- 布尔变量命名应尽量采用肯定形势。
+- 布尔变量命名应尽量采用肯定形式。
 - 避免硬编码数字、字符串，应使用常量并给它们有意义的名字。
 - 传递简单数据类型时，适当添加临时变量提高可读性，例如：
 
@@ -219,10 +219,11 @@ https://www.yinxiang.com/
     for (const item of list) {
       if (item.isDeleted) {
         deletedItemsCount++;
+        doStuff1();
       }
     }
     if (deletedItemsCount > 0) {
-      doStuff();
+      doStuff2();
     }
 
     // 正例：使用布尔表示是否
@@ -230,10 +231,11 @@ https://www.yinxiang.com/
     for (const item of list) {
       if (item.isDeleted) {
         hasDeletedItems = true;
+        doStuff1();
       }
     }
     if (hasDeletedItems) {
-      doStuff();
+      doStuff2();
     }
     ```
 
@@ -262,7 +264,7 @@ https://www.yinxiang.com/
     - 存在多种可选方案时，解释为什么选择现在这种，其它方案有何问题。
     - 因为某些限制而使代码不一致、不优雅或存在副作用时，应注明原因及后果。
     - 参考了外部一些资料时，应注明链接，方便其他人查看。
-    - 临时标记注释：TODO、FIXME、HACK、OPTIMIZE、REVIEW。
+    - 临时标记注释：TODO、FIXME、HACK、OPTIMIZE、REVIEW 等。
 - 注释应随代码更新，为了避免不同步，注释里不要包含不必要的细节，比如：
 
     ```js
@@ -274,7 +276,41 @@ https://www.yinxiang.com/
 
 ## 如何写日志
 
-[logging.md](./logging.md)
+写日志的方法应该命名为相应的 level，比如 `debug`、`info` 等，并接受四个参数：
+
+- `message` *(String)* ：日志消息，应为固定字符串，中间不要拼接任何变量（变量应该放到 `context` 里）。使用英文时应注意时态且首字母应大写（代码标识符例外，应保持原样），句号可加可不加，保持一致即可：
+
+    ```js
+    // 描述接下来要做什么或正在做什么，应该用现在进行时
+    logger.info('Sending emails');
+    sendEmails();
+    // 描述什么事情做完了，应该用一般过去时，并且没必要加 successfully 等字眼，不是 failed 自然就是成功
+    logger.info('Emails sent')
+    // 描述失败的情况：
+    logger.info('Failed to send emails') // 或者，Sending emails failed，注意是动名词做主语，不是 Send emails failed
+    ```
+
+- `context` *(Map, optional)* ：可选，日志上下文，以 kv 形式存放日志产生时的一些关键变量等。
+- `error` *(Error, optional)* ：可选，错误或异常对象。
+- `requestId` *(String, optional)* ：可选，请求 ID，用于调用链追踪。
+
+### 日志级别
+
+- `debug` 级别可用于记录代码执行细节信息，应该仅用于本地开发环境，或者完全不用。
+- `info` 级别可用于记录代码运行主干流程，比如记录 HTTP server 启动成功。
+- `warning` 级别可用于记录预期内的、但比较重要或需要留意的信息，出现后不要求立即采取措施，比如记录危险的删除操作、无效的请求（HTTP 4xx）等。
+- `error` 级别的应该用于所有非预期错误，出现时要求立即采取措施，要么修复，要么密切观察是否为偶发，要么调低级别，比如调用关键第三方服务失败、未捕获的异常等。
+- 建议本地开发环境开启 `debug` 级别，staging 和 production 环境开启 `info` 级别。
+
+### 补充说明
+
+- 正确使用日志级别，尤其不要滥用 `error`，否则会淹没关键信息，干扰系统调试。经常出现但无需干预的，都不应该是 `error`，`error` 意味着需要干预，一个健康的系统里，其数量应该非常有限。
+数量。
+- `message` 应为固定字符串，不要在其中拼接变量，变量应该放到 `context` 里，如此才能方便对 `message` 做统计、分析、报警。需详略得当：
+    - 对于细节、流程日志，除了陈述事实，最好说明影响、逻辑后续的走向，比如 `Skipped xxx due to xxx limit` 要比 `Reached xxx limit` 对调试、理解代码执行路径更有帮助。
+    - 对于错误、异常，尽量说出问题的本质，比如不要仅是说什么操作失败了，要说为什么失败，DNS 解析超时、连接超时还是响应错误，或者携带相应的 `context`、`error`。
+- 应提供尽量完整的 `context`，比如 HTTP 请求响应的参数、关键变量等，对于较复杂的 `context` 应只在入口处打一次再配合 `requestId` 实现调用链路追踪以避免给日志收集、处理系统造成过大压力。
+- 不要过度打日志以避免给日志收集、处理系统造成过大压力。
 
 ## 如何处理异常（错误）
 
@@ -336,25 +372,26 @@ $(scope): $(subject)
 $(description)
 ```
 
-- `$(scope)`：必需，取决于具体项目，一般为项目功能模块、组件或目录的名字，用来描述本次 commit **影响的范围**，比如 https://github.com/nodejs/node/commits/master 、https://github.com/golang/go/commits/master 。嵌套层级结构可以用 `/` 表示，如 `net/http`。涉及多个模块、组件或目录可以用 `,` 隔开（不加空格），如 `net/http,cmd`、`net/{tcp,http}`（表示 `net/tcp` 和 `net/http`）。后加入项目的新成员应遵循已有的 scope 约定（通过 `git log` 可以查看某个文件的提交历史），不要自己编造。使用首字母小写的驼峰命名。`bug`、`hotfix`、`task`、`change`、`refactor` 等等描述的都不是影响的具体范围，而是改动类型，不能用作 scope。除具体的模块、组件或目录名之外，可以使用 `base` 表示基础结构、框架相关的改动，用 `misc` 表示杂项改动，用 `all` 表示大范围重构。
-- `$(subject)`：必需，50 个字符左右的简要说明，首字母小写，祈使句，描述 what 和 why，不加句号。禁止出现 *update code* ， *fix bug* 等无实际意义的描述，好的例子： *select connector by sorting free memory* （不需要形如 *update about how to select connector ...* 的啰嗦写法），*fix sucess tip can not show on IE8* （不需要形如 *fix bug of ...* 的啰嗦写法）。一个简单的判断 subject 是否合适的办法：[把你的 subject 放到句子 *If applied, this commit will xxx* 里是否通顺？](https://chris.beams.io/posts/git-commit/#imperative)
+- `$(scope)`：必需，取决于具体项目，一般为项目目录、模块或组件的名字，用来描述本次 commit **影响的范围**（即 where），比如 [Node.js](https://github.com/nodejs/node/commits/master) 和 [Golang](https://github.com/golang/go/commits/master) 的源码仓库。嵌套层级结构可以用 `/` 表示，如 `net/http`。涉及多个目录、模块或组件可以用 `,` 隔开（不加空格以节省空间），如 `net/http,cmd`、`net/{tcp,http}`（表示 `net/tcp` 和 `net/http`）。后加入项目的新成员应遵循已有的 scope 约定（通过 `git log` 可以查看某个文件的提交历史），不要自己编造。使用首字母小写的驼峰命名。`bug`、`hotfix`、`task`、`change`、`refactor` 等等描述的都不是影响的具体范围，而是改动类型，不能用作 scope。除具体的目录、模块或组件名之外，可以使用 `base` 表示基础结构、框架相关的改动，用 `misc` 表示杂项改动，用 `all` 表示大范围重构。
+- `$(subject)`：必需，50 个字符左右的简要说明，首字母小写，祈使句，描述 what 和 why，不加句号。禁止出现 *update code*， *fix bug* 等无实际意义的描述，好的例子： *select connector by sorting free memory* （不需要形如 *update about how to select connector ...* 的啰嗦写法），*fix sucess tip can not show on IE8* （不需要形如 *fix bug of ...* 的啰嗦写法）。一个简单的判断 subject 是否合适的办法：[把你的 subject 放到句子 *If applied, this commit will xxx* 里是否通顺？](https://chris.beams.io/posts/git-commit/#imperative)
 - `$(description)`：可选，详细说明，建议使用列表罗列要点。
 
 ## 流程
 
 1. 提交者发起 topic 分支到目标分支的 Merge Request。
-    - 代码变动要尽量小且专注于一个任务，不要攒的很大，或者做多个任务，要保证审查者可以较快、较容易的 Review。
+    - 代码变动要尽量小且专注于一个任务，不要攒的很大，或者做多个任务，要保证审查者可以较快、较容易的 review。需要一次性提交大量不需要 review 的文件的（比如第三方依赖包），分两个 commit，并在 Merge Request 描述中说明。
     - 如果与目标分支有冲突，提交者应该自己使用 `git rebase` 或 `git merge`（共享分支的情况）解决。
-    - 交给别人之前一定要自己先 Review 一遍（在 GitLab 或者其它 Review 工具上检查最终效果），确保自己提交的每一行变更都是正确的、必要的，对自己的代码负责，不要浪费别人的时间。
-2. 审查者 Review 代码。
-    - 对 [编写整洁的代码](#编写整洁代码) 中各项要求进行检查
-    - 在任何有疑问或建议的地方留 comment。
+    - Assign 给别人之前一定要自己先 review 一遍（在 GitLab 或者其它 review 工具上检查最终效果），确保自己提交的每一行变更都是正确的、必要的，对自己的代码负责，不要浪费别人的时间。
+2. 审查者 review 代码。
+    - 对[编写整洁的代码](#编写整洁代码) 中各项要求进行检查，在任何有疑问或建议的地方留评论。
+    - 如果 review 工具是 GitLab 且提交者已针对之前的评论做了修复，审查者需在确认问题已修复后 resolve discussion（解决讨论）。
     - 从中学习一些好的东西。
-3. 提交者响应 comments。
+    - Review 完后，assign 给提交者处理；较小的问题可以不必 assign 回去，提交者也需保证及时响应。
+3. 提交者响应评论。
     - 确实有问题的，修复之。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit 历史（`--amend` 选项表示修改上一个 commit 而不是创建一个新的 commit，commit 被修改过后，`git push` 必须加 `-f` 强制推送才能 push 成功）。
     - 不同意的，讨论。
-    - 完成后，留 comment “fixed”，审查者再次检查，回到第二步。
-4. 审查者确认没有问题之后，将 Merge Request 转发给目标分支的维护者进行合并。
+    - 完成后，assign 给审查者再次 review；如果之前并未 assign 回来，留评论 `fixed` （只需在整个 Merge Rquest 下留一个）通知审查者已修完。回到第二步。
+4. 审查者确认没有问题之后，将 Merge Request assign 给目标分支的维护者进行二次 review 或合并。
 
 # 调试技巧
 

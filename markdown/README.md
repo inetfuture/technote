@@ -172,6 +172,8 @@
     username 规则：`${firstName}.${lastName}`
     ```
 
+    有惯例的除外，比如表示 RESTful API 的 path 参数可遵循 Swagger 的风格：`/blogs/{blogId}`。
+
 - 表示命令行选项（option）、参数（arg）时，参考各种 manual 里的惯例写法，可选的放在 `[]` 中，必需的放在 `<>` 中：
 
     ```markdown
@@ -179,6 +181,7 @@
     ```
 
 - 描述菜单、目录导航使用 `【xxx】>【xxx】` 的写法。
+- 英语专有名词大小写、空格等遵循官方的写法，比如 macOS、Microsoft、GitLab、MongoDB。
 
 ## 编辑器
 
