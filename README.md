@@ -359,7 +359,7 @@
 ## 目的
 
 - 提高代码质量，查漏补缺。
-- 相互学习。
+- 相互学习，共同进步。
 - 促进项目内知识流动，防止对某个个人过分依赖。
 
 ## Commit Message 规范
@@ -372,14 +372,24 @@ $(scope): $(subject)
 $(description)
 ```
 
-- `$(scope)`：必需，取决于具体项目，一般为项目目录、模块或组件的名字，用来描述本次 commit **影响的范围**（即 where），比如 [Node.js](https://github.com/nodejs/node/commits/master) 和 [Golang](https://github.com/golang/go/commits/master) 的源码仓库。嵌套层级结构可以用 `/` 表示，如 `net/http`。涉及多个目录、模块或组件可以用 `,` 隔开（不加空格以节省空间），如 `net/http,cmd`、`net/{tcp,http}`（表示 `net/tcp` 和 `net/http`）。后加入项目的新成员应遵循已有的 scope 约定（通过 `git log` 可以查看某个文件的提交历史），不要自己编造。使用首字母小写的驼峰命名。`bug`、`hotfix`、`task`、`change`、`refactor` 等等描述的都不是影响的具体范围，而是改动类型，不能用作 scope。除具体的目录、模块或组件名之外，可以使用 `base` 表示基础结构、框架相关的改动，用 `misc` 表示杂项改动，用 `all` 表示大范围重构。
-- `$(subject)`：必需，50 个字符左右的简要说明，首字母小写，祈使句，描述 what 和 why，不加句号。禁止出现 *update code*， *fix bug* 等无实际意义的描述，好的例子： *select connector by sorting free memory* （不需要形如 *update about how to select connector ...* 的啰嗦写法），*fix sucess tip can not show on IE8* （不需要形如 *fix bug of ...* 的啰嗦写法）。一个简单的判断 subject 是否合适的办法：[把你的 subject 放到句子 *If applied, this commit will xxx* 里是否通顺？](https://chris.beams.io/posts/git-commit/#imperative)
+- `$(scope)`：必需，取决于具体项目，一般为项目目录、模块或组件的名字，用来描述本次 commit **影响的范围**（即 where），比如 [Node.js](https://github.com/nodejs/node/commits/master) 和 [Golang](https://github.com/golang/go/commits/master) 的源码仓库就是如此。
+    - 使用首字母小写的驼峰格式。
+    - 嵌套层级结构可以用 `/` 表示，如 `net/http`。
+    - 涉及多个目录、模块或组件可以用 `,` 隔开（不加空格以节省空间），如 `net/http,cmd`、`net/{tcp,http}`（表示 `net/tcp` 和 `net/http`）。
+    - 无意义的层级可省略，比如 Java 项目没必要把 `src/main/java/${package}` 包含进来，需酌情选择简练而有描述性的表示方式。
+    - `bug`、`hotfix`、`task`、`change`、`refactor` 等等描述的都不是影响的具体范围，而是改动类型，不能用作 scope。
+    - 除具体的目录、模块或组件名之外，可以使用 `base` 表示基础结构、框架相关的改动，用 `misc` 表示杂项改动，用 `all` 表示大范围重构。
+    - 后加入项目的新成员应遵循已有的 scope 约定（通过 `git log` 可以查看某个文件的提交历史或咨询 leader），不要自己编造。
+- `$(subject)`：必需，描述 what 和 why。
+    - 50 个字符左右的简要说明，首字母小写，祈使句（即使用动词原型，无时态），不加句号。
+    - 禁止出现 *update code*、*fix bug* 等无实际意义的描述（这种废话写了跟没写一样），好的例子： *select connector by sorting free memory* （不需要形如 *update about how to select connector ...* 的啰嗦写法），*fix sucess tip can not show on IE8* （不需要形如 *fix bug of ...* 的啰嗦写法）。
+    - 一个简单的判断 subject 是否合适的办法：[把你的 subject 放到句子 *If applied, this commit will xxx* 里是否通顺？](https://chris.beams.io/posts/git-commit/#imperative)
 - `$(description)`：可选，详细说明，建议使用列表罗列要点。
 
 ## 流程
 
-1. 提交者发起 topic 分支到目标分支的 Merge Request。
-    - 代码变动要尽量小且专注于一个任务，不要攒的很大，或者做多个任务，要保证审查者可以较快、较容易的 review。需要一次性提交大量不需要 review 的文件的（比如第三方依赖包），分两个 commit，并在 Merge Request 描述中说明。
+1. 提交者发起 topic 分支到目标分支（日常开发一般是 `develop`）的 Merge Request（以下简称 MR），assign 给 peer 做 review。
+    - 代码变动要尽量小且专注于一个任务，不要攒的很大，或者做多个任务，要保证审查者可以较快、较容易的 review。需要一次性提交大量不需要 review 的文件的（比如第三方依赖包），分两个 commit，并在 MR 描述中说明。
     - 如果与目标分支有冲突，提交者应该自己使用 `git rebase` 或 `git merge`（共享分支的情况）解决。
     - Assign 给别人之前一定要自己先 review 一遍（在 GitLab 或者其它 review 工具上检查最终效果），确保自己提交的每一行变更都是正确的、必要的，对自己的代码负责，不要浪费别人的时间。
 2. 审查者 review 代码。
@@ -390,8 +400,11 @@ $(description)
 3. 提交者响应评论。
     - 确实有问题的，修复之。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit 历史（`--amend` 选项表示修改上一个 commit 而不是创建一个新的 commit，commit 被修改过后，`git push` 必须加 `-f` 强制推送才能 push 成功）。
     - 不同意的，讨论。
-    - 完成后，assign 给审查者再次 review；如果之前并未 assign 回来，留评论 `fixed` （只需在整个 Merge Rquest 下留一个）通知审查者已修完。回到第二步。
-4. 审查者确认没有问题之后，将 Merge Request assign 给目标分支的维护者进行二次 review 或合并。
+    - 完成后，assign 给审查者再次 review（不需要额外留评论）；如果之前并未 assign 回来，那么留评论 `fixed` （只需在整个 MR 下留一个）通知审查者已修完。回到第二步。
+
+        注意，来回 assign 或留评论都是沟通机制，二选一，没道理都做。
+
+4. 审查者确认没有问题之后，将 MR assign 给目标分支的维护者进行二次 review 或合并。
 
 # 调试技巧
 
