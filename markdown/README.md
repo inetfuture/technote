@@ -1,12 +1,11 @@
 # Markdown 书写规范
 
-请通过[原文](https://raw.githubusercontent.com/inetfuture/technote/master/markdown/README.md)模式阅读此文档。
+请通过[原文](https://raw.githubusercontent.com/inetfuture/technote/master/markdown/README.md)模式阅读此文档，以直观理解空格、换行、缩进等要求。
 
-对 Markdown 不熟悉的请先阅读：
+未系统学习过 Markdown 的先仔细阅读以下资料：
 
-- [原始定义](https://daringfireball.net/projects/markdown/)。
-- [GitHub 的教程](https://guides.github.com/features/mastering-markdown/)。
-- [CommonMark 规范](https://spec.commonmark.org/0.28/)。
+- [原始定义](https://daringfireball.net/projects/markdown/)
+- [GitHub 的教程](https://guides.github.com/features/mastering-markdown/)
 
 ## 中文排版
 
@@ -37,7 +36,7 @@
     - 遇到完整的英文整句（引用）、特殊名词等时，其內容才可酌情使用半角标点。
     - 数字使用半角字符。
 - 标点：
-    - 中文列举间隔使用顿号（`、`）而不是逗号（`，`）。
+    - [中文列举间隔使用顿号（`、`）而不是逗号（`，`）](https://zhuanlan.zhihu.com/p/83934100)。
     - 列表项目结尾是在引出详细描述时，用冒号结束，比如：
 
         ```markdown
@@ -48,14 +47,14 @@
             '''
         ```
 
-    - 句末加句号。
+    - 句末加句号，特别短的（不是完整句子）可以例外，但是注意保持一致。
 
 ## 语义
 
 格式使用应遵守语义：
 
 - 不要滥用强调格式，满篇强调更找不到重点。
-- 不要滥用行内代码格式，只有代码、标识符、变量值、路径等才能使用行内代码，不要将其作为高亮强调格式。
+- 不要滥用行内代码格式，只有代码、标识符、变量值、路径等才能（也应该）使用行内代码，不要将其作为高亮强调格式。
 - 不要滥用引用格式，不要将其作为高亮强调格式。
 
 ## 标题
@@ -181,7 +180,7 @@
     ```
 
 - 描述菜单、目录导航使用 `【xxx】>【xxx】` 的写法。
-- 英语专有名词大小写、空格等遵循官方的写法，比如 macOS、Microsoft、GitLab、MongoDB。
+- 英语专有名词大小写、符号等遵循官方的写法，比如 macOS、Microsoft、GitLab、PostgreSQL、MongoDB、InfluxDB、Elasticsearch、Node.js、Vue.js、React 等。
 
 ## 编辑器
 
