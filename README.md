@@ -52,6 +52,8 @@
 - [Chrome 剪藏插件](https://appcenter.yinxiang.com/app/evernote-webclipper/web-apps/)
 - 关注微信公众号：“我的印象笔记”，可以快速收藏微信公众号文章。
 
+印象笔记对 Markdown 的支持不好，可根据自己的喜好选择有道云笔记等。或者收藏文章用印象笔记，自己整理用 git 管理 Markdown 文件，比如本项目。
+
 ## TODO 管理
 
 [Trello](https://trello.com) 或 [Teambition](https://www.teambition.com/)。
@@ -177,6 +179,7 @@
 - [How to Name Things](http://slides.com/inetfuture/how-to-name-things)
 - [Clean Functions](https://slides.com/inetfuture/clean-functions)
 - [Patterns to Avoid Code Duplications](https://slides.com/inetfuture/patterns-to-avoid-code-duplications)
+- 特例一般化。
 - 局部变量尽量就近声明。
 - Return early：[Try Not to Use Else](https://www.airpair.com/php/posts/best-practices-for-modern-php-development#4-2-try-not-to-use-else-)、[How and Why to Avoid Excessive Nesting](http://www.codeproject.com/Articles/626403/How-and-Why-to-Avoid-Excessive-Nesting)
 - 在语言本身语法允许的情况下，将主流程放在文件上部，子流程按被调用顺序放在文件下部，这样打开文件后可以比较快的抓住重点，例如：
@@ -317,6 +320,7 @@
 - 不要吞掉异常（错误）：若明确知道某异常（错误）大概率发生（不要多虑）且可忽略，此时方可 catch 并加注释说明，否则不要 catch 了但不处理、不返回、不抛出。
 - 不要过度处理异常（错误）：一般用面向切面的方式统一捕获未处理异常（错误），统一记录日志，统一组装给客户端的响应。在此前提下，不要捕获、处理你无法处理、无法恢复的异常（错误），不要额外记录日志（除非可以比统一处理的提供更多上下文信息）。
 - 保留原始异常（错误）：比如 Java 中 `throw new RuntimeException()` 用第二个参数把原始 exception 传进去，如此在 stacktrace 里会有 `caused by` 信息。
+- 所用语言支持异常时，尽量不要用返回值表示成功和失败：避免要求客户端对返回值做 null、布尔或者数值检查（即避免 if 判断）。
 - 若要重试，必须加次数限制，应做好统一封装。
 
 ### 错误反馈设计
@@ -376,7 +380,7 @@ $(description)
     - 使用首字母小写的驼峰格式。
     - 嵌套层级结构可以用 `/` 表示，如 `net/http`。
     - 涉及多个目录、模块或组件可以用 `,` 隔开（不加空格以节省空间），如 `net/http,cmd`、`net/{tcp,http}`（表示 `net/tcp` 和 `net/http`）。
-    - 无意义的层级可省略，比如 Java 项目没必要把 `src/main/java/${package}` 包含进来，需酌情选择简练而有描述性的表示方式。
+    - 无意义的层级可省略，比如 Java 项目没必要把 `src/main/java/${package}` 包含进来，需酌情选择简练而有描述性的表示方式，嵌套层级不要太深。
     - `bug`、`hotfix`、`task`、`change`、`refactor` 等等描述的都不是影响的具体范围，而是改动类型，不能用作 scope。
     - 除具体的目录、模块或组件名之外，可以使用 `base` 表示基础结构、框架相关的改动，用 `misc` 表示杂项改动，用 `all` 表示大范围重构。
     - 后加入项目的新成员应遵循已有的 scope 约定（通过 `git log` 可以查看某个文件的提交历史或咨询 leader），不要自己编造。

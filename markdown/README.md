@@ -180,7 +180,7 @@
     ```
 
 - 描述菜单、目录导航使用 `【xxx】>【xxx】` 的写法。
-- 英语专有名词大小写、符号等遵循官方的写法，比如 macOS、Microsoft、GitLab、PostgreSQL、MongoDB、InfluxDB、Elasticsearch、Node.js、Vue.js、React 等。
+- 英语专有名词大小写、符号等遵循官方的写法，比如 macOS、Microsoft、GitLab、PostgreSQL、MongoDB、InfluxDB、Elasticsearch、Node.js、gRPC、Vue.js、React、HTML、MaiSCRM 等。
 
 ## 编辑器
 
