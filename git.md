@@ -5,6 +5,7 @@ git config --global user.name ???
 git config --global user.email ???
 git config --global core.editor vim
 git config --global core.quotepath false
+git config --global core.safecrlf false
 git config --global push.default simple
 git config --global rerere.enabled true
 git config --global alias.c checkout
