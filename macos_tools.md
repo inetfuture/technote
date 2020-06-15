@@ -7,3 +7,4 @@
 - https://www.iterm2.com/
 - https://itunes.apple.com/cn/app/parallels-client/id600925318?l=en&mt=12
 - https://theunarchiver.com/
+- https://github.com/webtorrent/webtorrent-desktop
