@@ -18,23 +18,23 @@ What's the point of all this? Come on, be professional!
 ### Endpoint Design
 
 - Keep in mind that REST is **resource oriented**, do not design endpoints casually.
-- Use **plural noun** as path for resource collection, like `/blogs`.
-- To represent a single resource out of a collection, use path like `/blogs/{id}`. The `{id}` is the unique identity(database id, unique name, etc) of a resource, and don't repeat the `{id}` in other request parameters.
+- Use **plural noun** as path for resource collection, like `/articles`.
+- To represent a single resource out of a collection, use path like `/articles/{id}`. The `{id}` is the unique identity(database id, unique name, etc) of a resource, and don't repeat the `{id}` in other request parameters.
 - Use HTTP verbs right, common CRUD cases:
 
     Resource Path | POST | GET | PUT | PATCH | DELETE
     -------- | ---- | --- | --- | ----- | ------
-    `/blogs` | create a new blog | list blogs | X | X | X
-    `/blogs/{id}` | X | get a blog by id | update or create(if not exists yet) a blog by id | update a blog partially by id | delete a blog by id
+    `/articles` | create a new article | list articles | X | X | X
+    `/articles/{id}` | X | get a article by id | update or create(if not exists yet) a article by id | update a article partially by id | delete a article by id
 
-- Resources can be nested, e.g. `/blogs/{blogId}/comments/{id}`, but not necessary, `/comments/{id}` is also ok, this is more a matter of style.
-- In some cases a property of a resource can be represented as a resource too, e.g. `PUT /blogs/{id}/title`.
-- Arbitrary meaningful information can be inserted into the resource path, e.g. `/it/blogs`(site category route), `/blogs/hot`(collection quick filter, only for `GET`), even `/it/blogs/hot`.
+- Resources can be nested, e.g. `/articles/{articleId}/comments/{id}`, but not necessary, `/comments/{id}` is also ok, this is more a matter of style.
+- In some cases a property of a resource can be represented as a resource too, e.g. `PUT /articles/{id}/title`.
+- Arbitrary meaningful information can be inserted into the resource path, e.g. `/it/articles`(site category route), `/articles/hot`(collection quick filter, only for `GET`), even `/it/articles/hot`.
 - A resource can be singleton without parent collection, e.g. `GET /appVersion`.
 - For unusual non-CRUD cases, always use POST + verb-ended path, e.g.:
-    - `POST /blogs/{blogId}/translate`
-    - `POST /blogs/batchUpdate`
-    - `POST /blogs/batchDelete`
+    - `POST /articles/{articleId}/translate`
+    - `POST /articles/batchUpdate`
+    - `POST /articles/batchDelete`
 
 ### Access Control
 
