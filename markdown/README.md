@@ -7,48 +7,6 @@
 - [原始定义](https://daringfireball.net/projects/markdown/)
 - [GitHub 的教程](https://guides.github.com/features/mastering-markdown/)
 
-## 中文排版
-
-- [空格](https://github.com/mzlogin/chinese-copywriting-guidelines#%E7%A9%BA%E6%A0%BC)：
-    - 中英文之间需要增加空格。
-    - 中文与数字之间需要增加空格。
-    - 数字与单位之间无需增加空格。
-    - 全角标点与其他字符之间不加空格。例外：裸链接后面需空格，不能紧跟标点，否则有些渲染器会把标点当成链接的一部分。
-    - 中文与链接、强调、行内代码等格式间是否加空格取决于内容（即以上规则），比如`书写 *Markdown* 的规范`需要加，而`书写*中文*的规范`不需要加。
-
-    示例：
-
-    ```markdown
-    大家好，我是 Aaron Wang，生于 1989 年，身高 173cm，*GitHub* 链接 https://github.com/inetfuture 。
-    ```
-
-- [全角与半角](https://github.com/mzlogin/chinese-copywriting-guidelines#%E5%85%A8%E8%A7%92%E5%92%8C%E5%8D%8A%E8%A7%92)：
-    - 主体是中文的时候（夹杂少量英文单词、术语、短句），应全部使用全角中文标点，不要随意混杂半角标点。
-
-        ```markdown
-        // 错误的
-        中文夹杂 English words, 标点不要乱.
-
-        // 正确的
-        中文夹杂 English words，标点不要乱。
-        ```
-
-    - 遇到完整的英文整句（引用）、特殊名词等时，其內容才可酌情使用半角标点。
-    - 数字使用半角字符。
-- 标点：
-    - [中文列举间隔使用顿号（`、`）而不是逗号（`，`）](https://zhuanlan.zhihu.com/p/83934100)。
-    - 列表项目结尾是在引出详细描述时，用冒号结束，比如：
-
-        ```markdown
-        - 使用示例：
-
-            '''shell
-            whatever xxx
-            '''
-        ```
-
-    - 句末加句号，特别短的（不是完整句子）可以例外，但是注意保持一致。
-
 ## 语义
 
 格式使用应遵守语义：
@@ -163,6 +121,48 @@
     '''
     ```
 
+## 中文排版
+
+- [空格](https://github.com/mzlogin/chinese-copywriting-guidelines#%E7%A9%BA%E6%A0%BC)：
+    - 中英文之间需要增加空格。
+    - 中文与数字之间需要增加空格。
+    - 数字与单位之间无需增加空格。
+    - 全角标点与其他字符之间不加空格。例外：裸链接后面需空格，不能紧跟标点，否则有些渲染器会把标点当成链接的一部分。
+    - 中文与链接、强调、行内代码等格式间是否加空格取决于内容（即以上规则），比如`书写 *Markdown* 的规范`需要加，而`书写*中文*的规范`不需要加。
+
+    示例：
+
+    ```markdown
+    大家好，我是 Aaron Wang，生于 1989 年，身高 173cm，*GitHub* 链接 https://github.com/inetfuture 。
+    ```
+
+- [全角与半角](https://github.com/mzlogin/chinese-copywriting-guidelines#%E5%85%A8%E8%A7%92%E5%92%8C%E5%8D%8A%E8%A7%92)：
+    - 主体是中文的时候（夹杂少量英文单词、术语、短句），应全部使用全角中文标点，不要随意混杂半角标点。
+
+        ```markdown
+        // 错误的
+        中文夹杂 English words, 标点不要乱.
+
+        // 正确的
+        中文夹杂 English words，标点不要乱。
+        ```
+
+    - 遇到完整的英文整句（引用）、特殊名词等时，其內容才可酌情使用半角标点。
+    - 数字使用半角字符。
+- 标点：
+    - [中文列举间隔使用顿号（`、`）而不是逗号（`，`）](https://zhuanlan.zhihu.com/p/83934100)。
+    - 列表项目结尾是在引出详细描述时，用冒号结束，比如：
+
+        ```markdown
+        - 使用示例：
+
+            '''shell
+            whatever xxx
+            '''
+        ```
+
+    - 句末加句号，特别短的（不是完整句子）可以例外，但是注意保持一致。
+
 ## 其它
 
 - 表示带变量的字符串时，使用 `${var}` 的形式（同 Shell）：
@@ -171,7 +171,7 @@
     username 规则：`${firstName}.${lastName}`
     ```
 
-    有惯例的除外，比如表示 RESTful API 的 path 参数可遵循 Swagger 的风格：`/blogs/{blogId}`。
+    有惯例的除外，比如表示 RESTful API 的 path 参数可遵循 Swagger 的风格：`/articles/{articleId}`。
 
 - 表示命令行选项（option）、参数（arg）时，参考各种 manual 里的惯例写法，可选的放在 `[]` 中，必需的放在 `<>` 中：
 
@@ -181,6 +181,7 @@
 
 - 描述菜单、目录导航使用 `【xxx】>【xxx】` 的写法。
 - 英语专有名词大小写、符号等遵循官方的写法，比如 macOS、Microsoft、GitLab、PostgreSQL、MongoDB、InfluxDB、Elasticsearch、Node.js、gRPC、Vue.js、React、HTML、MaiSCRM 等。
+- 英语标题除介词、连词等外应首字母大写，可参考 [Capitalize My Title](https://capitalizemytitle.com/) 的结果。
 
 ## 编辑器
 
