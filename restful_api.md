@@ -13,39 +13,42 @@
 
 ## Best Practices
 
-What's the point of all this? Come on, be professional!
+Someone may be wondering what's the point of all this... Go away, I have nothing to say to you.
 
 ### Endpoint Design
 
-- Keep in mind that REST is **resource oriented**, do not design endpoints casually.
-- Use **plural noun** as path for resource collection, like `/articles`.
-- To represent a single resource out of a collection, use path like `/articles/{id}`. The `{id}` is the unique identity(database id, unique name, etc) of a resource, and don't repeat the `{id}` in other request parameters.
-- Use HTTP verbs right, common CRUD cases:
+- Keep in mind that REST is **resource oriented**, do not design endpoints without community well-known and consistent rules.
+- Use **plural noun** as path for resource collection, like `/articles`, not `/article`.
+- To represent a single resource of a collection, use path like `/articles/{id}`. The `{id}` is the unique identity(database id, unique name, etc) of a resource, and don't repeat the `{id}` in other request parameters.
+- Use HTTP methods right, common CRUD(Create、Read、Update、Delete) cases:
 
     Resource Path | POST | GET | PUT | PATCH | DELETE
     -------- | ---- | --- | --- | ----- | ------
     `/articles` | create a new article | list articles | X | X | X
     `/articles/{id}` | X | get a article by id | update or create(if not exists yet) a article by id | update a article partially by id | delete a article by id
 
-- Resources can be nested, e.g. `/articles/{articleId}/comments/{id}`, but not necessary, `/comments/{id}` is also ok, this is more a matter of style.
+- Resources can be nested, e.g. `/articles/{articleId}/comments/{id}`, but not always necessary, `/comments/{id}` is also fine, this is more a matter of style.
 - In some cases a property of a resource can be represented as a resource too, e.g. `PUT /articles/{id}/title`.
-- Arbitrary meaningful information can be inserted into the resource path, e.g. `/it/articles`(site category route), `/articles/hot`(collection quick filter, only for `GET`), even `/it/articles/hot`.
+- Arbitrary meaningful information can be inserted into the resource path, e.g. `/it/articles`(site category route, meaning IT articles), `/articles/hot`(collection quick filter, only suitable for `GET`), even `/it/articles/hot`.
 - A resource can be singleton without parent collection, e.g. `GET /appVersion`.
-- For unusual non-CRUD cases, always use POST + verb-ended path, e.g.:
+- DO NOT use `GET` for write or danger operation, it's dangerous in Web security manner and semantically wrong.
+- For unusual non-CRUD cases, if there is indeed no obvious resource abstraction you can think of, always use `POST` + verb-ended path, e.g.:
     - `POST /articles/{articleId}/translate`
     - `POST /articles/batchUpdate`
     - `POST /articles/batchDelete`
 
+    Most of the time this is debatable, e.g., for an user login API, you can abstract the operation as creating a session, so `POST /users/{id}/sessions` can be used, but `POST /users/login` is also fine in this case. Just don't do `GET /users/login` or  `PUT /users`, etc, it would be purely chaos.
+
 ### Access Control
 
-- Don't trust client input, all id information should be extracted or derived from a signed access token that is generated on server side then issued to client, either by user login or admin configuration.
-- Don't only implement action or operation permissions and forget data or resource permissions.
+- Don't trust client input, all id information should be extracted or derived from a signed access token that is generated on server side then issued to client(either by user login or administrator configuration), instead of being passed by client input.
+- Don't only implement action or operation permissions and forget data or resource permissions, otherwise malicious user may have access to other users' data.
 
 ### Others
 
 - Use HTTP response status code right(no need to repeat it in response body), avoid to create your own error codes unless absolutely necessary.
 - Use Content-Type `application/json` for request/response body.
-- To represent date and time in request or response, use string ISO 8601 or RFC 3339 standard format instead of unix timestamp, it's more friendly for human, therefore more easier to debug. The same goes for enum fields, prefer strings over integers if possible.
+- To represent date and time in request or response, use string ISO 8601 or RFC 3339 standard format instead of Unix timestamp, it's more friendly for human, therefore more easier to debug. The same goes for enumeration fields, prefer strings over integers if possible.
 - For error response design, please refer to [错误反馈设计](/README.md#错误反馈设计).
 - As for versioning, pagination, filtering, sorting, batch operations, etc, there are no hard rules, but take some popular API as examples and **be consistent with yourself**.
 
@@ -55,31 +58,31 @@ What's the point of all this? Come on, be professional!
 
 RPC(SOAP, gRPC):
 
-- Use HTTP/HTTP2 for transferring xml-based or binary enveloped data, only use POST verb.
+- Use HTTP/HTTP2 for transferring xml-based or binary enveloped data, only use POST method.
 - Method-oriented.
 - Heavyweight, usually requires client to use specify libraries and generate stub files before actually making any requests.
 - High performance, more suitable for internal system communications, but not friendly for open API.
 
 HTTP-RPC:
 
-- No envelop, but also no conventional HTTP paths and verbs, represent method info in path.
+- No envelop, but also no conventional HTTP paths and methods, represent method info in path.
 
 RESTful API:
 
-- Standard HTTP verbs for CRUD.
+- Standard HTTP methods for CRUD.
 - Resource-oriented.
 - Lightweight, cross platform easily, more friendly for open API.
 
-### HTTP Verbs
+### HTTP Methods
 
-Verb | Safe? | Idempotent? | Scenario |
+Method | Safe? | Idempotent? | Scenario |
 -----| ---- | ---------- | -------- |
-OPTIONS | Y | Y | get communication options(at least available verbs) |
+OPTIONS | Y | Y | get communication options(at least available methods) |
 GET | Y | Y | get resource |
 HEAD | Y | Y | same with GET but no response body |
 PUT | N | Y | create(if not exists)/relpace resource |
 DELETE | N | Y | delete resource |
-POST | N | N | create resource, unsafe operations there are no suitable verbs for |
+POST | N | N | create resource, unsafe operations there are no suitable methods for |
 PATCH | N | N | update resource partially |
 
 ### Parameter Types
