@@ -380,7 +380,7 @@ $(description)
     - 使用首字母小写的驼峰格式。
     - 嵌套层级结构可以用 `/` 表示，如 `net/http`。
     - 涉及多个目录、模块或组件可以用 `,` 隔开（不加空格以节省空间），如 `net/http,cmd`、`net/{tcp,http}`（表示 `net/tcp` 和 `net/http`）。
-    - 无意义的层级可省略，比如 Java 项目没必要把 `src/main/java/${package}` 包含进来，需酌情选择简练而有描述性的表示方式，嵌套层级不要太深。
+    - 无意义的层级可省略，比如 Java 项目没必要把 `src/main/java/${package}` 包含进来，需酌情选择简练而有描述性的表示方式，嵌套层级不要太深，无需具体到文件。
     - `bug`、`hotfix`、`task`、`change`、`refactor` 等等描述的都不是影响的具体范围，而是改动类型，不能用作 scope。
     - 除具体的目录、模块或组件名之外，可以使用 `base` 表示基础结构、框架相关的改动，用 `misc` 表示杂项改动，用 `all` 表示大范围重构。
     - 后加入项目的新成员应遵循已有的 scope 约定（通过 `git log` 可以查看某个文件的提交历史或咨询 leader），不要自己编造。
@@ -402,7 +402,7 @@ $(description)
     - 从中学习一些好的东西。
     - Review 完后，assign 给提交者处理。
 3. 提交者响应评论。
-    - 确实有问题的，修复之。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit 历史（`--amend` 选项表示修改上一个 commit 而不是创建一个新的 commit，commit 被修改过后，`git push` 必须加 `-f` 强制推送才能 push 成功）。
+    - 确实有问题的，修复之，注意举一反三，检查其它地方是否有类似问题，一并修改。如果该分支未被其他人使用，应使用 `git commit --amend` 提交以减少不必要的 commit 历史（`--amend` 选项表示修改上一个 commit 而不是创建一个新的 commit，commit 被修改过后，`git push` 必须加 `-f` 强制推送才能 push 成功）。
     - 不同意的，讨论。
     - 完成后，assign 给审查者再次 review（不需要额外留评论说修好了，assign 回去就表示修好了）。回到第二步。
 4. 审查者确认没有问题之后，将 MR assign 给目标分支的维护者进行二次 review 或合并。
