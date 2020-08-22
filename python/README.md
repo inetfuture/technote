@@ -7,10 +7,14 @@
 
 # Style Guide
 
-https://www.python.org/dev/peps/pep-0008/
+- https://www.python.org/dev/peps/pep-0008/
+- https://www.python.org/dev/peps/pep-0257/
 
 补充：
 
 - 每行最大长度限制为 120 个字符。
+- 尽量使用单引号，例外：
+    - 字符串本身含单引号，为了避免转义可使用双引号。
+    - docstring 始终使用三个双引号。
 - 私有成员要加下划线前缀，private 和 protected 均加一个。
 - 尽量只 `import` module 或 class，避免频繁 `import` function（写起来太费劲），按需使用 `from`。
