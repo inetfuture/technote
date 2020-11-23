@@ -180,7 +180,7 @@
     ```
 
 - 描述菜单、目录导航使用 `【xxx】>【xxx】` 的写法。
-- 英语专有名词大小写、符号等遵循官方的写法，比如 macOS、Microsoft、GitLab、PostgreSQL、MongoDB、InfluxDB、Elasticsearch、Node.js、gRPC、Vue.js、React、HTML、MaiSCRM 等。
+- 英语专有名词大小写、符号等遵循官方的写法，不要乱写，比如 macOS、Microsoft、GitLab、PostgreSQL、MongoDB、InfluxDB、Elasticsearch、Node.js、gRPC、Vue.js、React、HTML、MaiSCRM 等。
 - 英语标题除介词、连词等外应首字母大写，可参考 [Capitalize My Title](https://capitalizemytitle.com/) 的结果。
 
 ## 编辑器

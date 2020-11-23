@@ -30,29 +30,26 @@
 
 ## 科学上网
 
-方式很多，建议购买国外 VPS 自建 shadowsocks，~~服务端推荐使用[搬瓦工](https://bwh88.net/aff.php?aff=48579)~~（已经不稳定，经常被封 IP），客户端 macOS 使用 [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)，Ubuntu 使用 [shadowsocks-qt5](https://github.com/shadowsocks/) 配合 [Chrome Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=en) 插件，具体搭建方式自己搜。或者买服务，注意经常有跑路的，一次不要买太长。
+方式很多，建议购买阿里云香港 ECS 自建 shadowsocks，客户端 macOS 使用 [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)，Ubuntu 使用 [shadowsocks-qt5](https://github.com/shadowsocks/) 配合 [Chrome Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=en) 插件，具体搭建方式自己搜。或者买服务，注意经常有跑路的，一次不要买太长。
 
 ## 编辑器
 
-[Sublime Text](http://www.sublimetext.com/3)，安装 [Package Control](https://packagecontrol.io/installation)，必备插件：Git、GitGutter、knockdown、SublimeLinter、DocBlockr、EditorConfig、Emmet、FileDiffs、SublimeCodeIntel、SidebarEnhancements。
+[VS Code](https://code.visualstudio.com/)。
 
-可以将整个配置目录放到 GitHub 上，方便在多台机器上同步，比如 [inetfuture/sublime-config](https://github.com/inetfuture/sublime-config)，配置目录的位置：
-
-- Linux：`~/.config/sublime-text-3/Packages/User`
-- macOS：`~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`
-
-或者使用 [VS Code](https://code.visualstudio.com/)。
-
-配合 [editorconfig](http://editorconfig.org/)，使用时需下载建议的[配置文件](.editorconfig) 到源码根目录，并安装编辑器相应插件。
+配合 [editorconfig](http://editorconfig.org/) 可跨编辑器统一缩进风格等基础配置，使用时需下载建议的[配置文件](.editorconfig) 到源码根目录，并安装编辑器相应插件。
 
 ## 知识管理
+
+### 记笔记
+
+[幕布](https://mubu.com/)，极简大纲笔记，一键生成思维导图，以结构化思维整理知识。
+
+### 资料收集
 
 [印象笔记](https://www.yinxiang.com/)，不建议使用 Evernote 国际版，太卡，而且国内的版本提供的本地化服务更方便。
 
 - [Chrome 剪藏插件](https://appcenter.yinxiang.com/app/evernote-webclipper/web-apps/)
 - 关注微信公众号：“我的印象笔记”，可以快速收藏微信公众号文章。
-
-印象笔记对 Markdown 的支持不好，可根据自己的喜好选择有道云笔记等。或者收藏文章用印象笔记，自己整理用 git 管理 Markdown 文件，比如本项目。
 
 ## TODO 管理
 
