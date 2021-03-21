@@ -18,3 +18,4 @@
     - docstring 始终使用三个双引号。
 - 私有成员要加下划线前缀，private 和 protected 均加一个。
 - 尽量只 `import` module 或 class，避免频繁 `import` function（写起来太费劲），按需使用 `from`。
+- 字符串拼接尽量使用 [f-strings 语法](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals)。
