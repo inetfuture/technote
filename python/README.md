@@ -9,6 +9,7 @@
 
 - https://www.python.org/dev/peps/pep-0008/
 - https://www.python.org/dev/peps/pep-0257/
+- https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html
 
 补充：
 
