@@ -479,6 +479,7 @@ $(description)
     - PC 端只能登陆一个设备，家里公司要频繁切换登录，还必须在手机上确认（WTF？）。
     - 功能有限，不支持机器人，不能高亮代码，想只复制消息的某一部分都费劲。
     - 至于微信方便在手机上使用，根本是个伪需求，你天天在手机上工作？（我说开发，其他角色请无视）
+- 参考[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)。
 
 # Get Things Done
 
