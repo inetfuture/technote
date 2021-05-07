@@ -276,23 +276,28 @@
 
 ## 如何写日志
 
-写日志的方法应该命名为相应的 level，比如 `debug`、`info` 等，并接受四个参数：
+写日志的方法应该命名为相应的 level，比如 `debug`、`info` 等，并接受三个参数：
 
-- `message` *(String)* ：日志消息，应为固定字符串，中间不要拼接任何变量（变量应该放到 `context` 里）。使用英文时应注意时态且首字母应大写（代码标识符例外，应保持原样），句号可加可不加，保持一致即可：
+- `message` *(String)* ：日志消息。
+    - 应为固定字符串，中间不要拼接任何变量（变量应该放到 `context` 里）。
+    - 应为正式的非口语化的陈述句，英文应注意时态且首字母应大写（代码标识符例外，应保持原样），句号可加可不加，保持一致即可：
 
     ```js
-    // 描述接下来要做什么或正在做什么，应该用现在进行时
-    logger.info('Sending emails');
-    sendEmails();
-    // 描述什么事情做完了，应该用一般过去时，并且没必要加 successfully 等字眼，不是 failed 自然就是成功
-    logger.info('Emails sent')
-    // 描述失败的情况：
-    logger.info('Failed to send emails') // 或者，Sending emails failed，注意是动名词做主语，不是 Send emails failed
+    try {
+        // 描述接下来要做什么或正在做什么，应该用现在进行时
+        logger.info('Sending emails');
+        sendEmails();
+        // 描述什么事情做完了，应该用一般过去时，并且没必要加 successfully 等字眼，不是 failed 自然就是成功，
+        // 此外不要用 Sending emails ok 等不正式的口语化表述方式
+        logger.info('Sent emails');
+    } catch (err) {
+        // 描述什么事情失败了，也应该用一般过去时
+        logger.info('Failed to send emails', err); // 或者 Sending emails failed，注意是动名词做主语，不是 Send emails failed
+    }
     ```
 
 - `context` *(Map, optional)* ：可选，日志上下文，以 kv 形式存放日志产生时的一些关键变量等。
 - `error` *(Error, optional)* ：可选，错误或异常对象。
-- `requestId` *(String, optional)* ：可选，请求 ID，用于调用链追踪。
 
 ### 日志级别
 
