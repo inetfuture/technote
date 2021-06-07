@@ -387,7 +387,7 @@ $(description)
     - 除具体的目录、模块或组件名之外，可以使用 `base` 表示基础结构、框架相关的改动，用 `misc` 表示杂项改动，用 `all` 表示大范围重构。
     - 后加入项目的新成员应遵循已有的 scope 约定（通过 `git log` 可以查看某个文件的提交历史或咨询 leader），不要自己编造。
 - `$(subject)`：必需，描述 what 和 why。
-    - 50 个字符左右的简要说明，首字母小写，祈使句（即使用动词原型，无时态），不加句号。
+    - 80 个字符以内简要说明（实在必要，也可以超过），首字母小写，祈使句（即使用动词原型，无时态），不加句号。
     - 禁止出现 *update code*、*fix bug* 等无实际意义的描述（这种废话写了跟没写一样），好的例子： *select connector by sorting free memory* （不需要形如 *update about how to select connector ...* 的啰嗦写法），*fix success tip can not show on IE8* （不需要形如 *fix bug of ...* 的啰嗦写法）。
     - 一个简单的判断 subject 是否合适的办法：[把你的 subject 放到句子 *If applied, this commit will xxx* 里是否通顺？](https://chris.beams.io/posts/git-commit/#imperative)
 - `$(description)`：可选，详细说明，建议使用列表罗列要点，也用英文写。
@@ -400,7 +400,7 @@ $(description)
     - Assign 给别人之前一定要自己先 review 一遍（在 GitLab 或者其它 review 工具上检查最终效果），确保自己提交的每一行变更都是正确的、必要的，对自己的代码负责，不要浪费别人的时间。
 2. 审查者 review 代码。
     - 对[编写整洁的代码](#编写整洁代码) 中各项要求进行检查，在任何有疑问或建议的地方留评论。
-    - 如果 review 工具是 GitLab 且提交者已针对之前的评论做了修复，审查者需在确认问题已修复后 resolve discussion（解决讨论）。
+    - 如果 review 工具是 GitLab 且提交者已针对之前的评论做了修复，审查者需在确认问题已修复后 resolve thread（解决话题）。
     - 从中学习一些好的东西。
     - Review 完后，assign 给提交者处理。
 3. 提交者响应评论。
