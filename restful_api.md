@@ -18,26 +18,29 @@ Someone may be wondering what's the point of all this... Go away, I have nothing
 ### Endpoint Design
 
 - Keep in mind that REST is **resource oriented**, do not design endpoints without community well-known and consistent rules.
-- Use **plural noun** as path for resource collection, like `/articles`, not `/article`.
+- Use **plural noun** in path for resource collection, like `/articles`, not `/article`.
 - To represent a single resource of a collection, use path like `/articles/{id}`. The `{id}` is the unique identity(database id, unique name, etc) of a resource, and don't repeat the `{id}` in other request parameters.
-- Use HTTP methods right, common CRUD(Create、Read、Update、Delete) cases:
+- Use HTTP path and method combinations right, common CRUD(Create、Read、Update、Delete) cases are listed below:
 
     Resource Path | POST | GET | PUT | PATCH | DELETE
     -------- | ---- | --- | --- | ----- | ------
     `/articles` | create a new article | list articles | X | X | X
-    `/articles/{id}` | X | get a article by id | update or create(if not exists yet) a article by id | update a article partially by id | delete a article by id
+    `/articles/{id}` | X | get a article by id | update or create(if not exists yet) a article by id | update a article **partially** by id | delete a article by id
 
-- Resources can be nested, e.g. `/articles/{articleId}/comments/{id}`, but not always necessary, `/comments/{id}` is also fine, this is more a matter of style.
-- In some cases a property of a resource can be represented as a resource too, e.g. `PUT /articles/{id}/title`.
-- Arbitrary meaningful information can be inserted into the resource path, e.g. `/it/articles`(site category route, meaning IT articles), `/articles/hot`(collection quick filter, only suitable for `GET`), even `/it/articles/hot`.
-- A resource can be singleton without parent collection, e.g. `GET /appVersion`.
-- DO NOT use `GET` for write or danger operation, it's dangerous in Web security manner and semantically wrong.
+    Don't try to understand why, there is no why, just get used to them and remember them, and use this table as a cheat sheet when you're starting to practice.
+
 - For unusual non-CRUD cases, if there is indeed no obvious resource abstraction you can think of, always use `POST` + verb-ended path, e.g.:
     - `POST /articles/{articleId}/translate`
     - `POST /articles/batchUpdate`
     - `POST /articles/batchDelete`
 
-    Most of the time this is debatable, e.g., for an user login API, you can abstract the operation as creating a session, so `POST /users/{id}/sessions` can be used, but `POST /users/login` is also fine in this case. Just don't do `GET /users/login` or  `PUT /users`, etc, it would be purely chaos.
+    Most of the time this is debatable, e.g., for an user login API, you can abstract the operation as creating a session, so `POST /users/{id}/sessions` can be used, but `POST /users/login` is also fine in this case. Just don't do `GET /users/login` or  `PUT /users`, etc, these obviously don't comply with above rules.
+
+- Resources can be nested, e.g. `/articles/{articleId}/comments/{id}`, but not always necessary, `/comments/{id}` is also fine, this is more a matter of style.
+- In some cases a property of a resource can be represented as a resource too, e.g. `PUT /articles/{id}/title`(but `PATCH /articles/{id}/title` is wrong, `title` is already an atomic resource, it can not be partially updated).
+- Arbitrary meaningful information can be inserted into the resource path, e.g. `/it/articles`(site category route, meaning IT articles), `/articles/hot`(collection quick filter, only suitable for `GET`), even `/it/articles/hot`.
+- A resource can be singleton without parent collection, e.g. `GET /appVersion`.
+- DO NOT use `GET` for write or danger operation(user login etc), it's dangerous in Web security manner and semantically wrong.
 
 ### Access Control
 
