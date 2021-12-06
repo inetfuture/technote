@@ -9,3 +9,7 @@
 - https://theunarchiver.com/
 - https://github.com/webtorrent/webtorrent-desktop
 - https://github.com/wulkano/Kap
+- https://obsproject.com/forum/resources/os-x-capture-audio-with-ishowu-audio-capture.505/
+- https://steelseries.com/engine
+- http://plentycom.jp/en/steermouse/index.html
+- https://mos.caldis.me/
